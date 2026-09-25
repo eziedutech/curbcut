@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/eziedutech/curbcut/codes/engine/schema/findings.schema.json",
+  "title": "CurbCut findings",
+  "description": "Merged review of one pull request, written by the cc-review mode. Every finding has an evidence tier. A proven finding must cite at least one fact_id that exists in facts.json; a flagged finding is a reviewer's judgment and must say why in one sentence. Out-of-reach checks are always listed. Facts that could not be interpreted go to not_scanned with a reason; nothing is silently dropped. The counts in summary must equal the lengths of the lists. No em dashes in any text.",
+  "type": "object",
+  "required": ["schema_version", "pr_id", "base", "head", "facts_file", "summary", "findings", "out_of_reach", "not_scanned"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "pr_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "description": "Report id, for example pr-1 or pr-1-run2." },
+    "base": { "type": "string", "description": "Base branch, for example main." },
+    "head": { "type": "string", "description": "Head branch under review." },
+    "facts_file": { "type": "string", "description": "Repository-relative path to the facts.json this review used." },
+    "generated_by": { "type": "string", "description": "Mode or tool that wrote this file, for example cc-review." },
+    "summary": {
+      "type": "object",
+      "required": ["proven", "flagged", "out_of_reach", "not_scanned"],
+      "properties": {
+        "proven": { "type": "integer", "minimum": 0 },
+        "flagged": { "type": "integer", "minimum": 0 },
+        "out_of_reach": { "type": "integer", "minimum": 0 },
+        "not_scanned": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "findings": {
+      "type": "array",
+      "description": "Proven and flagged findings, one per (sc, page, selector) after deduplication.",
+      "items": { "$ref": "#/$defs/finding" }
+    },
+    "out_of_reach": {
+      "type": "array",
+      "description": "Checks this method cannot perform for the changed pages, such as caption accuracy or real screen reader experience.",
+      "items": { "$ref": "#/$defs/outOfReach" }
+    },
+    "not_scanned": {
+      "type": "array",
+      "description": "Facts or pages that could not be turned into a finding, with the reason.",
+      "items": { "$ref": "#/$defs/notScanned" }
+    }
+  },
+  "$defs": {
+    "sc": {
+      "type": "string",
+      "pattern": "^[1-4]\\.[0-9]{1,2}\\.[0-9]{1,2}$",
+      "description": "WCAG 2.2 success criterion number, for example 1.4.3."
+    },
+    "principle": { "enum": ["perceivable", "operable", "understandable", "robust"] },
+    "finding": {
+      "type": "object",
+      "required": ["id", "tier", "sc", "title", "principle", "severity", "page", "selector", "fact_ids", "reason", "who_is_affected", "how_to_fix", "fixable", "source"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^F[0-9]{3}$", "description": "F001, F002 and so on, unique in this file." },
+        "tier": { "enum": ["proven", "flagged"] },
+        "sc": { "$ref": "#/$defs/sc" },
+        "title": { "type": "string", "minLength": 3, "description": "Short statement of the problem." },
+        "principle": { "$ref": "#/$defs/principle" },
+        "severity": { "enum": ["critical", "serious", "moderate", "minor"], "description": "Orders the list. Never removes a finding." },
+        "page": { "type": "string", "description": "Page path relative to codes/fixture/src, for example quiz-signup.html." },
+        "selector": { "type": "string", "minLength": 1, "description": "CSS selector of the element, as in facts.json when a fact exists." },
+        "fact_ids": { "type": "array", "items": { "type": "string" }, "uniqueItems": true, "description": "Required and non-empty for proven. May be empty for flagged." },
+        "reason": { "type": "string", "minLength": 10, "description": "One sentence: what was measured (proven) or why the reviewer believes it (flagged)." },
+        "who_is_affected": { "type": "string", "minLength": 10, "description": "Plain language: who is affected and how." },
+        "how_to_fix": { "type": "string", "minLength": 10 },
+        "fixable": { "type": "boolean", "description": "True when a code change in the fixture can resolve it." },
+        "understanding_url": { "type": "string", "pattern": "^https://www\\.w3\\.org/WAI/WCAG22/Understanding/" },
+        "source": { "type": "string", "pattern": "^(engine|subagent:(perceivable|operable|understandable|robust))$", "description": "engine, or the Explore subagent that raised it." },
+        "file": { "type": "string", "description": "Optional repository-relative source file." },
+        "line": { "type": "integer", "minimum": 1, "description": "Optional line in file." }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "tier": { "const": "proven" } } },
+          "then": { "properties": { "fact_ids": { "minItems": 1 } } }
+        }
+      ]
+    },
+    "outOfReach": {
+      "type": "object",
+      "required": ["sc", "title", "reason"],
+      "properties": {
+        "sc": { "$ref": "#/$defs/sc" },
+        "title": { "type": "string", "minLength": 3 },
+        "page": { "type": "string" },
+        "reason": { "type": "string", "minLength": 10 }
+      }
+    },
+    "notScanned": {
+      "type": "object",
+      "required": ["status", "reason"],
+      "properties": {
+        "status": { "const": "not_scanned" },
+        "fact_id": { "type": "string" },
+        "page": { "type": "string" },
+        "reason": { "type": "string", "minLength": 5 }
+      },
+      "anyOf": [ { "required": ["fact_id"] }, { "required": ["page"] } ]
+    }
+  }
+}
