@@ -1,0 +1,69 @@
+# Deterministic checks only. IBM Bob runs in the IDE; CI never spends Bobcoin.
+name: CurbCut
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v10.2.0
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 24.21.0
+      - name: Engine tests
+        working-directory: codes/engine
+        run: |
+          uv sync --frozen
+          uv run playwright install --with-deps chromium
+          uv run pytest tests -q
+      - name: Backend tests
+        working-directory: codes/backpy
+        run: uv sync --frozen && uv run pytest -q
+      - name: Dashboard typecheck and build
+        working-directory: codes/frontrouter
+        run: npm ci && npm run typecheck && npm run build
+      - name: Scan the pull request
+        if: github.event_name == 'pull_request'
+        run: |
+          uv run --project codes/engine curbcut scan \
+            --base "origin/${{ github.base_ref }}" --head HEAD --out reports/ci/facts.json
+      - uses: actions/upload-artifact@v7.0.1
+        if: github.event_name == 'pull_request'
+        with:
+          name: curbcut-facts
+          path: reports/ci/
+
+  # Publishes the PR-1 review to GitHub code scanning, against the commit it reviewed.
+  sarif:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v10.2.0
+      - name: Export SARIF
+        id: export
+        run: |
+          uv run --project codes/engine curbcut sarif reports/curbcut/pr-1/findings.json --out reports/curbcut/pr-1/findings.sarif
+          echo "sha=$(python3 -c "import json;print(json.load(open('reports/curbcut/pr-1/facts.json'))['head']['sha'])")" >> "$GITHUB_OUTPUT"
+      - uses: github/codeql-action/upload-sarif@v4.38.2
+        with:
+          sarif_file: reports/curbcut/pr-1/findings.sarif
+          category: curbcut-pr-1
+          ref: refs/heads/demo/pr-1-quiz-signup
+          sha: ${{ steps.export.outputs.sha }}
