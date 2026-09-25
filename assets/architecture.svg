@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="t d" font-family="IBM Plex Sans, Segoe UI, Arial, sans-serif">
+  <title id="t">CurbCut architecture</title>
+  <desc id="d">A pull request is measured by the CurbCut engine into facts.json. In IBM Bob, the cc-review mode runs four read-only Explore subagents in parallel, one per WCAG principle, and writes findings.json. The cc-fixer mode fixes the app and writes fixes.json. The cc-prover mode writes tests, and curbcut verify runs them on base and on the fix to produce verify.json. curbcut report sends the report to backpy and Postgres, shown on the dashboard, and curbcut sarif sends findings to GitHub code scanning.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#14213D"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="800" fill="#F5F7FA"/>
+  <text x="40" y="56" font-size="30" font-weight="700" fill="#14213D">CurbCut: accessibility review that proves its fixes</text>
+
+  <!-- IBM Bob container -->
+  <rect x="590" y="96" width="720" height="440" rx="10" fill="#E3ECFF" stroke="#0F62FE" stroke-width="2"/>
+  <text x="610" y="128" font-size="20" font-weight="700" fill="#0F62FE">IBM Bob 2.0 IDE</text>
+
+  <!-- Pull request -->
+  <rect x="40" y="160" width="200" height="110" rx="8" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+  <text x="140" y="208" font-size="22" font-weight="700" fill="#14213D" text-anchor="middle">Pull request</text>
+  <text x="140" y="238" font-size="17" fill="#4A5568" text-anchor="middle">UI change</text>
+
+  <!-- Engine scan -->
+  <rect x="300" y="160" width="240" height="110" rx="8" fill="#FFFFFF" stroke="#14213D" stroke-width="2"/>
+  <text x="420" y="200" font-size="22" font-weight="700" fill="#14213D" text-anchor="middle">curbcut scan</text>
+  <text x="420" y="228" font-size="16" fill="#4A5568" text-anchor="middle">axe-core, WCAG contrast,</text>
+  <text x="420" y="250" font-size="16" fill="#4A5568" text-anchor="middle">Tab crawl, a11y tree</text>
+  <text x="420" y="300" font-size="17" fill="#14213D" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace">facts.json</text>
+
+  <!-- cc-review -->
+  <rect x="620" y="160" width="210" height="110" rx="8" fill="#FFFFFF" stroke="#0F62FE" stroke-width="2"/>
+  <text x="725" y="200" font-size="22" font-weight="700" fill="#14213D" text-anchor="middle">cc-review</text>
+  <text x="725" y="228" font-size="16" fill="#4A5568" text-anchor="middle">skill wcag-audit,</text>
+  <text x="725" y="250" font-size="16" fill="#4A5568" text-anchor="middle">policy pack WCAG 2.2</text>
+
+  <!-- subagents -->
+  <text x="725" y="306" font-size="15" fill="#0F62FE" text-anchor="middle" font-weight="600">4 Explore subagents, in parallel</text>
+  <rect x="620" y="318" width="210" height="38" rx="6" fill="#FFFFFF" stroke="#0F62FE"/>
+  <text x="725" y="343" font-size="16" fill="#14213D" text-anchor="middle">Perceivable</text>
+  <rect x="620" y="362" width="210" height="38" rx="6" fill="#FFFFFF" stroke="#0F62FE"/>
+  <text x="725" y="387" font-size="16" fill="#14213D" text-anchor="middle">Operable</text>
+  <rect x="620" y="406" width="210" height="38" rx="6" fill="#FFFFFF" stroke="#0F62FE"/>
+  <text x="725" y="431" font-size="16" fill="#14213D" text-anchor="middle">Understandable</text>
+  <rect x="620" y="450" width="210" height="38" rx="6" fill="#FFFFFF" stroke="#0F62FE"/>
+  <text x="725" y="475" font-size="16" fill="#14213D" text-anchor="middle">Robust</text>
+  <text x="725" y="516" font-size="17" fill="#14213D" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace">findings.json</text>
+
+  <!-- cc-fixer -->
+  <rect x="860" y="160" width="200" height="110" rx="8" fill="#FFFFFF" stroke="#0F62FE" stroke-width="2"/>
+  <text x="960" y="200" font-size="22" font-weight="700" fill="#14213D" text-anchor="middle">cc-fixer</text>
+  <text x="960" y="228" font-size="16" fill="#4A5568" text-anchor="middle">smallest fix,</text>
+  <text x="960" y="250" font-size="16" fill="#4A5568" text-anchor="middle">may edit the app only</text>
+  <text x="960" y="300" font-size="17" fill="#14213D" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace">fixes.json</text>
+
+  <!-- cc-prover -->
+  <rect x="1090" y="160" width="200" height="110" rx="8" fill="#FFFFFF" stroke="#0F62FE" stroke-width="2"/>
+  <text x="1190" y="200" font-size="22" font-weight="700" fill="#14213D" text-anchor="middle">cc-prover</text>
+  <text x="1190" y="228" font-size="16" fill="#4A5568" text-anchor="middle">one test per fix,</text>
+  <text x="1190" y="250" font-size="16" fill="#4A5568" text-anchor="middle">may edit tests only</text>
+  <text x="1190" y="300" font-size="17" fill="#14213D" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace">tests/a11y</text>
+
+  <!-- verify -->
+  <rect x="1350" y="160" width="210" height="110" rx="8" fill="#FFFFFF" stroke="#14213D" stroke-width="2"/>
+  <text x="1455" y="200" font-size="22" font-weight="700" fill="#14213D" text-anchor="middle">curbcut verify</text>
+  <text x="1455" y="228" font-size="16" fill="#4A5568" text-anchor="middle">fails on the PR,</text>
+  <text x="1455" y="250" font-size="16" fill="#4A5568" text-anchor="middle">passes on the fix</text>
+  <text x="1455" y="300" font-size="17" fill="#14213D" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace">verify.json</text>
+
+  <!-- row 1 arrows -->
+  <line x1="240" y1="215" x2="298" y2="215" stroke="#14213D" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="540" y1="215" x2="618" y2="215" stroke="#14213D" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="830" y1="215" x2="858" y2="215" stroke="#14213D" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="1060" y1="215" x2="1088" y2="215" stroke="#14213D" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="1290" y1="215" x2="1348" y2="215" stroke="#14213D" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="725" y1="270" x2="725" y2="290" stroke="#0F62FE" stroke-width="2"/>
+
+  <!-- report row -->
+  <line x1="1455" y1="310" x2="1455" y2="600" stroke="#14213D" stroke-width="2"/>
+  <line x1="1455" y1="600" x2="542" y2="600" stroke="#14213D" stroke-width="2" marker-end="url(#a)"/>
+  <text x="1000" y="590" font-size="16" fill="#4A5568" text-anchor="middle">facts, findings, fixes, verify</text>
+
+  <rect x="300" y="560" width="240" height="90" rx="8" fill="#FFFFFF" stroke="#14213D" stroke-width="2"/>
+  <text x="420" y="598" font-size="22" font-weight="700" fill="#14213D" text-anchor="middle">curbcut report</text>
+  <text x="420" y="626" font-size="16" fill="#4A5568" text-anchor="middle">and curbcut sarif</text>
+
+  <line x1="420" y1="650" x2="420" y2="690" stroke="#14213D" stroke-width="2"/>
+  <line x1="420" y1="690" x2="598" y2="690" stroke="#14213D" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="600" y="650" width="260" height="90" rx="8" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+  <text x="730" y="690" font-size="20" font-weight="700" fill="#14213D" text-anchor="middle">backpy + Postgres</text>
+  <text x="730" y="716" font-size="16" fill="#4A5568" text-anchor="middle">report API, token ingest</text>
+
+  <line x1="860" y1="695" x2="918" y2="695" stroke="#14213D" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="920" y="650" width="260" height="90" rx="8" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+  <text x="1050" y="690" font-size="20" font-weight="700" fill="#14213D" text-anchor="middle">Dashboard</text>
+  <text x="1050" y="716" font-size="16" fill="#4A5568" text-anchor="middle">curbcut.eziedutech.dev</text>
+
+  <line x1="300" y1="605" x2="240" y2="605" stroke="#14213D" stroke-width="2"/>
+  <line x1="240" y1="605" x2="240" y2="648" stroke="#14213D" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="40" y="650" width="220" height="90" rx="8" fill="#FFFFFF" stroke="#8A94A6" stroke-width="1.5"/>
+  <text x="150" y="690" font-size="20" font-weight="700" fill="#14213D" text-anchor="middle">GitHub</text>
+  <text x="150" y="716" font-size="16" fill="#4A5568" text-anchor="middle">code scanning (SARIF)</text>
+
+  <!-- legend -->
+  <rect x="1250" y="660" width="22" height="22" rx="4" fill="#E3ECFF" stroke="#0F62FE" stroke-width="2"/>
+  <text x="1282" y="678" font-size="16" fill="#14213D">IBM Bob: judges, fixes, proves</text>
+  <rect x="1250" y="700" width="22" height="22" rx="4" fill="#FFFFFF" stroke="#14213D" stroke-width="2"/>
+  <text x="1282" y="718" font-size="16" fill="#14213D">Engine: measures, never judges</text>
+</svg>

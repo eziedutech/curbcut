@@ -67,6 +67,8 @@ To review a branch yourself in IBM Bob, select the **CurbCut Review** mode and f
 
 ## Architecture
 
+![CurbCut architecture: the engine measures a pull request into facts.json; in IBM Bob, cc-review runs four Explore subagents in parallel and writes findings.json, cc-fixer writes fixes, cc-prover writes tests; curbcut verify proves each fix, and the report goes to the dashboard and GitHub code scanning.](assets/architecture.svg)
+
 ```
 Pull request
   -> curbcut scan        axe-core, WCAG contrast, Tab crawl, accessibility tree   facts.json
