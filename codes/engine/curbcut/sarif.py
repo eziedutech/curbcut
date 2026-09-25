@@ -25,13 +25,17 @@ def _locate(repo: Path, ref: str, file_rel: str, selector: str) -> int | None:
         lines = git(repo, "show", f"{ref}:{file_rel}").splitlines()
     except RuntimeError:
         return None
+    # Most specific first: the last compound of the selector, then its ancestors.
+    last = selector.split(",")[0].split(">")[-1].split(" ")[-1]
     needles = []
-    for m in re.finditer(r"#([A-Za-z][\w-]*)", selector):
-        needles.append(f'id="{m.group(1)}"')
-    for m in re.finditer(r"\.([A-Za-z][\w-]*)", selector):
-        needles.append(m.group(1))
-    for m in re.finditer(r'\[(?:src|href)\$?="([^"]+)"\]', selector):
-        needles.append(m.group(1))
+    for part in (last, selector):
+        for m in re.finditer(r'\[(?:src|href|aria-label)\$?="([^"]+)"\]', part):
+            needles.append(m.group(1))
+        for m in re.finditer(r"#([A-Za-z][\w-]*)", part):
+            needles.append(f'id="{m.group(1)}"')
+        for m in re.finditer(r"\.([A-Za-z][\w-]*)", part):
+            needles.append(f'class="{m.group(1)}')
+    needles.extend(f'id="{m.group(1)}"' for m in reversed(list(re.finditer(r"#([A-Za-z][\w-]*)", selector))))
     tag = re.match(r"^([a-z]+)", selector)
     if tag:
         needles.append(f"<{tag.group(1)}")
