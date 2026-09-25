@@ -6,6 +6,7 @@ resources/
 project-global-rule.md
 CLAUDE.md
 .claude/
+.vscode/
 read_folder.md
 
 # Python
