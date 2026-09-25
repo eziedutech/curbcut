@@ -44,6 +44,11 @@ def _locate(repo: Path, ref: str, file_rel: str, selector: str) -> int | None:
 
 def to_sarif(findings_path: Path, repo: Path, out: Path) -> dict[str, Any]:
     data = json.loads(findings_path.read_text(encoding="utf-8"))
+    # The reviewed commit, not the branch name: in CI only origin/<branch> exists.
+    head_ref = data["head"]
+    facts_path = repo / data.get("facts_file", "")
+    if facts_path.is_file():
+        head_ref = json.loads(facts_path.read_text(encoding="utf-8"))["head"]["sha"]
     rules: dict[str, dict[str, Any]] = {}
     results = []
     for f in data["findings"]:
@@ -56,7 +61,7 @@ def to_sarif(findings_path: Path, repo: Path, out: Path) -> dict[str, Any]:
             "properties": {"principle": f["principle"]},
         })
         file_rel = f.get("file") or f"{FIXTURE_ROOT}/{f['page']}"
-        line = f.get("line") or _locate(repo, data["head"], file_rel, f["selector"])
+        line = f.get("line") or _locate(repo, head_ref, file_rel, f["selector"])
         location: dict[str, Any] = {"physicalLocation": {"artifactLocation": {"uri": file_rel}}}
         if line:
             location["physicalLocation"]["region"] = {"startLine": line}
