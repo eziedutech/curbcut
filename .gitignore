@@ -5,6 +5,7 @@ docs/
 resources/
 project-global-rule.md
 CLAUDE.md
+.claude/
 read_folder.md
 
 # Python
