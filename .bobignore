@@ -1,7 +1,12 @@
 # Benchmark ground truth: Bob must never read it during a review
 scripts/benchmark/
 
+# Dependencies and virtual environments
+**/node_modules/
+**/.venv/
+
 # Large or binary files that would only spend Bobcoin
+assets/
 codes/engine/curbcut/vendor/
 codes/fixture/src/media/
 resources/wcag-source/

@@ -1,0 +1,754 @@
+[
+  {
+    "sc": "1.1.1",
+    "title": "Non-text Content",
+    "level": "A",
+    "principle": "perceivable",
+    "method": "engine",
+    "axe_rules": ["image-alt", "input-image-alt", "role-img-alt", "svg-img-alt"],
+    "review_questions": [
+      "Does every meaningful image have a text alternative that conveys the same information?",
+      "Are decorative images hidden from assistive technology with empty alt or role=presentation?",
+      "Do icon buttons have an accessible name?"
+    ],
+    "who_is_affected": "Blind users and people who cannot see images rely on text alternatives to understand visual content.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html"
+  },
+  {
+    "sc": "1.2.1",
+    "title": "Audio-only and Video-only (Prerecorded)",
+    "level": "A",
+    "principle": "perceivable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Is a text transcript or equivalent provided for prerecorded audio-only content?",
+      "Is a text alternative or audio track provided for prerecorded video-only content?"
+    ],
+    "who_is_affected": "Deaf or hard-of-hearing users and blind users cannot access audio or silent video without a text or audio alternative.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded.html"
+  },
+  {
+    "sc": "1.2.2",
+    "title": "Captions (Prerecorded)",
+    "level": "A",
+    "principle": "perceivable",
+    "method": "judgment",
+    "axe_rules": ["video-caption"],
+    "review_questions": [
+      "Are captions provided for all prerecorded video that includes audio?"
+    ],
+    "who_is_affected": "Deaf and hard-of-hearing users cannot follow spoken content in video without captions.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html"
+  },
+  {
+    "sc": "1.2.3",
+    "title": "Audio Description or Media Alternative (Prerecorded)",
+    "level": "A",
+    "principle": "perceivable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Is audio description or a full text alternative provided for prerecorded synchronized media?"
+    ],
+    "who_is_affected": "Blind users cannot perceive visual information in a video without an audio description or text alternative.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded.html"
+  },
+  {
+    "sc": "1.2.4",
+    "title": "Captions (Live)",
+    "level": "AA",
+    "principle": "perceivable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Is live captioning provided for any live audio in synchronized media?"
+    ],
+    "who_is_affected": "Deaf and hard-of-hearing users cannot follow live audio streams without real-time captions.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/captions-live.html"
+  },
+  {
+    "sc": "1.2.5",
+    "title": "Audio Description (Prerecorded)",
+    "level": "AA",
+    "principle": "perceivable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Is audio description provided for all prerecorded video in synchronized media?"
+    ],
+    "who_is_affected": "Blind users cannot access visual-only information in video without audio description.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded.html"
+  },
+  {
+    "sc": "1.3.1",
+    "title": "Info and Relationships",
+    "level": "A",
+    "principle": "perceivable",
+    "method": "engine",
+    "axe_rules": ["list", "listitem", "definition-list", "dlitem", "th-has-data-cells", "td-headers-attr"],
+    "review_questions": [
+      "Are headings, lists, tables, and form fields marked up with the correct semantic HTML or ARIA roles?",
+      "Does visual structure (grouping, hierarchy, labels) have a programmatic equivalent?",
+      "Are form inputs associated with their visible labels?"
+    ],
+    "who_is_affected": "Screen reader users depend on semantic markup to understand the structure and relationships in a page.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html"
+  },
+  {
+    "sc": "1.3.2",
+    "title": "Meaningful Sequence",
+    "level": "A",
+    "principle": "perceivable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Does the DOM order match the visual reading order where sequence affects meaning?",
+      "Is CSS used to reorder content in a way that breaks logical reading order?"
+    ],
+    "who_is_affected": "Screen reader users and keyboard users encounter content in DOM order, so a mismatch with visual order causes confusion.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence.html"
+  },
+  {
+    "sc": "1.3.3",
+    "title": "Sensory Characteristics",
+    "level": "A",
+    "principle": "perceivable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Do any instructions refer solely to shape, color, size, or position without a text label?",
+      "For example, does the UI say 'click the green button' or 'use the icon on the right' without another identifier?"
+    ],
+    "who_is_affected": "Blind users and people with color blindness cannot rely on visual or spatial characteristics alone to identify controls.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html"
+  },
+  {
+    "sc": "1.3.4",
+    "title": "Orientation",
+    "level": "AA",
+    "principle": "perceivable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Does the page or any component lock itself to portrait or landscape orientation without an essential reason?"
+    ],
+    "who_is_affected": "Users with limited mobility who have their device fixed in one orientation cannot use content that locks to the opposite orientation.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/orientation.html"
+  },
+  {
+    "sc": "1.3.5",
+    "title": "Identify Input Purpose",
+    "level": "AA",
+    "principle": "perceivable",
+    "method": "engine",
+    "axe_rules": ["autocomplete-valid"],
+    "review_questions": [
+      "Do input fields that collect personal data (name, email, address, phone) have the correct autocomplete attribute?"
+    ],
+    "who_is_affected": "People with cognitive disabilities and motor impairments benefit from browser autofill, which requires correct autocomplete values.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html"
+  },
+  {
+    "sc": "1.4.1",
+    "title": "Use of Color",
+    "level": "A",
+    "principle": "perceivable",
+    "method": "judgment",
+    "axe_rules": ["link-in-text-block"],
+    "review_questions": [
+      "Is color the only way to convey information, indicate an action, or distinguish an element?",
+      "Are error states, required fields, or status indicators differentiated by more than color alone (e.g., icon, label, pattern)?"
+    ],
+    "who_is_affected": "People with color blindness or low vision cannot distinguish meaning conveyed by color alone.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html"
+  },
+  {
+    "sc": "1.4.2",
+    "title": "Audio Control",
+    "level": "A",
+    "principle": "perceivable",
+    "method": "judgment",
+    "axe_rules": ["no-autoplay-audio"],
+    "review_questions": [
+      "Does any audio play automatically for more than 3 seconds?",
+      "If so, is there a mechanism to pause, stop, or control the volume independently of the system volume?"
+    ],
+    "who_is_affected": "Screen reader users are disrupted by auto-playing audio because it competes with their speech output.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html"
+  },
+  {
+    "sc": "1.4.3",
+    "title": "Contrast (Minimum)",
+    "level": "AA",
+    "principle": "perceivable",
+    "method": "engine",
+    "axe_rules": ["color-contrast"],
+    "review_questions": [
+      "Does normal text (below 18pt or 14pt bold) have a contrast ratio of at least 4.5:1?",
+      "Does large text have a contrast ratio of at least 3:1?"
+    ],
+    "who_is_affected": "People with low vision or color blindness struggle to read text that does not have sufficient contrast against its background.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+  },
+  {
+    "sc": "1.4.4",
+    "title": "Resize Text",
+    "level": "AA",
+    "principle": "perceivable",
+    "method": "out_of_reach",
+    "axe_rules": ["meta-viewport"],
+    "review_questions": [
+      "Does the page remain functional when text is zoomed to 200% using browser zoom?",
+      "Is any text clipped, overlapping, or cut off at 200% zoom?"
+    ],
+    "who_is_affected": "People with low vision increase text size in their browser, and content must remain usable when they do.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html"
+  },
+  {
+    "sc": "1.4.5",
+    "title": "Images of Text",
+    "level": "AA",
+    "principle": "perceivable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Is text embedded in images where real HTML text could be used instead?",
+      "If an image of text is used, is it either customizable by the user or essential to the presentation?"
+    ],
+    "who_is_affected": "People with low vision who customise fonts or colors cannot do so with images of text.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html"
+  },
+  {
+    "sc": "1.4.10",
+    "title": "Reflow",
+    "level": "AA",
+    "principle": "perceivable",
+    "method": "out_of_reach",
+    "axe_rules": [],
+    "review_questions": [
+      "Can all content be accessed without horizontal scrolling at a viewport width of 320 CSS pixels?",
+      "Does any component require two-dimensional scrolling at high zoom levels?"
+    ],
+    "who_is_affected": "People with low vision who zoom to 400% on a desktop effectively have a 320px viewport, and horizontal scrolling is a significant barrier.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+  },
+  {
+    "sc": "1.4.11",
+    "title": "Non-text Contrast",
+    "level": "AA",
+    "principle": "perceivable",
+    "method": "engine",
+    "axe_rules": [],
+    "review_questions": [
+      "Do UI component boundaries (button borders, input outlines, checkbox edges) have at least 3:1 contrast against adjacent colors?",
+      "Do graphical elements required to understand content (chart lines, icons) have at least 3:1 contrast?"
+    ],
+    "who_is_affected": "People with low vision may not perceive control boundaries or icons that lack sufficient contrast.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html"
+  },
+  {
+    "sc": "1.4.12",
+    "title": "Text Spacing",
+    "level": "AA",
+    "principle": "perceivable",
+    "method": "out_of_reach",
+    "axe_rules": [],
+    "review_questions": [
+      "When line-height is set to 1.5x font size, letter-spacing to 0.12x, word-spacing to 0.16x, and paragraph spacing to 2x font size, does the content remain readable with no clipping or overlap?"
+    ],
+    "who_is_affected": "People with dyslexia and low vision often override text spacing, and content must not break when they do.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html"
+  },
+  {
+    "sc": "1.4.13",
+    "title": "Content on Hover or Focus",
+    "level": "AA",
+    "principle": "perceivable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Can the user dismiss hover/focus-triggered content (like a tooltip) without moving focus?",
+      "Can the pointer move over hover-triggered content without it disappearing?",
+      "Does the tooltip or popup remain visible until the user dismisses it or moves focus away?"
+    ],
+    "who_is_affected": "Users with low vision who zoom in and users with motor disabilities often need to move the pointer to read tooltip content.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html"
+  },
+  {
+    "sc": "2.1.1",
+    "title": "Keyboard",
+    "level": "A",
+    "principle": "operable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Can every interactive element (links, buttons, form fields, custom widgets) be reached and activated by keyboard alone?",
+      "Is any functionality triggered only by mouse hover or pointer events with no keyboard equivalent?"
+    ],
+    "who_is_affected": "Keyboard-only users, switch access users, and screen reader users cannot use a mouse and depend entirely on keyboard access.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html"
+  },
+  {
+    "sc": "2.1.2",
+    "title": "No Keyboard Trap",
+    "level": "A",
+    "principle": "operable",
+    "method": "engine",
+    "axe_rules": [],
+    "review_questions": [
+      "Can keyboard focus move out of every component using standard keys (Tab, Shift+Tab, Escape)?",
+      "Are there any modals, date pickers, or custom widgets that trap focus permanently?"
+    ],
+    "who_is_affected": "Keyboard users become stuck on the page if they cannot move focus out of a component.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html"
+  },
+  {
+    "sc": "2.1.4",
+    "title": "Character Key Shortcuts",
+    "level": "A",
+    "principle": "operable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Does the UI implement single-character keyboard shortcuts (letters, numbers, punctuation)?",
+      "If so, can the user turn them off or remap them to require a modifier key?"
+    ],
+    "who_is_affected": "Speech input users may accidentally trigger single-key shortcuts while dictating, and keyboard users may trigger them unintentionally.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html"
+  },
+  {
+    "sc": "2.2.1",
+    "title": "Timing Adjustable",
+    "level": "A",
+    "principle": "operable",
+    "method": "judgment",
+    "axe_rules": ["meta-refresh"],
+    "review_questions": [
+      "Does the page or any component impose a time limit on the user?",
+      "If yes, can the user turn it off, adjust it to at least 10x the default, or extend it with a simple action?"
+    ],
+    "who_is_affected": "People with cognitive or motor disabilities need more time to complete tasks and may be unable to act before a session or form expires.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable.html"
+  },
+  {
+    "sc": "2.2.2",
+    "title": "Pause, Stop, Hide",
+    "level": "A",
+    "principle": "operable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Does the page include any moving, blinking, or scrolling content that starts automatically and lasts more than 5 seconds?",
+      "Is there a mechanism to pause, stop, or hide it?"
+    ],
+    "who_is_affected": "People with attention or seizure disorders and screen reader users are disrupted by auto-moving content they cannot stop.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html"
+  },
+  {
+    "sc": "2.3.1",
+    "title": "Three Flashes or Below Threshold",
+    "level": "A",
+    "principle": "operable",
+    "method": "out_of_reach",
+    "axe_rules": [],
+    "review_questions": [
+      "Does any content flash more than three times per second?"
+    ],
+    "who_is_affected": "People with photosensitive epilepsy can experience seizures triggered by rapidly flashing content.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html"
+  },
+  {
+    "sc": "2.4.1",
+    "title": "Bypass Blocks",
+    "level": "A",
+    "principle": "operable",
+    "method": "engine",
+    "axe_rules": ["bypass"],
+    "review_questions": [
+      "Is there a skip-navigation link or landmark structure that lets keyboard users bypass repeated navigation blocks?"
+    ],
+    "who_is_affected": "Keyboard and screen reader users must tab through every navigation item on every page load unless a bypass mechanism exists.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html"
+  },
+  {
+    "sc": "2.4.2",
+    "title": "Page Titled",
+    "level": "A",
+    "principle": "operable",
+    "method": "engine",
+    "axe_rules": ["document-title"],
+    "review_questions": [
+      "Does the page have a title element that describes its topic or purpose?"
+    ],
+    "who_is_affected": "Screen reader users and keyboard users rely on the page title to identify the page, especially when switching between tabs.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html"
+  },
+  {
+    "sc": "2.4.3",
+    "title": "Focus Order",
+    "level": "A",
+    "principle": "operable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "When navigating by Tab, does focus move in a logical order that matches the visual layout?",
+      "After opening a dialog or modal, does focus move into it and return to the trigger on close?"
+    ],
+    "who_is_affected": "Keyboard users and screen reader users become confused when focus jumps unpredictably around the page.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html"
+  },
+  {
+    "sc": "2.4.4",
+    "title": "Link Purpose (In Context)",
+    "level": "A",
+    "principle": "operable",
+    "method": "engine",
+    "axe_rules": ["link-name", "area-alt"],
+    "review_questions": [
+      "Can the purpose of each link be understood from its text alone or from its surrounding context?",
+      "Are there multiple 'Read more' or 'Click here' links that do not describe where they lead?"
+    ],
+    "who_is_affected": "Screen reader users often navigate by listing all links on a page; ambiguous link text makes it impossible to choose the right one.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html"
+  },
+  {
+    "sc": "2.4.5",
+    "title": "Multiple Ways",
+    "level": "AA",
+    "principle": "operable",
+    "method": "out_of_reach",
+    "axe_rules": [],
+    "review_questions": [
+      "Is more than one way available to reach a page within the site (e.g., navigation menu, search, sitemap)?"
+    ],
+    "who_is_affected": "People with cognitive disabilities and motor impairments benefit from alternative ways to find content when one navigation method is difficult.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways.html"
+  },
+  {
+    "sc": "2.4.6",
+    "title": "Headings and Labels",
+    "level": "AA",
+    "principle": "operable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Do headings accurately describe the content that follows them?",
+      "Do form field labels clearly describe the purpose of each input?"
+    ],
+    "who_is_affected": "Screen reader users navigate by headings and labels; vague or missing text makes it hard to find and understand content.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html"
+  },
+  {
+    "sc": "2.4.7",
+    "title": "Focus Visible",
+    "level": "AA",
+    "principle": "operable",
+    "method": "engine",
+    "axe_rules": [],
+    "review_questions": [
+      "Is the keyboard focus indicator visible on all interactive elements?",
+      "Has outline: none or outline: 0 been applied without a replacement focus style?"
+    ],
+    "who_is_affected": "Keyboard users cannot tell which element is active without a visible focus indicator.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html"
+  },
+  {
+    "sc": "2.4.11",
+    "title": "Focus Not Obscured (Minimum)",
+    "level": "AA",
+    "principle": "operable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "When an element receives keyboard focus, is any part of it still visible (not entirely hidden by sticky headers, cookie banners, or modals)?",
+      "Do fixed or sticky elements overlap focused components in a way that hides them completely?"
+    ],
+    "who_is_affected": "Keyboard users cannot interact with a focused element they cannot see on screen.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html"
+  },
+  {
+    "sc": "2.5.1",
+    "title": "Pointer Gestures",
+    "level": "A",
+    "principle": "operable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Does any feature require a multipoint gesture (pinch, two-finger scroll) or a path-based gesture (swipe, draw)?",
+      "If yes, is there a single-pointer alternative for the same action?"
+    ],
+    "who_is_affected": "People with motor disabilities may be unable to perform complex gestures and need simpler single-tap or single-click alternatives.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html"
+  },
+  {
+    "sc": "2.5.2",
+    "title": "Pointer Cancellation",
+    "level": "A",
+    "principle": "operable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Are actions triggered on the down-event (mousedown/touchstart) without the ability to cancel?",
+      "For single-pointer actions, does the up-event complete the function or allow undo?"
+    ],
+    "who_is_affected": "People with motor disabilities may accidentally touch or click controls and need to be able to abort the action before releasing.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation.html"
+  },
+  {
+    "sc": "2.5.3",
+    "title": "Label in Name",
+    "level": "A",
+    "principle": "operable",
+    "method": "engine",
+    "axe_rules": ["label-content-name-mismatch"],
+    "review_questions": [
+      "For buttons or links with a visible text label, does the accessible name (aria-label, aria-labelledby) contain that visible text?",
+      "Is there an icon button whose aria-label is completely different from any visible text near it?"
+    ],
+    "who_is_affected": "Speech input users activate controls by speaking their visible label; if the accessible name differs, the voice command fails.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html"
+  },
+  {
+    "sc": "2.5.4",
+    "title": "Motion Actuation",
+    "level": "A",
+    "principle": "operable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Does any feature respond to device motion (shake, tilt) or user motion?",
+      "If yes, is there a UI alternative and can the motion response be disabled?"
+    ],
+    "who_is_affected": "People who use their device on a mount or have tremors cannot perform or prevent unintended motion-triggered actions.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html"
+  },
+  {
+    "sc": "2.5.7",
+    "title": "Dragging Movements",
+    "level": "AA",
+    "principle": "operable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Does any feature require dragging (drag-and-drop, sliders moved by dragging) as the only means of operation?",
+      "Is there a single-pointer alternative (e.g., up/down buttons, input field) for every dragging function?"
+    ],
+    "who_is_affected": "People with motor disabilities often cannot perform dragging movements and need non-drag alternatives.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html"
+  },
+  {
+    "sc": "2.5.8",
+    "title": "Target Size (Minimum)",
+    "level": "AA",
+    "principle": "operable",
+    "method": "engine",
+    "axe_rules": ["target-size"],
+    "review_questions": [
+      "Are interactive targets at least 24x24 CSS pixels in size?",
+      "If a target is smaller, is it spaced far enough from other targets so that a 24px-diameter circle around it does not overlap another target?"
+    ],
+    "who_is_affected": "People with limited motor control struggle to accurately tap or click small targets, especially on touch screens.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"
+  },
+  {
+    "sc": "3.1.1",
+    "title": "Language of Page",
+    "level": "A",
+    "principle": "understandable",
+    "method": "engine",
+    "axe_rules": ["html-has-lang", "html-lang-valid"],
+    "review_questions": [
+      "Does the html element have a valid lang attribute that identifies the primary language of the page?"
+    ],
+    "who_is_affected": "Screen readers use the language attribute to select the correct voice and pronunciation rules; without it, content may be spoken incorrectly.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html"
+  },
+  {
+    "sc": "3.1.2",
+    "title": "Language of Parts",
+    "level": "AA",
+    "principle": "understandable",
+    "method": "engine",
+    "axe_rules": ["valid-lang"],
+    "review_questions": [
+      "Are passages in a different language from the page's default marked with a lang attribute on the containing element?"
+    ],
+    "who_is_affected": "Screen reader users hear garbled pronunciation when foreign-language passages lack a lang attribute.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html"
+  },
+  {
+    "sc": "3.2.1",
+    "title": "On Focus",
+    "level": "A",
+    "principle": "understandable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Does focusing on any component (e.g., a select, link, or input) automatically trigger a page navigation or major context change without user action?"
+    ],
+    "who_is_affected": "Keyboard users and screen reader users are disoriented when focus alone causes an unexpected page change.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html"
+  },
+  {
+    "sc": "3.2.2",
+    "title": "On Input",
+    "level": "A",
+    "principle": "understandable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Does changing the value of a form component (e.g., selecting from a dropdown) automatically submit a form or navigate the page without the user being warned in advance?"
+    ],
+    "who_is_affected": "Keyboard users and people with cognitive disabilities are disoriented by unexpected navigation triggered by input changes.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/on-input.html"
+  },
+  {
+    "sc": "3.2.3",
+    "title": "Consistent Navigation",
+    "level": "AA",
+    "principle": "understandable",
+    "method": "out_of_reach",
+    "axe_rules": [],
+    "review_questions": [
+      "Does the navigation appear in the same relative order across all pages of the site?"
+    ],
+    "who_is_affected": "People with cognitive disabilities and screen reader users build a mental map of a site based on consistent navigation placement.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation.html"
+  },
+  {
+    "sc": "3.2.4",
+    "title": "Consistent Identification",
+    "level": "AA",
+    "principle": "understandable",
+    "method": "out_of_reach",
+    "axe_rules": [],
+    "review_questions": [
+      "Are components with the same function labeled and identified the same way across the site (e.g., a search field always labeled 'Search')?"
+    ],
+    "who_is_affected": "People with cognitive disabilities rely on consistent naming to learn and remember how to use recurring components.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html"
+  },
+  {
+    "sc": "3.2.6",
+    "title": "Consistent Help",
+    "level": "A",
+    "principle": "understandable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "If the site provides help mechanisms (chat, contact link, FAQ), do they appear in the same position on every page where they are present?"
+    ],
+    "who_is_affected": "People with cognitive disabilities can find help more reliably when its location is predictable across pages.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html"
+  },
+  {
+    "sc": "3.3.1",
+    "title": "Error Identification",
+    "level": "A",
+    "principle": "understandable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "When a form error is detected automatically, is the field in error identified and the error described in text?",
+      "Is the error message conveyed by more than color alone?"
+    ],
+    "who_is_affected": "Blind users and people with cognitive disabilities need errors described in text to understand what went wrong and which field to correct.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html"
+  },
+  {
+    "sc": "3.3.2",
+    "title": "Labels or Instructions",
+    "level": "A",
+    "principle": "understandable",
+    "method": "engine",
+    "axe_rules": [],
+    "review_questions": [
+      "Does every form input have a visible label or clear instructions describing what the user should enter?",
+      "Are placeholder texts used as the only label? (Placeholder disappears on input, which is insufficient.)"
+    ],
+    "who_is_affected": "People with cognitive disabilities and screen reader users need labels to understand what each form field expects.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html"
+  },
+  {
+    "sc": "3.3.3",
+    "title": "Error Suggestion",
+    "level": "AA",
+    "principle": "understandable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "When a form validation error is known (e.g., invalid email format), is a specific correction suggestion provided to the user?"
+    ],
+    "who_is_affected": "People with cognitive disabilities and screen reader users need concrete suggestions to correct mistakes without having to guess.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html"
+  },
+  {
+    "sc": "3.3.4",
+    "title": "Error Prevention (Legal, Financial, Data)",
+    "level": "AA",
+    "principle": "understandable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "For forms that complete purchases, make legal commitments, or delete user data, is the user given a chance to review, confirm, or reverse the submission?"
+    ],
+    "who_is_affected": "People with cognitive disabilities and motor disabilities are more likely to make accidental submissions and need a way to correct or undo them.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-legal-financial-data.html"
+  },
+  {
+    "sc": "3.3.7",
+    "title": "Redundant Entry",
+    "level": "A",
+    "principle": "understandable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "In a multi-step process, is the user ever asked to enter information they already provided in an earlier step?",
+      "If so, is the earlier value auto-populated or available to select?"
+    ],
+    "who_is_affected": "People with cognitive disabilities and motor impairments are burdened by re-typing information the system already has.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html"
+  },
+  {
+    "sc": "3.3.8",
+    "title": "Accessible Authentication (Minimum)",
+    "level": "AA",
+    "principle": "understandable",
+    "method": "judgment",
+    "axe_rules": [],
+    "review_questions": [
+      "Does the authentication flow require the user to memorize a password or solve a cognitive puzzle without offering an alternative (such as a password manager or copy-paste)?",
+      "Is copy-paste disabled on password or authentication fields?"
+    ],
+    "who_is_affected": "People with cognitive disabilities, dyslexia, or memory impairments struggle to remember passwords and need alternative authentication methods.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html"
+  },
+  {
+    "sc": "4.1.2",
+    "title": "Name, Role, Value",
+    "level": "A",
+    "principle": "robust",
+    "method": "engine",
+    "axe_rules": ["aria-allowed-attr", "aria-required-attr", "aria-valid-attr", "aria-valid-attr-value", "aria-roles", "aria-hidden-focus", "button-name", "frame-title", "link-name", "label", "select-name", "input-button-name", "area-alt", "duplicate-id-aria"],
+    "review_questions": [
+      "Do all interactive components have an accessible name, a correct role, and programmatically exposed state?",
+      "Are custom components (built with div or span) given the correct ARIA role, states, and properties?"
+    ],
+    "who_is_affected": "Screen reader users rely on name, role, and value to understand and interact with every control on the page.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+  },
+  {
+    "sc": "4.1.3",
+    "title": "Status Messages",
+    "level": "AA",
+    "principle": "robust",
+    "method": "engine",
+    "axe_rules": [],
+    "review_questions": [
+      "When status messages appear without focus moving to them (e.g., 'Item added to cart', form success banners, loading spinners), do they use role=status, role=alert, or aria-live so screen readers announce them?"
+    ],
+    "who_is_affected": "Blind users do not see status messages that appear on screen; without a live region, they have no way of knowing an action succeeded or failed.",
+    "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
+  }
+]
