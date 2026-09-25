@@ -173,3 +173,175 @@ main {
   padding: 1rem 1.5rem 2rem;
   color: var(--oc-muted);
 }
+
+/* Quiz sign-up */
+
+.flourish {
+  display: block;
+  margin: 0.25rem 0 1rem;
+}
+
+.help-text {
+  color: #595959;
+  font-size: 0.95rem;
+}
+
+.quiz-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--oc-surface);
+  border-radius: var(--oc-radius);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.signup-form .field {
+  margin-bottom: 1.25rem;
+}
+
+.signup-form label,
+.signup-form .field-name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.signup-form input[type="email"],
+.signup-form input[type="text"],
+.signup-form select {
+  width: 100%;
+  max-width: 24rem;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+  border: 1px solid #6b6b76;
+  border-radius: var(--oc-radius);
+  background: #ffffff;
+}
+
+.signup-form .invalid {
+  border-color: #d93025;
+  background: #fdecea;
+}
+
+.hint {
+  color: #9a9a9a;
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0;
+}
+
+#course-select:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--oc-accent);
+}
+
+.quiz-options {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 400;
+}
+
+.level-radio {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  border: 2px solid #4a4a55;
+  border-radius: 50%;
+}
+
+.level-radio:checked {
+  background: radial-gradient(circle, var(--oc-accent) 45%, transparent 50%);
+}
+
+.level-radio:focus-visible {
+  outline: none;
+}
+
+.help-icons {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.help-icon {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #4a4a55;
+  color: #ffffff;
+  font-size: 11px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.terms {
+  background: var(--oc-surface);
+  border-radius: var(--oc-radius);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.terms-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terms-head h2 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.icon-btn {
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  background: transparent;
+  color: var(--oc-text);
+  cursor: pointer;
+}
+
+.terms-box {
+  max-height: 6rem;
+  overflow: auto;
+  background: #ffffff;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.agree-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fake-checkbox {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #4a4a55;
+  border-radius: 3px;
+  background: #ffffff;
+}
+
+.fake-checkbox.is-checked {
+  background: var(--oc-accent);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-go {
+  background: #1e7a34;
+  color: #ffffff;
+}
