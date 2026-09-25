@@ -655,6 +655,1204 @@
         "error": 0,
         "total": 23
       }
+    },
+    {
+      "run": "pr-1-run2",
+      "pr": "pr-1",
+      "head_sha": "250923a3204cbd037061261fd37560d342bf1223",
+      "axe_only": {
+        "found": 8,
+        "planted": 18,
+        "judgment_only_found": 0,
+        "judgment_only_planted": 7,
+        "decoys_hit": 0,
+        "decoys": 6,
+        "items": 9,
+        "unmatched": [],
+        "decoy_hits": [],
+        "by_principle": {
+          "perceivable": {
+            "found": 2,
+            "planted": 5
+          },
+          "operable": {
+            "found": 2,
+            "planted": 6
+          },
+          "understandable": {
+            "found": 1,
+            "planted": 4
+          },
+          "robust": {
+            "found": 3,
+            "planted": 3
+          }
+        },
+        "per_issue": [
+          {
+            "gt_id": "P1-01",
+            "sc": "3.1.1",
+            "principle": "understandable",
+            "engine_signal": "axe:html-has-lang",
+            "found": true,
+            "by": [
+              "axe-6a8c18df"
+            ]
+          },
+          {
+            "gt_id": "P1-02",
+            "sc": "2.2.1",
+            "principle": "operable",
+            "engine_signal": "axe:meta-refresh",
+            "found": true,
+            "by": [
+              "axe-a10cd7fe"
+            ]
+          },
+          {
+            "gt_id": "P1-03",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:label",
+            "found": true,
+            "by": [
+              "axe-a17f85a7"
+            ]
+          },
+          {
+            "gt_id": "P1-04",
+            "sc": "1.4.3",
+            "principle": "perceivable",
+            "engine_signal": "axe:color-contrast",
+            "found": true,
+            "by": [
+              "axe-43c1c80f"
+            ]
+          },
+          {
+            "gt_id": "P1-05",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:button-name",
+            "found": true,
+            "by": [
+              "axe-5a7ee1d4"
+            ]
+          },
+          {
+            "gt_id": "P1-06",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:aria-required-attr",
+            "found": true,
+            "by": [
+              "axe-82f21c93"
+            ]
+          },
+          {
+            "gt_id": "P1-07",
+            "sc": "1.3.5",
+            "principle": "perceivable",
+            "engine_signal": "axe:autocomplete-valid",
+            "found": true,
+            "by": [
+              "axe-60dbbd10"
+            ]
+          },
+          {
+            "gt_id": "P1-08",
+            "sc": "2.1.2",
+            "principle": "operable",
+            "engine_signal": "engine:focus_trap",
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-09",
+            "sc": "2.4.7",
+            "principle": "operable",
+            "engine_signal": "engine:focus_not_visible",
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-10",
+            "sc": "2.1.1",
+            "principle": "operable",
+            "engine_signal": "engine:clickable_not_focusable",
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-11",
+            "sc": "1.3.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-12",
+            "sc": "3.3.1",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-13",
+            "sc": "1.1.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-14",
+            "sc": "2.4.4",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-15",
+            "sc": "1.3.3",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-16",
+            "sc": "2.5.8",
+            "principle": "operable",
+            "engine_signal": "axe:target-size",
+            "found": true,
+            "by": [
+              "axe-df0a41ad",
+              "axe-5d9d842b"
+            ]
+          },
+          {
+            "gt_id": "P1-17",
+            "sc": "3.3.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-18",
+            "sc": "3.2.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          }
+        ]
+      },
+      "engine": {
+        "found": 11,
+        "planted": 18,
+        "judgment_only_found": 0,
+        "judgment_only_planted": 7,
+        "decoys_hit": 0,
+        "decoys": 6,
+        "items": 13,
+        "unmatched": [],
+        "decoy_hits": [],
+        "by_principle": {
+          "perceivable": {
+            "found": 2,
+            "planted": 5
+          },
+          "operable": {
+            "found": 5,
+            "planted": 6
+          },
+          "understandable": {
+            "found": 1,
+            "planted": 4
+          },
+          "robust": {
+            "found": 3,
+            "planted": 3
+          }
+        },
+        "per_issue": [
+          {
+            "gt_id": "P1-01",
+            "sc": "3.1.1",
+            "principle": "understandable",
+            "engine_signal": "axe:html-has-lang",
+            "found": true,
+            "by": [
+              "axe-6a8c18df"
+            ]
+          },
+          {
+            "gt_id": "P1-02",
+            "sc": "2.2.1",
+            "principle": "operable",
+            "engine_signal": "axe:meta-refresh",
+            "found": true,
+            "by": [
+              "axe-a10cd7fe"
+            ]
+          },
+          {
+            "gt_id": "P1-03",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:label",
+            "found": true,
+            "by": [
+              "axe-a17f85a7"
+            ]
+          },
+          {
+            "gt_id": "P1-04",
+            "sc": "1.4.3",
+            "principle": "perceivable",
+            "engine_signal": "axe:color-contrast",
+            "found": true,
+            "by": [
+              "axe-43c1c80f",
+              "contr-7ad405bb"
+            ]
+          },
+          {
+            "gt_id": "P1-05",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:button-name",
+            "found": true,
+            "by": [
+              "axe-5a7ee1d4"
+            ]
+          },
+          {
+            "gt_id": "P1-06",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:aria-required-attr",
+            "found": true,
+            "by": [
+              "axe-82f21c93"
+            ]
+          },
+          {
+            "gt_id": "P1-07",
+            "sc": "1.3.5",
+            "principle": "perceivable",
+            "engine_signal": "axe:autocomplete-valid",
+            "found": true,
+            "by": [
+              "axe-60dbbd10"
+            ]
+          },
+          {
+            "gt_id": "P1-08",
+            "sc": "2.1.2",
+            "principle": "operable",
+            "engine_signal": "engine:focus_trap",
+            "found": true,
+            "by": [
+              "focus-fca4a983"
+            ]
+          },
+          {
+            "gt_id": "P1-09",
+            "sc": "2.4.7",
+            "principle": "operable",
+            "engine_signal": "engine:focus_not_visible",
+            "found": true,
+            "by": [
+              "focus-be564984"
+            ]
+          },
+          {
+            "gt_id": "P1-10",
+            "sc": "2.1.1",
+            "principle": "operable",
+            "engine_signal": "engine:clickable_not_focusable",
+            "found": true,
+            "by": [
+              "click-4816a2a4"
+            ]
+          },
+          {
+            "gt_id": "P1-11",
+            "sc": "1.3.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-12",
+            "sc": "3.3.1",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-13",
+            "sc": "1.1.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-14",
+            "sc": "2.4.4",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-15",
+            "sc": "1.3.3",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-16",
+            "sc": "2.5.8",
+            "principle": "operable",
+            "engine_signal": "axe:target-size",
+            "found": true,
+            "by": [
+              "axe-df0a41ad",
+              "axe-5d9d842b"
+            ]
+          },
+          {
+            "gt_id": "P1-17",
+            "sc": "3.3.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-18",
+            "sc": "3.2.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          }
+        ]
+      },
+      "curbcut": {
+        "found": 14,
+        "planted": 18,
+        "judgment_only_found": 3,
+        "judgment_only_planted": 7,
+        "decoys_hit": 0,
+        "decoys": 6,
+        "items": 21,
+        "unmatched": [
+          {
+            "id": "F014",
+            "scs": [
+              "1.3.1"
+            ],
+            "label": "flagged:Email field label is a span, not a label element"
+          },
+          {
+            "id": "F015",
+            "scs": [
+              "1.3.3"
+            ],
+            "label": "flagged:Submit instruction uses color and position to identify the button"
+          },
+          {
+            "id": "F016",
+            "scs": [
+              "1.4.11"
+            ],
+            "label": "flagged:Custom radio buttons and fake checkbox may lack sufficient non-text contrast"
+          },
+          {
+            "id": "F017",
+            "scs": [
+              "2.1.1"
+            ],
+            "label": "flagged:Selecting a course option causes unexpected page navigation"
+          },
+          {
+            "id": "F019",
+            "scs": [
+              "3.3.1"
+            ],
+            "label": "flagged:Form validation errors are not communicated in text"
+          }
+        ],
+        "decoy_hits": [],
+        "by_principle": {
+          "perceivable": {
+            "found": 3,
+            "planted": 5
+          },
+          "operable": {
+            "found": 5,
+            "planted": 6
+          },
+          "understandable": {
+            "found": 3,
+            "planted": 4
+          },
+          "robust": {
+            "found": 3,
+            "planted": 3
+          }
+        },
+        "per_issue": [
+          {
+            "gt_id": "P1-01",
+            "sc": "3.1.1",
+            "principle": "understandable",
+            "engine_signal": "axe:html-has-lang",
+            "found": true,
+            "by": [
+              "F012"
+            ]
+          },
+          {
+            "gt_id": "P1-02",
+            "sc": "2.2.1",
+            "principle": "operable",
+            "engine_signal": "axe:meta-refresh",
+            "found": true,
+            "by": [
+              "F003"
+            ]
+          },
+          {
+            "gt_id": "P1-03",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:label",
+            "found": true,
+            "by": [
+              "F006",
+              "F020"
+            ]
+          },
+          {
+            "gt_id": "P1-04",
+            "sc": "1.4.3",
+            "principle": "perceivable",
+            "engine_signal": "axe:color-contrast",
+            "found": true,
+            "by": [
+              "F008"
+            ]
+          },
+          {
+            "gt_id": "P1-05",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:button-name",
+            "found": true,
+            "by": [
+              "F005"
+            ]
+          },
+          {
+            "gt_id": "P1-06",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:aria-required-attr",
+            "found": true,
+            "by": [
+              "F004"
+            ]
+          },
+          {
+            "gt_id": "P1-07",
+            "sc": "1.3.5",
+            "principle": "perceivable",
+            "engine_signal": "axe:autocomplete-valid",
+            "found": true,
+            "by": [
+              "F007"
+            ]
+          },
+          {
+            "gt_id": "P1-08",
+            "sc": "2.1.2",
+            "principle": "operable",
+            "engine_signal": "engine:focus_trap",
+            "found": true,
+            "by": [
+              "F002"
+            ]
+          },
+          {
+            "gt_id": "P1-09",
+            "sc": "2.4.7",
+            "principle": "operable",
+            "engine_signal": "engine:focus_not_visible",
+            "found": true,
+            "by": [
+              "F009"
+            ]
+          },
+          {
+            "gt_id": "P1-10",
+            "sc": "2.1.1",
+            "principle": "operable",
+            "engine_signal": "engine:clickable_not_focusable",
+            "found": true,
+            "by": [
+              "F001"
+            ]
+          },
+          {
+            "gt_id": "P1-11",
+            "sc": "1.3.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-12",
+            "sc": "3.3.1",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-13",
+            "sc": "1.1.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F013"
+            ]
+          },
+          {
+            "gt_id": "P1-14",
+            "sc": "2.4.4",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-15",
+            "sc": "1.3.3",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-16",
+            "sc": "2.5.8",
+            "principle": "operable",
+            "engine_signal": "axe:target-size",
+            "found": true,
+            "by": [
+              "F010",
+              "F011"
+            ]
+          },
+          {
+            "gt_id": "P1-17",
+            "sc": "3.3.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F021"
+            ]
+          },
+          {
+            "gt_id": "P1-18",
+            "sc": "3.2.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F018"
+            ]
+          }
+        ]
+      },
+      "scan_seconds": 5.08
+    },
+    {
+      "run": "pr-2",
+      "pr": "pr-2",
+      "head_sha": "d9e7da06478eeffaec5028e4dc0e68256508f6e6",
+      "axe_only": {
+        "found": 6,
+        "planted": 16,
+        "judgment_only_found": 0,
+        "judgment_only_planted": 9,
+        "decoys_hit": 0,
+        "decoys": 6,
+        "items": 7,
+        "unmatched": [
+          {
+            "id": "axe-f83619fd",
+            "scs": [],
+            "label": "axe_violation:tabindex"
+          }
+        ],
+        "decoy_hits": [],
+        "by_principle": {
+          "perceivable": {
+            "found": 4,
+            "planted": 9
+          },
+          "operable": {
+            "found": 0,
+            "planted": 4
+          },
+          "understandable": {
+            "found": 0,
+            "planted": 1
+          },
+          "robust": {
+            "found": 2,
+            "planted": 2
+          }
+        },
+        "per_issue": [
+          {
+            "gt_id": "P2-01",
+            "sc": "1.1.1",
+            "principle": "perceivable",
+            "engine_signal": "axe:image-alt",
+            "found": true,
+            "by": [
+              "axe-52ead39b"
+            ]
+          },
+          {
+            "gt_id": "P2-02",
+            "sc": "1.1.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-03",
+            "sc": "1.2.2",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-04",
+            "sc": "1.4.2",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-05",
+            "sc": "1.3.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-06",
+            "sc": "2.2.2",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-07",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:frame-title",
+            "found": true,
+            "by": [
+              "axe-50259738"
+            ]
+          },
+          {
+            "gt_id": "P2-08",
+            "sc": "2.4.4",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-09",
+            "sc": "1.4.3",
+            "principle": "perceivable",
+            "engine_signal": "axe:color-contrast",
+            "found": true,
+            "by": [
+              "axe-2b92f245"
+            ]
+          },
+          {
+            "gt_id": "P2-10",
+            "sc": "1.4.4",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-11",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:aria-allowed-attr",
+            "found": true,
+            "by": [
+              "axe-8f4c86bb"
+            ]
+          },
+          {
+            "gt_id": "P2-12",
+            "sc": "1.3.1",
+            "principle": "perceivable",
+            "engine_signal": "axe:list",
+            "found": true,
+            "by": [
+              "axe-64c0a3ad"
+            ]
+          },
+          {
+            "gt_id": "P2-13",
+            "sc": "1.4.4",
+            "principle": "perceivable",
+            "engine_signal": "axe:meta-viewport",
+            "found": true,
+            "by": [
+              "axe-729140cb"
+            ]
+          },
+          {
+            "gt_id": "P2-14",
+            "sc": "2.4.3",
+            "principle": "operable",
+            "engine_signal": "engine:positive_tabindex",
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-15",
+            "sc": "3.1.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-16",
+            "sc": "2.4.2",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          }
+        ]
+      },
+      "engine": {
+        "found": 7,
+        "planted": 16,
+        "judgment_only_found": 0,
+        "judgment_only_planted": 9,
+        "decoys_hit": 0,
+        "decoys": 6,
+        "items": 10,
+        "unmatched": [
+          {
+            "id": "axe-f83619fd",
+            "scs": [],
+            "label": "axe_violation:tabindex"
+          }
+        ],
+        "decoy_hits": [],
+        "by_principle": {
+          "perceivable": {
+            "found": 4,
+            "planted": 9
+          },
+          "operable": {
+            "found": 1,
+            "planted": 4
+          },
+          "understandable": {
+            "found": 0,
+            "planted": 1
+          },
+          "robust": {
+            "found": 2,
+            "planted": 2
+          }
+        },
+        "per_issue": [
+          {
+            "gt_id": "P2-01",
+            "sc": "1.1.1",
+            "principle": "perceivable",
+            "engine_signal": "axe:image-alt",
+            "found": true,
+            "by": [
+              "axe-52ead39b"
+            ]
+          },
+          {
+            "gt_id": "P2-02",
+            "sc": "1.1.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-03",
+            "sc": "1.2.2",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-04",
+            "sc": "1.4.2",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-05",
+            "sc": "1.3.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-06",
+            "sc": "2.2.2",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-07",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:frame-title",
+            "found": true,
+            "by": [
+              "axe-50259738"
+            ]
+          },
+          {
+            "gt_id": "P2-08",
+            "sc": "2.4.4",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-09",
+            "sc": "1.4.3",
+            "principle": "perceivable",
+            "engine_signal": "axe:color-contrast",
+            "found": true,
+            "by": [
+              "axe-2b92f245",
+              "contr-29849d30"
+            ]
+          },
+          {
+            "gt_id": "P2-10",
+            "sc": "1.4.4",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-11",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:aria-allowed-attr",
+            "found": true,
+            "by": [
+              "axe-8f4c86bb",
+              "click-da5d22c2"
+            ]
+          },
+          {
+            "gt_id": "P2-12",
+            "sc": "1.3.1",
+            "principle": "perceivable",
+            "engine_signal": "axe:list",
+            "found": true,
+            "by": [
+              "axe-64c0a3ad"
+            ]
+          },
+          {
+            "gt_id": "P2-13",
+            "sc": "1.4.4",
+            "principle": "perceivable",
+            "engine_signal": "axe:meta-viewport",
+            "found": true,
+            "by": [
+              "axe-729140cb"
+            ]
+          },
+          {
+            "gt_id": "P2-14",
+            "sc": "2.4.3",
+            "principle": "operable",
+            "engine_signal": "engine:positive_tabindex",
+            "found": true,
+            "by": [
+              "posit-765e99aa"
+            ]
+          },
+          {
+            "gt_id": "P2-15",
+            "sc": "3.1.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-16",
+            "sc": "2.4.2",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          }
+        ]
+      },
+      "curbcut": {
+        "found": 14,
+        "planted": 16,
+        "judgment_only_found": 7,
+        "judgment_only_planted": 9,
+        "decoys_hit": 0,
+        "decoys": 6,
+        "items": 16,
+        "unmatched": [
+          {
+            "id": "F016",
+            "scs": [
+              "4.1.3"
+            ],
+            "label": "flagged:Carousel slide changes are not announced to screen readers"
+          }
+        ],
+        "decoy_hits": [],
+        "by_principle": {
+          "perceivable": {
+            "found": 7,
+            "planted": 9
+          },
+          "operable": {
+            "found": 4,
+            "planted": 4
+          },
+          "understandable": {
+            "found": 1,
+            "planted": 1
+          },
+          "robust": {
+            "found": 2,
+            "planted": 2
+          }
+        },
+        "per_issue": [
+          {
+            "gt_id": "P2-01",
+            "sc": "1.1.1",
+            "principle": "perceivable",
+            "engine_signal": "axe:image-alt",
+            "found": true,
+            "by": [
+              "F001"
+            ]
+          },
+          {
+            "gt_id": "P2-02",
+            "sc": "1.1.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F002"
+            ]
+          },
+          {
+            "gt_id": "P2-03",
+            "sc": "1.2.2",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F003"
+            ]
+          },
+          {
+            "gt_id": "P2-04",
+            "sc": "1.4.2",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F007"
+            ]
+          },
+          {
+            "gt_id": "P2-05",
+            "sc": "1.3.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-06",
+            "sc": "2.2.2",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F009"
+            ]
+          },
+          {
+            "gt_id": "P2-07",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:frame-title",
+            "found": true,
+            "by": [
+              "F015"
+            ]
+          },
+          {
+            "gt_id": "P2-08",
+            "sc": "2.4.4",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F012"
+            ]
+          },
+          {
+            "gt_id": "P2-09",
+            "sc": "1.4.3",
+            "principle": "perceivable",
+            "engine_signal": "axe:color-contrast",
+            "found": true,
+            "by": [
+              "F005"
+            ]
+          },
+          {
+            "gt_id": "P2-10",
+            "sc": "1.4.4",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P2-11",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:aria-allowed-attr",
+            "found": true,
+            "by": [
+              "F008",
+              "F014"
+            ]
+          },
+          {
+            "gt_id": "P2-12",
+            "sc": "1.3.1",
+            "principle": "perceivable",
+            "engine_signal": "axe:list",
+            "found": true,
+            "by": [
+              "F004"
+            ]
+          },
+          {
+            "gt_id": "P2-13",
+            "sc": "1.4.4",
+            "principle": "perceivable",
+            "engine_signal": "axe:meta-viewport",
+            "found": true,
+            "by": [
+              "F006"
+            ]
+          },
+          {
+            "gt_id": "P2-14",
+            "sc": "2.4.3",
+            "principle": "operable",
+            "engine_signal": "engine:positive_tabindex",
+            "found": true,
+            "by": [
+              "F010"
+            ]
+          },
+          {
+            "gt_id": "P2-15",
+            "sc": "3.1.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F013"
+            ]
+          },
+          {
+            "gt_id": "P2-16",
+            "sc": "2.4.2",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F011"
+            ]
+          }
+        ]
+      },
+      "scan_seconds": 5.65
     }
   ]
 }

@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.0",
+  "tool": {
+    "name": "curbcut",
+    "version": "0.1.0",
+    "axe_core": "4.13.0",
+    "chromium": "153.0.8010.12",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  "base": {
+    "ref": "main",
+    "sha": "515a2b8f8e1a98677ecd8f1ede173798b2e2dbd9"
+  },
+  "head": {
+    "ref": "demo/pr-2-lesson-media",
+    "sha": "d9e7da06478eeffaec5028e4dc0e68256508f6e6"
+  },
+  "fixture_root": "codes/fixture/src",
+  "summary": {
+    "pages_total": 4,
+    "pages_scanned": 4,
+    "pages_not_scanned": 0,
+    "facts_total": 14,
+    "facts_introduced": 14,
+    "by_kind": {
+      "axe_needs_review": 3,
+      "axe_violation": 7,
+      "clickable_not_focusable": 1,
+      "contrast_below_minimum": 1,
+      "focus_not_measured": 1,
+      "positive_tabindex": 1
+    }
+  },
+  "digest": "8d8399ae3c3cbfc2f08abe7cb494326230cd90ad1be8197adf40e672dde6a28b",
+  "pages": [
+    {
+      "page": "course.html",
+      "change": "dependency",
+      "scanned": true,
+      "reason": null,
+      "focus_sequence": [
+        "body > a",
+        "body > header > a",
+        "body > header > nav > ul > li:nth-of-type(1) > a",
+        "body > header > nav > ul > li:nth-of-type(2) > a",
+        "#main > nav > a",
+        "#main > ol > li:nth-of-type(1) > a"
+      ]
+    },
+    {
+      "page": "index.html",
+      "change": "dependency",
+      "scanned": true,
+      "reason": null,
+      "focus_sequence": [
+        "body > a",
+        "body > header > a",
+        "body > header > nav > ul > li:nth-of-type(1) > a",
+        "body > header > nav > ul > li:nth-of-type(2) > a",
+        "#main > ul > li:nth-of-type(1) > a"
+      ]
+    },
+    {
+      "page": "lesson-media.html",
+      "change": "added",
+      "scanned": true,
+      "reason": null,
+      "focus_sequence": [
+        "#main > p:nth-of-type(4) > a",
+        "body > a",
+        "body > header > a",
+        "body > header > nav > ul > li:nth-of-type(1) > a",
+        "body > header > nav > ul > li:nth-of-type(2) > a",
+        "#main > nav > a",
+        "#main > div:nth-of-type(1) > figure:nth-of-type(1) > video",
+        "#main > div:nth-of-type(1) > figure:nth-of-type(2) > video",
+        "#main > iframe",
+        "#main > ul:nth-of-type(2) > li:nth-of-type(1) > a",
+        "#main > ul:nth-of-type(2) > li:nth-of-type(2) > a",
+        "#main > ul:nth-of-type(2) > li:nth-of-type(3) > a"
+      ]
+    },
+    {
+      "page": "lesson.html",
+      "change": "modified",
+      "scanned": true,
+      "reason": null,
+      "focus_sequence": [
+        "body > a",
+        "body > header > a",
+        "body > header > nav > ul > li:nth-of-type(1) > a",
+        "body > header > nav > ul > li:nth-of-type(2) > a",
+        "#main > nav > a:nth-of-type(1)",
+        "#main > nav > a:nth-of-type(2)",
+        "#main > p:nth-of-type(2) > a",
+        "#mark-complete"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "kind": "axe_needs_review",
+      "page": "lesson-media.html",
+      "selector": "iframe",
+      "rule": "frame-tested",
+      "wcag": [],
+      "best_practice": true,
+      "impact": "critical",
+      "help": "Frames should be tested with axe-core",
+      "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-tested?application=axeAPI",
+      "html": "<iframe class=\"practice\" srcdoc=\"&lt;p style='font-family:sans-serif'&gt;Which gas do plants release? &lt;label&gt;&lt;input type='radio' name='q'&gt; Oxygen&lt;/label&gt; &lt;label&gt;&lt;input type='radio' name='q'&gt; Nitrogen&lt;/label&gt;&lt;/p&gt;\" width=\"560\" height=\"80\"></iframe>",
+      "detail": "Fix all of the following:\n  The iframe still has to be tested with axe-core",
+      "introduced": true,
+      "fact_id": "axr-924fe599"
+    },
+    {
+      "kind": "axe_needs_review",
+      "page": "lesson-media.html",
+      "selector": "audio",
+      "rule": "no-autoplay-audio",
+      "wcag": [
+        "1.4.2"
+      ],
+      "best_practice": false,
+      "impact": "moderate",
+      "help": "<video> or <audio> elements must not play automatically",
+      "help_url": "https://dequeuniversity.com/rules/axe/4.13/no-autoplay-audio?application=axeAPI",
+      "html": "<audio src=\"media/ambient.ogg\" autoplay=\"\" loop=\"\"></audio>",
+      "detail": "Fix all of the following:\n  <video> or <audio> outputs audio for more than allowed duration and does not have a controls mechanism",
+      "introduced": true,
+      "fact_id": "axr-a048e62e"
+    },
+    {
+      "kind": "axe_needs_review",
+      "page": "lesson-media.html",
+      "selector": "video[src$=\"intro.webm\"]",
+      "rule": "video-caption",
+      "wcag": [
+        "1.2.2"
+      ],
+      "best_practice": false,
+      "impact": "critical",
+      "help": "<video> elements must have captions",
+      "help_url": "https://dequeuniversity.com/rules/axe/4.13/video-caption?application=axeAPI",
+      "html": "<video src=\"media/intro.webm\" width=\"320\" height=\"180\" controls=\"\"></video>",
+      "detail": "Fix all of the following:\n  Check that captions are available for the element",
+      "introduced": true,
+      "fact_id": "axr-6345442b"
+    },
+    {
+      "kind": "axe_violation",
+      "page": "lesson-media.html",
+      "selector": "#more-trigger",
+      "rule": "aria-allowed-attr",
+      "wcag": [
+        "4.1.2"
+      ],
+      "best_practice": false,
+      "impact": "critical",
+      "help": "Elements must only use supported ARIA attributes",
+      "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=axeAPI",
+      "html": "<div class=\"accordion-trigger\" id=\"more-trigger\" aria-expanded=\"false\">Show the full equation</div>",
+      "detail": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+      "introduced": true,
+      "fact_id": "axe-8f4c86bb"
+    },
+    {
+      "kind": "axe_violation",
+      "page": "lesson-media.html",
+      "selector": ".figure-caption",
+      "rule": "color-contrast",
+      "wcag": [
+        "1.4.3"
+      ],
+      "best_practice": false,
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+      "html": "<figcaption class=\"figure-caption\">A leaf is a solar panel made of cells.</figcaption>",
+      "detail": "Fix any of the following:\n  Element has insufficient color contrast of 2.25 (foreground color: #ffffff, background color: #7fb3d5, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "introduced": true,
+      "fact_id": "axe-2b92f245"
+    },
+    {
+      "kind": "axe_violation",
+      "page": "lesson-media.html",
+      "selector": "iframe",
+      "rule": "frame-title",
+      "wcag": [
+        "4.1.2"
+      ],
+      "best_practice": false,
+      "impact": "serious",
+      "help": "Frames must have an accessible name",
+      "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+      "html": "<iframe class=\"practice\" srcdoc=\"&lt;p style='font-family:sans-serif'&gt;Which gas do plants release? &lt;label&gt;&lt;input type='radio' name='q'&gt; Oxygen&lt;/label&gt; &lt;label&gt;&lt;input type='radio' name='q'&gt; Nitrogen&lt;/label&gt;&lt;/p&gt;\" width=\"560\" height=\"80\"></iframe>",
+      "detail": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "introduced": true,
+      "fact_id": "axe-50259738"
+    },
+    {
+      "kind": "axe_violation",
+      "page": "lesson-media.html",
+      "selector": "img[src$=\"leaf.svg\"]",
+      "rule": "image-alt",
+      "wcag": [
+        "1.1.1"
+      ],
+      "best_practice": false,
+      "impact": "critical",
+      "help": "Images must have alternative text",
+      "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+      "html": "<img src=\"img/leaf.svg\" width=\"320\" height=\"200\">",
+      "detail": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "introduced": true,
+      "fact_id": "axe-52ead39b"
+    },
+    {
+      "kind": "axe_violation",
+      "page": "lesson-media.html",
+      "selector": ".glossary",
+      "rule": "list",
+      "wcag": [
+        "1.3.1"
+      ],
+      "best_practice": false,
+      "impact": "serious",
+      "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+      "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+      "html": "<ul class=\"glossary\">\n      <div><strong>Chlorophyll</strong>: the green pigment that absorbs light.</div>\n      <div><strong>Stomata</strong>: tiny pores that let gases in and out.</div>\n    </ul>",
+      "detail": "Fix all of the following:\n  List element has direct children that are not allowed: div",
+      "introduced": true,
+      "fact_id": "axe-64c0a3ad"
+    },
+    {
+      "kind": "axe_violation",
+      "page": "lesson-media.html",
+      "selector": "meta[name=\"viewport\"]",
+      "rule": "meta-viewport",
+      "wcag": [
+        "1.4.4"
+      ],
+      "best_practice": false,
+      "impact": "moderate",
+      "help": "Zooming and scaling must not be disabled",
+      "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+      "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">",
+      "detail": "Fix any of the following:\n  user-scalable=no on <meta> tag disables zooming on mobile devices",
+      "introduced": true,
+      "fact_id": "axe-729140cb"
+    },
+    {
+      "kind": "axe_violation",
+      "page": "lesson-media.html",
+      "selector": ".next-lesson",
+      "rule": "tabindex",
+      "wcag": [],
+      "best_practice": true,
+      "impact": "serious",
+      "help": "Elements should not have tabindex greater than zero",
+      "help_url": "https://dequeuniversity.com/rules/axe/4.13/tabindex?application=axeAPI",
+      "html": "<a href=\"course.html\" class=\"next-lesson\" tabindex=\"1\">Next lesson</a>",
+      "detail": "Fix any of the following:\n  Element has a tabindex greater than 0",
+      "introduced": true,
+      "fact_id": "axe-f83619fd"
+    },
+    {
+      "kind": "clickable_not_focusable",
+      "page": "lesson-media.html",
+      "selector": "#more-trigger",
+      "rule": "click-listener",
+      "wcag": [
+        "2.1.1"
+      ],
+      "listeners": [
+        "click"
+      ],
+      "html": "<div class=\"accordion-trigger\" id=\"more-trigger\" aria-expanded=\"false\">Show the full equation</div>",
+      "detail": "Has a pointer listener but is not focusable and is not a native control.",
+      "introduced": true,
+      "fact_id": "click-da5d22c2"
+    },
+    {
+      "kind": "contrast_below_minimum",
+      "page": "lesson-media.html",
+      "selector": "#main > figure:nth-of-type(1) > figcaption",
+      "rule": "wcag-1.4.3",
+      "wcag": [
+        "1.4.3"
+      ],
+      "ratio": 2.25,
+      "required": 4.5,
+      "fg": "#ffffff",
+      "bg": "#7fb3d5",
+      "font_size_px": 14.4,
+      "bold": false,
+      "large_text": false,
+      "text": "A leaf is a solar panel made of cells.",
+      "detail": null,
+      "introduced": true,
+      "fact_id": "contr-29849d30"
+    },
+    {
+      "kind": "focus_not_measured",
+      "page": "lesson-media.html",
+      "selector": "#main > iframe",
+      "rule": "tab-crawl",
+      "wcag": [
+        "2.4.7"
+      ],
+      "detail": "focus moved into an iframe; its indicator is not measured",
+      "introduced": true,
+      "fact_id": "focus-107a113b"
+    },
+    {
+      "kind": "positive_tabindex",
+      "page": "lesson-media.html",
+      "selector": "#main > p:nth-of-type(4) > a",
+      "rule": "tab-crawl",
+      "wcag": [
+        "2.4.3"
+      ],
+      "tabindex": 1,
+      "dom_position": 12,
+      "focus_position": 1,
+      "detail": "tabindex=1: focus position 1, DOM position 12.",
+      "introduced": true,
+      "fact_id": "posit-765e99aa"
+    }
+  ],
+  "snapshots_file": "snapshots.json",
+  "run": {
+    "started_at": "2026-09-25T18:40:48+00:00",
+    "duration_s": 5.65
+  }
+}
