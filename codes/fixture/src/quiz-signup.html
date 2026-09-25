@@ -1,9 +1,8 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="300;url=course.html">
   <title>Quiz sign-up - OpenClass</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -29,20 +28,21 @@
     <p class="help-text">Sign up once and we will add the quiz to your course page. It takes about two minutes.</p>
 
     <div class="quiz-badge">
-      <img src="img/badge.svg" width="96" height="96" alt="image">
+      <img src="img/badge.svg" width="96" height="96" alt="Cell Explorer badge">
       <p>Finish the quiz to earn the Cell Explorer badge.</p>
     </div>
 
     <form id="signup-form" class="signup-form" novalidate>
       <div class="field">
-        <span class="field-name">Email</span>
-        <input id="email" name="email" type="email" autocomplete="email">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error">
         <p class="hint">We only use this to send your quiz link.</p>
+        <p class="field-error" id="email-error" role="alert" hidden></p>
       </div>
 
       <div class="field">
         <label for="display-name">Display name</label>
-        <input id="display-name" name="display-name" type="text" autocomplete="nick-name">
+        <input id="display-name" name="display-name" type="text" autocomplete="username">
         <p class="help-text">Shown on the class leaderboard instead of your email.</p>
       </div>
 
@@ -62,7 +62,9 @@
 
       <div class="field">
         <label for="quiz-date">Date</label>
-        <input id="quiz-date" name="quiz-date" type="text">
+        <input id="quiz-date" name="quiz-date" type="text" placeholder="DD/MM/YYYY" aria-describedby="quiz-date-hint quiz-date-error">
+        <p class="hint" id="quiz-date-hint">Format: DD/MM/YYYY, for example 25/09/2026</p>
+        <p class="field-error" id="quiz-date-error" role="alert" hidden></p>
       </div>
 
       <div class="field">
@@ -83,24 +85,24 @@
       <div class="terms">
         <div class="terms-head">
           <h2>Quiz terms</h2>
-          <button type="button" class="icon-btn" id="close-terms"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2"/></svg></button>
+          <button type="button" class="icon-btn" id="close-terms" aria-label="Close terms"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2"/></svg></button>
         </div>
         <div class="terms-box" id="terms-box" tabindex="0">
           <p>You may take each quiz up to three times. Your best score counts.</p>
           <p>Read the <a href="course.html#rules" id="terms-first">full quiz rules</a> and the <a href="index.html" id="terms-last">course list</a>.</p>
         </div>
         <p class="agree-row">
-          <span role="checkbox" tabindex="0" id="agree" class="fake-checkbox" aria-labelledby="agree-label"></span>
+          <span role="checkbox" tabindex="0" id="agree" class="fake-checkbox" aria-checked="false" aria-labelledby="agree-label"></span>
           <span id="agree-label">I agree to the quiz terms</span>
         </p>
       </div>
 
       <p>Quiz rules apply to every attempt.</p>
-      <p><a href="course.html#rules">Click here</a></p>
+      <p><a href="course.html#rules">View course rules</a></p>
 
-      <p>When you are ready, press the green button on the right.</p>
+      <p>When you are ready, press Sign up.</p>
       <div class="actions">
-        <div class="btn btn-go" id="submit-signup">Sign up</div>
+        <button type="submit" class="btn btn-go" id="submit-signup">Sign up</button>
       </div>
       <p class="status" id="form-status" role="status" aria-live="polite"></p>
     </form>

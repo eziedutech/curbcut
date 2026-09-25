@@ -225,7 +225,13 @@ main {
 }
 
 .hint {
-  color: #9a9a9a;
+  color: #767676;
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0;
+}
+
+.field-error {
+  color: #b3261e;
   font-size: 0.9rem;
   margin: 0.25rem 0 0;
 }
@@ -261,7 +267,8 @@ main {
 }
 
 .level-radio:focus-visible {
-  outline: none;
+  outline: 3px solid #4a4a55;
+  outline-offset: 2px;
 }
 
 .help-icons {
@@ -270,15 +277,15 @@ main {
 }
 
 .help-icon {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   padding: 0;
   border: 0;
   border-radius: 50%;
   background: #4a4a55;
   color: #ffffff;
   font-size: 11px;
-  line-height: 16px;
+  line-height: 24px;
   cursor: pointer;
 }
 
