@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="180" viewBox="0 0 560 180" font-family="Arial, sans-serif">
+  <rect width="560" height="180" fill="#ffffff"/>
+  <rect x="20" y="40" width="240" height="100" rx="8" fill="#fdf3dc" stroke="#e2a33b" stroke-width="3"/>
+  <text x="140" y="80" text-anchor="middle" font-size="18" font-weight="700" fill="#1b1b1f">Stage 1: Light reaction</text>
+  <text x="140" y="108" text-anchor="middle" font-size="14" fill="#1b1b1f">Light splits water, oxygen leaves</text>
+  <path d="M268 90 L292 90" stroke="#1b1b1f" stroke-width="3"/>
+  <path d="M292 82 L304 90 L292 98 Z" fill="#1b1b1f"/>
+  <rect x="300" y="40" width="240" height="100" rx="8" fill="#cfe3d4" stroke="#2f6b3f" stroke-width="3"/>
+  <text x="420" y="80" text-anchor="middle" font-size="18" font-weight="700" fill="#1b1b1f">Stage 2: Calvin cycle</text>
+  <text x="420" y="108" text-anchor="middle" font-size="14" fill="#1b1b1f">Carbon dioxide becomes sugar</text>
+</svg>

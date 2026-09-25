@@ -1,4 +1,4 @@
-import { Box, Card, Code, DataList, Flex, Grid, Heading, Table, Text } from "@radix-ui/themes";
+import { Box, Card, Code, DataList, Flex, Grid, Heading, Link, Table, Text } from "@radix-ui/themes";
 import { data } from "react-router";
 
 import { Breadcrumbs } from "~/components/Breadcrumbs";
@@ -8,6 +8,7 @@ import { NotChecked } from "~/components/NotChecked";
 import { StatTile } from "~/components/StatTile";
 import { TierBadge } from "~/components/TierBadge";
 import { BackpyError, getReport } from "~/lib/backpy.server";
+import { openclassLinks } from "~/lib/openclass";
 import type { Report } from "~/lib/types";
 import { PRINCIPLE_LABEL, PRINCIPLES, shortSha } from "~/lib/wcag";
 
@@ -77,6 +78,7 @@ export default function ReportPage({ loaderData }: Route.ComponentProps) {
   const fixes = new Map((report.fixes?.fixes ?? []).map((f) => [f.finding_id.toUpperCase(), f]));
   const tests = new Map((report.verify?.results ?? []).filter((r) => r.finding_id).map((r) => [r.finding_id!.toUpperCase(), r]));
   const v = report.verify?.summary;
+  const pages = [...new Set(report.review.findings.map((f) => f.page))].sort();
 
   return (
     <Flex direction="column" gap="6">
@@ -89,6 +91,28 @@ export default function ReportPage({ loaderData }: Route.ComponentProps) {
           {report.repo}, {report.pr.base} at {shortSha(report.pr.base_sha)} to {report.pr.head} at{" "}
           {shortSha(report.pr.head_sha)}
         </Text>
+        {pages.map((page) => {
+          const links = openclassLinks(report.id, page);
+          if (!links) return null;
+          return (
+            <Flex key={page} gap="4" mt="3" wrap="wrap" align="center">
+              <Text size="2" weight="bold">
+                {page}
+              </Text>
+              <Link href={links.before} target="_blank" rel="noreferrer" size="2">
+                Open the page as reviewed
+              </Link>
+              {links.after && (
+                <Link href={links.after} target="_blank" rel="noreferrer" size="2">
+                  Open the page after IBM Bob's fixes
+                </Link>
+              )}
+              <InfoTip label="demo pages">
+                OpenClass is the demo class app. These are the exact versions of the page that were reviewed and fixed.
+              </InfoTip>
+            </Flex>
+          );
+        })}
       </Box>
 
       <Grid columns={{ initial: "2", sm: "3", md: "5" }} gap="3">

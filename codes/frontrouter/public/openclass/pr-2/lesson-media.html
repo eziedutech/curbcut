@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">OpenClass</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Courses</a></li>
+        <li><a href="course.html">Biology basics</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <nav aria-label="Breadcrumb">
+      <a href="course.html">Biology basics</a> / <span aria-current="page">Lesson 3 media</span>
+    </nav>
+    <h1>Lesson 3: Photosynthesis in pictures and video</h1>
+    <p>Plants make their own food from light. This page collects the pictures, videos and data for lesson 3.</p>
+    <p>Fotosintesis adalah proses tumbuhan membuat makanan dari cahaya.</p>
+    <p>In the Indonesian edition this lesson is called <span lang="id">Fotosintesis pada tumbuhan</span>.</p>
+
+    <audio src="media/ambient.ogg" autoplay loop></audio>
+
+    <h2>Watch</h2>
+    <div class="media-row">
+      <figure class="media-card">
+        <video src="media/intro.webm" width="320" height="180" controls></video>
+        <figcaption>Video 1. How a leaf catches light.</figcaption>
+      </figure>
+      <figure class="media-card">
+        <video width="320" height="180" controls>
+          <source src="media/summary.webm" type="video/webm">
+          <track kind="captions" src="media/summary.vtt" srclang="en" label="English" default>
+        </video>
+        <figcaption>Video 2. Photosynthesis in two sentences.</figcaption>
+      </figure>
+    </div>
+
+    <img class="divider" src="img/divider.svg" width="560" height="12" alt="">
+
+    <h2>Look</h2>
+    <figure class="photo-figure">
+      <img src="img/leaf.svg" width="320" height="200">
+      <figcaption class="figure-caption">A leaf is a solar panel made of cells.</figcaption>
+    </figure>
+    <figure class="lesson-figure">
+      <img src="img/stages-chart.svg" width="560" height="180" alt="chart">
+    </figure>
+
+    <div class="key-point">
+      <p>Key point: chlorophyll absorbs red and blue light and reflects green light, which is why most leaves look green to us.</p>
+    </div>
+
+    <h2>Did you know?</h2>
+    <div class="carousel" id="facts-carousel">
+      <p class="slide">A single large tree can release enough oxygen in a season for several people.</p>
+      <p class="slide" hidden>Some plants can photosynthesise through their stems, not only their leaves.</p>
+      <p class="slide" hidden>Algae in the ocean make a large share of the oxygen on Earth.</p>
+    </div>
+
+    <h2>Data</h2>
+    <table class="data-table">
+      <tr><td>Plant</td><td>Hours of light</td><td>Growth in cm</td></tr>
+      <tr><td>Bean</td><td>4</td><td>2.1</td></tr>
+      <tr><td>Bean</td><td>8</td><td>4.6</td></tr>
+      <tr><td>Bean</td><td>12</td><td>6.3</td></tr>
+    </table>
+
+    <table class="data-table">
+      <caption>Oxygen bubbles counted per minute</caption>
+      <thead>
+        <tr><th scope="col">Light distance</th><th scope="col">Bubbles per minute</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">10 cm</th><td>32</td></tr>
+        <tr><th scope="row">20 cm</th><td>18</td></tr>
+        <tr><th scope="row">40 cm</th><td>7</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Glossary</h2>
+    <ul class="glossary">
+      <div><strong>Chlorophyll</strong>: the green pigment that absorbs light.</div>
+      <div><strong>Stomata</strong>: tiny pores that let gases in and out.</div>
+    </ul>
+
+    <div class="accordion">
+      <div class="accordion-trigger" id="more-trigger" aria-expanded="false">Show the full equation</div>
+      <div class="accordion-panel" id="more-panel" hidden>
+        <p>Carbon dioxide plus water, with light, gives glucose plus oxygen.</p>
+      </div>
+    </div>
+
+    <h2>Practice</h2>
+    <iframe class="practice" srcdoc="&lt;p style='font-family:sans-serif'&gt;Which gas do plants release? &lt;label&gt;&lt;input type='radio' name='q'&gt; Oxygen&lt;/label&gt; &lt;label&gt;&lt;input type='radio' name='q'&gt; Nitrogen&lt;/label&gt;&lt;/p&gt;" width="560" height="80"></iframe>
+
+    <h2>Read further</h2>
+    <ul class="further">
+      <li>Light reaction. <a href="lesson.html">More</a></li>
+      <li>Calvin cycle. <a href="course.html">More</a></li>
+      <li>Leaf structure. <a href="lesson.html#main" aria-label="More about leaf structure">More</a></li>
+    </ul>
+
+    <p><a href="course.html" class="next-lesson" tabindex="1">Next lesson</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <p>OpenClass is a demo application. It stores no personal data.</p>
+  </footer>
+  <script src="lesson-media.js"></script>
+</body>
+</html>

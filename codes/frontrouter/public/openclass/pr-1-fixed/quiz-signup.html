@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz sign-up - OpenClass</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">OpenClass</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Courses</a></li>
+        <li><a href="course.html">Biology basics</a></li>
+        <li><a href="quiz-signup.html" aria-current="page">Quiz sign-up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <nav aria-label="Breadcrumb">
+      <a href="course.html">Biology basics</a> / <span aria-current="page">Quiz sign-up</span>
+    </nav>
+    <h1 tabindex="-1" id="page-title">Sign up for the Biology quiz</h1>
+    <img class="flourish" src="img/flourish.svg" width="240" height="16" alt="">
+    <p class="help-text">Sign up once and we will add the quiz to your course page. It takes about two minutes.</p>
+
+    <div class="quiz-badge">
+      <img src="img/badge.svg" width="96" height="96" alt="Cell Explorer badge">
+      <p>Finish the quiz to earn the Cell Explorer badge.</p>
+    </div>
+
+    <form id="signup-form" class="signup-form" novalidate>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error">
+        <p class="hint">We only use this to send your quiz link.</p>
+        <p class="field-error" id="email-error" role="alert" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="display-name">Display name</label>
+        <input id="display-name" name="display-name" type="text" autocomplete="username">
+        <p class="help-text">Shown on the class leaderboard instead of your email.</p>
+      </div>
+
+      <div class="field">
+        <label class="visually-hidden" for="course-code">Course code</label>
+        <input id="course-code" name="course-code" type="text" value="BIO-101" readonly>
+      </div>
+
+      <div class="field">
+        <label for="course-select">Course</label>
+        <select id="course-select" name="course">
+          <option value="bio" selected>Biology basics</option>
+          <option value="maths">Everyday maths</option>
+          <option value="writing">Writing clearly</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="quiz-date">Date</label>
+        <input id="quiz-date" name="quiz-date" type="text" placeholder="DD/MM/YYYY" aria-describedby="quiz-date-hint quiz-date-error">
+        <p class="hint" id="quiz-date-hint">Format: DD/MM/YYYY, for example 25/09/2026</p>
+        <p class="field-error" id="quiz-date-error" role="alert" hidden></p>
+      </div>
+
+      <div class="field">
+        <p class="field-name">Choose your level</p>
+        <div class="quiz-options">
+          <label class="quiz-option"><input class="level-radio" type="radio" name="level" value="starter" checked> Starter</label>
+          <label class="quiz-option"><input class="level-radio" type="radio" name="level" value="core"> Core</label>
+          <label class="quiz-option"><input class="level-radio" type="radio" name="level" value="stretch"> Stretch</label>
+        </div>
+        <div class="help-icons">
+          <button type="button" class="help-icon" aria-label="Help about levels" data-help="help-levels">?</button>
+          <button type="button" class="help-icon" aria-label="Help about timing" data-help="help-timing">i</button>
+        </div>
+        <p class="help-text" id="help-levels" hidden>Starter has ten short questions. Core and Stretch add longer questions.</p>
+        <p class="help-text" id="help-timing" hidden>There is no time limit on the quiz itself.</p>
+      </div>
+
+      <div class="terms">
+        <div class="terms-head">
+          <h2>Quiz terms</h2>
+          <button type="button" class="icon-btn" id="close-terms" aria-label="Close terms"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2"/></svg></button>
+        </div>
+        <div class="terms-box" id="terms-box" tabindex="0">
+          <p>You may take each quiz up to three times. Your best score counts.</p>
+          <p>Read the <a href="course.html#rules" id="terms-first">full quiz rules</a> and the <a href="index.html" id="terms-last">course list</a>.</p>
+        </div>
+        <p class="agree-row">
+          <span role="checkbox" tabindex="0" id="agree" class="fake-checkbox" aria-checked="false" aria-labelledby="agree-label"></span>
+          <span id="agree-label">I agree to the quiz terms</span>
+        </p>
+      </div>
+
+      <p>Quiz rules apply to every attempt.</p>
+      <p><a href="course.html#rules">View course rules</a></p>
+
+      <p>When you are ready, press Sign up.</p>
+      <div class="actions">
+        <button type="submit" class="btn btn-go" id="submit-signup">Sign up</button>
+      </div>
+      <p class="status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>OpenClass is a demo application. It stores no personal data.</p>
+  </footer>
+  <script src="quiz-signup.js"></script>
+</body>
+</html>
