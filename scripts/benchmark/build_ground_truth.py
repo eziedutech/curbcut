@@ -31,14 +31,14 @@ PR1 = [
     issue("P1-05", "4.1.2", Q, "#close-terms", "The close button contains only an icon and has no accessible name.", "axe:button-name"),
     issue("P1-06", "4.1.2", Q, "#agree", "The custom checkbox has role checkbox but no aria-checked state.", "axe:aria-required-attr"),
     issue("P1-07", "1.3.5", Q, "#display-name", "The autocomplete value nick-name is not a valid token.", "axe:autocomplete-valid"),
-    issue("P1-08", "2.1.2", Q, "#terms-box", "Tab and Shift+Tab loop between the two links in the terms box; keyboard users cannot leave it.", "engine:focus_trap"),
+    issue("P1-08", "2.1.2", Q, "#terms-box, #terms-first, #terms-last", "Tab and Shift+Tab loop between the two links in the terms box; keyboard users cannot leave it.", "engine:focus_trap"),
     issue("P1-09", "2.4.7", Q, ".level-radio", "The custom level radios remove the outline on focus and show no other indicator.", "engine:focus_not_visible"),
     issue("P1-10", "2.1.1", Q, "#submit-signup", "The Sign up control is a div with a click handler; it cannot be reached or activated with a keyboard.", "engine:clickable_not_focusable", also=["4.1.2"]),
     issue("P1-11", "1.3.1", Q, ".quiz-options", "The level radios have no fieldset and legend, so the question Choose your level is not tied to them.", None),
     issue("P1-12", "3.3.1", Q, "#email", "Invalid fields only turn red; there is no text describing the error.", None, also=["1.4.1"]),
     issue("P1-13", "1.1.1", Q, ".quiz-badge img", 'The badge image has alt="image", which says nothing about the badge.', None),
     issue("P1-14", "2.4.4", Q, '#signup-form a[href="course.html#rules"]', 'A link reads only "Click here", in its own paragraph, with no programmatic context.', None),
-    issue("P1-15", "1.3.3", Q, "#submit-signup", "The instruction refers to the green button on the right, relying on colour and position.", None, also=["1.4.1"]),
+    issue("P1-15", "1.3.3", Q, "#signup-form > p:nth-of-type(3)", "The instruction refers to the green button on the right, relying on colour and position.", None, also=["1.4.1"]),
     issue("P1-16", "2.5.8", Q, ".help-icon", "Two 16 by 16 px help buttons sit next to each other with no spacing.", "axe:target-size"),
     issue("P1-17", "3.3.2", Q, "#quiz-date", "The date field requires DD/MM/YYYY but does not say so.", None),
     issue("P1-18", "3.2.2", Q, "#course-select", "Choosing another course in the select immediately navigates away from the form.", None),
@@ -95,6 +95,11 @@ def main():
                  "engine_signal is the deterministic check that fires on the element with axe-core 4.13.0 and the "
                  "CurbCut engine, or null when only judgment can find it."),
         "fixture_root": "codes/fixture/src",
+        "changes": [
+            "26 Sep 2026, after the first scoring run: P1-08 selector widened from the #terms-box container to include "
+            "the two links that form the trap, as its description already said. P1-15 selector moved from the Sign up "
+            "control to the instruction paragraph that contains the sensory wording. No issue was added, removed or re-scoped.",
+        ],
         "prs": [
             {"id": "pr-1", "base": "main", "head": "demo/pr-1-quiz-signup", "counts": counts(PR1, PR1_DECOYS), "issues": PR1, "decoys": PR1_DECOYS},
             {"id": "pr-2", "base": "main", "head": "demo/pr-2-lesson-media", "counts": counts(PR2, PR2_DECOYS), "issues": PR2, "decoys": PR2_DECOYS},

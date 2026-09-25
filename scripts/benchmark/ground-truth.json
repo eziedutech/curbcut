@@ -2,6 +2,9 @@
   "schema_version": "1.0",
   "note": "Planted issues and decoys in the OpenClass fixture, written by the same team that built CurbCut. engine_signal is the deterministic check that fires on the element with axe-core 4.13.0 and the CurbCut engine, or null when only judgment can find it.",
   "fixture_root": "codes/fixture/src",
+  "changes": [
+    "26 Sep 2026, after the first scoring run: P1-08 selector widened from the #terms-box container to include the two links that form the trap, as its description already said. P1-15 selector moved from the Sign up control to the instruction paragraph that contains the sensory wording. No issue was added, removed or re-scoped."
+  ],
   "prs": [
     {
       "id": "pr-1",
@@ -113,7 +116,7 @@
           "also_accept_sc": [],
           "principle": "operable",
           "page": "quiz-signup.html",
-          "selector": "#terms-box",
+          "selector": "#terms-box, #terms-first, #terms-last",
           "description": "Tab and Shift+Tab loop between the two links in the terms box; keyboard users cannot leave it.",
           "engine_signal": "engine:focus_trap",
           "expected_tier": "proven",
@@ -203,7 +206,7 @@
           ],
           "principle": "perceivable",
           "page": "quiz-signup.html",
-          "selector": "#submit-signup",
+          "selector": "#signup-form > p:nth-of-type(3)",
           "description": "The instruction refers to the green button on the right, relying on colour and position.",
           "engine_signal": null,
           "expected_tier": "flagged",

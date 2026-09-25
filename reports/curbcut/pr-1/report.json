@@ -1,0 +1,1336 @@
+{
+  "schema_version": "1.0",
+  "id": "pr-1",
+  "repo": "eziedutech/curbcut",
+  "generated_at": "2026-09-25T18:00:03+00:00",
+  "engine": {
+    "name": "curbcut",
+    "version": "0.1.0",
+    "axe_core": "4.13.0",
+    "chromium": "153.0.8010.12",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "curbcut": "0.1.0"
+  },
+  "pr": {
+    "base": "main",
+    "head": "demo/pr-1-quiz-signup",
+    "base_sha": "736bb7f59d65e44d58d9b66679ce77eaca92c996",
+    "head_sha": "250923a3204cbd037061261fd37560d342bf1223"
+  },
+  "facts": {
+    "summary": {
+      "pages_total": 4,
+      "pages_scanned": 4,
+      "pages_not_scanned": 0,
+      "facts_total": 13,
+      "facts_introduced": 13,
+      "by_kind": {
+        "axe_violation": 9,
+        "clickable_not_focusable": 1,
+        "contrast_below_minimum": 1,
+        "focus_not_visible": 1,
+        "focus_trap": 1
+      }
+    },
+    "digest": "86fc0656842bf550baff7ec7db6cc9e60a6520c59cac0adbc1d4aea480c2729e",
+    "pages": [
+      {
+        "page": "course.html",
+        "change": "modified",
+        "scanned": true,
+        "reason": null,
+        "focus_sequence": [
+          "body > a",
+          "body > header > a",
+          "body > header > nav > ul > li:nth-of-type(1) > a",
+          "body > header > nav > ul > li:nth-of-type(2) > a",
+          "body > header > nav > ul > li:nth-of-type(3) > a",
+          "#main > nav > a",
+          "#main > ol > li:nth-of-type(1) > a",
+          "#main > p:nth-of-type(2) > a"
+        ]
+      },
+      {
+        "page": "index.html",
+        "change": "modified",
+        "scanned": true,
+        "reason": null,
+        "focus_sequence": [
+          "body > a",
+          "body > header > a",
+          "body > header > nav > ul > li:nth-of-type(1) > a",
+          "body > header > nav > ul > li:nth-of-type(2) > a",
+          "body > header > nav > ul > li:nth-of-type(3) > a",
+          "#main > ul > li:nth-of-type(1) > a"
+        ]
+      },
+      {
+        "page": "lesson.html",
+        "change": "dependency",
+        "scanned": true,
+        "reason": null,
+        "focus_sequence": [
+          "body > a",
+          "body > header > a",
+          "body > header > nav > ul > li:nth-of-type(1) > a",
+          "body > header > nav > ul > li:nth-of-type(2) > a",
+          "#main > nav > a:nth-of-type(1)",
+          "#main > nav > a:nth-of-type(2)",
+          "#mark-complete"
+        ]
+      },
+      {
+        "page": "quiz-signup.html",
+        "change": "added",
+        "scanned": true,
+        "reason": null,
+        "focus_sequence": [
+          "body > a",
+          "body > header > a",
+          "body > header > nav > ul > li:nth-of-type(1) > a",
+          "body > header > nav > ul > li:nth-of-type(2) > a",
+          "body > header > nav > ul > li:nth-of-type(3) > a",
+          "#main > nav > a",
+          "#email",
+          "#display-name",
+          "#course-code",
+          "#course-select",
+          "#quiz-date",
+          "#signup-form > div:nth-of-type(6) > div:nth-of-type(1) > label:nth-of-type(1) > input",
+          "#signup-form > div:nth-of-type(6) > div:nth-of-type(2) > button:nth-of-type(1)",
+          "#signup-form > div:nth-of-type(6) > div:nth-of-type(2) > button:nth-of-type(2)",
+          "#close-terms",
+          "#terms-box",
+          "#terms-first",
+          "#terms-last"
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "kind": "axe_violation",
+        "page": "quiz-signup.html",
+        "selector": "#agree",
+        "rule": "aria-required-attr",
+        "wcag": [
+          "4.1.2"
+        ],
+        "best_practice": false,
+        "impact": "critical",
+        "help": "Required ARIA attributes must be provided",
+        "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-attr?application=axeAPI",
+        "html": "<span role=\"checkbox\" tabindex=\"0\" id=\"agree\" class=\"fake-checkbox\" aria-labelledby=\"agree-label\"></span>",
+        "detail": "Fix any of the following:\n  Required ARIA attribute not present: aria-checked",
+        "introduced": true,
+        "fact_id": "axe-82f21c93"
+      },
+      {
+        "kind": "axe_violation",
+        "page": "quiz-signup.html",
+        "selector": "#display-name",
+        "rule": "autocomplete-valid",
+        "wcag": [
+          "1.3.5"
+        ],
+        "best_practice": false,
+        "impact": "serious",
+        "help": "autocomplete attribute must be used correctly",
+        "help_url": "https://dequeuniversity.com/rules/axe/4.13/autocomplete-valid?application=axeAPI",
+        "html": "<input id=\"display-name\" name=\"display-name\" type=\"text\" autocomplete=\"nick-name\">",
+        "detail": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted",
+        "introduced": true,
+        "fact_id": "axe-60dbbd10"
+      },
+      {
+        "kind": "axe_violation",
+        "page": "quiz-signup.html",
+        "selector": "#close-terms",
+        "rule": "button-name",
+        "wcag": [
+          "4.1.2"
+        ],
+        "best_practice": false,
+        "impact": "critical",
+        "help": "Buttons must have discernible text",
+        "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+        "html": "<button type=\"button\" class=\"icon-btn\" id=\"close-terms\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 3l10 10M13 3L3 13\" stroke=\"currentColor\" stroke-width=\"2\"></path></svg></button>",
+        "detail": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+        "introduced": true,
+        "fact_id": "axe-5a7ee1d4"
+      },
+      {
+        "kind": "axe_violation",
+        "page": "quiz-signup.html",
+        "selector": ".hint",
+        "rule": "color-contrast",
+        "wcag": [
+          "1.4.3"
+        ],
+        "best_practice": false,
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "html": "<p class=\"hint\">We only use this to send your quiz link.</p>",
+        "detail": "Fix any of the following:\n  Element has insufficient color contrast of 2.81 (foreground color: #9a9a9a, background color: #ffffff, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+        "introduced": true,
+        "fact_id": "axe-43c1c80f"
+      },
+      {
+        "kind": "axe_violation",
+        "page": "quiz-signup.html",
+        "selector": "html",
+        "rule": "html-has-lang",
+        "wcag": [
+          "3.1.1"
+        ],
+        "best_practice": false,
+        "impact": "serious",
+        "help": "<html> element must have a lang attribute",
+        "help_url": "https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=axeAPI",
+        "html": "<html>",
+        "detail": "Fix any of the following:\n  The <html> element does not have a lang attribute",
+        "introduced": true,
+        "fact_id": "axe-6a8c18df"
+      },
+      {
+        "kind": "axe_violation",
+        "page": "quiz-signup.html",
+        "selector": "#email",
+        "rule": "label",
+        "wcag": [
+          "4.1.2"
+        ],
+        "best_practice": false,
+        "impact": "critical",
+        "help": "Form elements must have labels",
+        "help_url": "https://dequeuniversity.com/rules/axe/4.13/label?application=axeAPI",
+        "html": "<input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\">",
+        "detail": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+        "introduced": true,
+        "fact_id": "axe-a17f85a7"
+      },
+      {
+        "kind": "axe_violation",
+        "page": "quiz-signup.html",
+        "selector": "meta[http-equiv=\"refresh\"]",
+        "rule": "meta-refresh",
+        "wcag": [
+          "2.2.1"
+        ],
+        "best_practice": false,
+        "impact": "critical",
+        "help": "Delayed refresh under 20 hours must not be used",
+        "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-refresh?application=axeAPI",
+        "html": "<meta http-equiv=\"refresh\" content=\"300;url=course.html\">",
+        "detail": "Fix any of the following:\n  <meta> tag forces timed refresh of page (less than 20 hours)",
+        "introduced": true,
+        "fact_id": "axe-a10cd7fe"
+      },
+      {
+        "kind": "axe_violation",
+        "page": "quiz-signup.html",
+        "selector": "button[aria-label=\"Help about levels\"]",
+        "rule": "target-size",
+        "wcag": [
+          "2.5.8"
+        ],
+        "best_practice": false,
+        "impact": "serious",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "help_url": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=axeAPI",
+        "html": "<button type=\"button\" class=\"help-icon\" aria-label=\"Help about levels\" data-help=\"help-levels\">?</button>",
+        "detail": "Fix any of the following:\n  Target has insufficient size (16px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 8px instead of at least 24px.",
+        "introduced": true,
+        "fact_id": "axe-df0a41ad"
+      },
+      {
+        "kind": "axe_violation",
+        "page": "quiz-signup.html",
+        "selector": "button[aria-label=\"Help about timing\"]",
+        "rule": "target-size",
+        "wcag": [
+          "2.5.8"
+        ],
+        "best_practice": false,
+        "impact": "serious",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "help_url": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=axeAPI",
+        "html": "<button type=\"button\" class=\"help-icon\" aria-label=\"Help about timing\" data-help=\"help-timing\">i</button>",
+        "detail": "Fix any of the following:\n  Target has insufficient size (16px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 8px instead of at least 24px.",
+        "introduced": true,
+        "fact_id": "axe-5d9d842b"
+      },
+      {
+        "kind": "clickable_not_focusable",
+        "page": "quiz-signup.html",
+        "selector": "#submit-signup",
+        "rule": "click-listener",
+        "wcag": [
+          "2.1.1"
+        ],
+        "listeners": [
+          "click"
+        ],
+        "html": "<div class=\"btn btn-go\" id=\"submit-signup\">Sign up</div>",
+        "detail": "Has a pointer listener but is not focusable and is not a native control.",
+        "introduced": true,
+        "fact_id": "click-4816a2a4"
+      },
+      {
+        "kind": "contrast_below_minimum",
+        "page": "quiz-signup.html",
+        "selector": "#signup-form > div:nth-of-type(1) > p",
+        "rule": "wcag-1.4.3",
+        "wcag": [
+          "1.4.3"
+        ],
+        "ratio": 2.81,
+        "required": 4.5,
+        "fg": "#9a9a9a",
+        "bg": "#ffffff",
+        "font_size_px": 14.4,
+        "bold": false,
+        "large_text": false,
+        "text": "We only use this to send your quiz link.",
+        "detail": null,
+        "introduced": true,
+        "fact_id": "contr-7ad405bb"
+      },
+      {
+        "kind": "focus_not_visible",
+        "page": "quiz-signup.html",
+        "selector": "#signup-form > div:nth-of-type(6) > div:nth-of-type(1) > label:nth-of-type(1) > input",
+        "rule": "tab-crawl",
+        "wcag": [
+          "2.4.7"
+        ],
+        "detail": "Outline, box-shadow, border, background, colour and underline of the element, its parent and next sibling were identical with and without keyboard focus.",
+        "introduced": true,
+        "fact_id": "focus-be564984"
+      },
+      {
+        "kind": "focus_trap",
+        "page": "quiz-signup.html",
+        "selector": "#terms-first",
+        "rule": "tab-crawl",
+        "wcag": [
+          "2.1.2"
+        ],
+        "cycle": [
+          "#terms-first",
+          "#terms-last"
+        ],
+        "unreachable": [
+          "#agree",
+          "#signup-form > p:nth-of-type(2) > a"
+        ],
+        "detail": "Repeated Tab presses never left the page; focus cycled between the listed elements.",
+        "introduced": true,
+        "fact_id": "focus-fca4a983"
+      }
+    ],
+    "duration_s": 6.16
+  },
+  "review": {
+    "summary": {
+      "proven": 12,
+      "flagged": 11,
+      "out_of_reach": 13,
+      "not_scanned": 0
+    },
+    "findings": [
+      {
+        "id": "F001",
+        "tier": "proven",
+        "sc": "1.3.5",
+        "title": "Invalid autocomplete attribute value on display-name field",
+        "principle": "perceivable",
+        "severity": "serious",
+        "page": "quiz-signup.html",
+        "selector": "#display-name",
+        "fact_ids": [
+          "axe-60dbbd10"
+        ],
+        "reason": "The autocomplete attribute value 'nick-name' is not a valid HTML autocomplete keyword; the engine confirmed the value is incorrectly formatted.",
+        "who_is_affected": "People with cognitive disabilities and motor impairments benefit from browser autofill, which requires correct autocomplete values.",
+        "how_to_fix": "Change autocomplete='nick-name' to a valid token such as autocomplete='username' or autocomplete='name'.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html",
+        "source": "subagent:perceivable"
+      },
+      {
+        "id": "F002",
+        "tier": "proven",
+        "sc": "1.4.3",
+        "title": "Hint text has insufficient color contrast",
+        "principle": "perceivable",
+        "severity": "serious",
+        "page": "quiz-signup.html",
+        "selector": "#signup-form > div:nth-of-type(1) > p",
+        "fact_ids": [
+          "axe-43c1c80f",
+          "contr-7ad405bb"
+        ],
+        "reason": "Hint text has foreground color #9a9a9a on background #ffffff with a contrast ratio of 2.81:1, below the required minimum of 4.5:1 for normal-weight text at 14.4px.",
+        "who_is_affected": "People with low vision or color blindness struggle to read text that does not have sufficient contrast against its background.",
+        "how_to_fix": "Change the hint text color to a darker shade that achieves at least 4.5:1 contrast against #ffffff; for example #767676 achieves exactly 4.5:1.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+        "source": "subagent:perceivable"
+      },
+      {
+        "id": "F003",
+        "tier": "flagged",
+        "sc": "1.1.1",
+        "title": "Non-descriptive alt text on badge image",
+        "principle": "perceivable",
+        "severity": "serious",
+        "page": "quiz-signup.html",
+        "selector": ".quiz-badge img",
+        "fact_ids": [],
+        "reason": "The badge image has alt text 'image' which does not convey the purpose or meaning of the graphic (the Cell Explorer badge).",
+        "who_is_affected": "Blind users and people who cannot see images rely on text alternatives to understand visual content; 'image' conveys nothing about the badge.",
+        "how_to_fix": "Replace alt='image' with a descriptive alternative such as alt='Cell Explorer badge'.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
+        "source": "subagent:perceivable"
+      },
+      {
+        "id": "F004",
+        "tier": "flagged",
+        "sc": "1.3.3",
+        "title": "Form instruction relies on color and position to identify the submit button",
+        "principle": "perceivable",
+        "severity": "serious",
+        "page": "quiz-signup.html",
+        "selector": "#signup-form > p:nth-of-type(2)",
+        "fact_ids": [],
+        "reason": "The instruction 'When you are ready, press the green button on the right' identifies the control only by color (green) and screen position (right), with no text label or other identifier.",
+        "who_is_affected": "Blind users and people with color blindness cannot rely on visual or spatial characteristics alone to identify controls.",
+        "how_to_fix": "Replace the instruction with one that uses the button label, for example 'When you are ready, press Sign up'.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html",
+        "source": "subagent:perceivable"
+      },
+      {
+        "id": "F005",
+        "tier": "flagged",
+        "sc": "1.4.1",
+        "title": "Form validation error state indicated by color only",
+        "principle": "perceivable",
+        "severity": "serious",
+        "page": "quiz-signup.html",
+        "selector": ".signup-form .invalid",
+        "fact_ids": [],
+        "reason": "Invalid form fields are indicated by changing the border to red (#d93025) and background to light red (#fdecea), with no text message, error icon, or aria-invalid attribute to convey the error state without color.",
+        "who_is_affected": "People with color blindness or low vision cannot distinguish an error state indicated by color alone.",
+        "how_to_fix": "Add a visible error message in text, set aria-invalid='true' on invalid fields, and link each field to its error message with aria-describedby.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+        "source": "subagent:perceivable"
+      },
+      {
+        "id": "F006",
+        "tier": "flagged",
+        "sc": "1.4.13",
+        "title": "Help popups lack a keyboard-accessible dismiss mechanism",
+        "principle": "perceivable",
+        "severity": "moderate",
+        "page": "quiz-signup.html",
+        "selector": ".help-icon",
+        "fact_ids": [],
+        "reason": "Help buttons toggle hidden text panels on click but provide no Escape-key dismiss handler and no hover persistence, leaving keyboard and low-vision users unable to dismiss or re-read the content.",
+        "who_is_affected": "Users with low vision who zoom in and users with motor disabilities often need to move the pointer to read tooltip content without it closing.",
+        "how_to_fix": "Add an Escape key listener to dismiss open help panels and ensure pointer users can move onto the revealed content without it closing.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html",
+        "source": "subagent:perceivable"
+      },
+      {
+        "id": "F007",
+        "tier": "proven",
+        "sc": "2.1.1",
+        "title": "Submit button implemented as a div and is not keyboard accessible",
+        "principle": "operable",
+        "severity": "critical",
+        "page": "quiz-signup.html",
+        "selector": "#submit-signup",
+        "fact_ids": [
+          "click-4816a2a4"
+        ],
+        "reason": "The submit control is a div with a click listener but is not focusable and is not a native interactive element, so keyboard-only users cannot reach or activate it.",
+        "who_is_affected": "Keyboard-only users, switch access users, and screen reader users cannot use a mouse and depend entirely on keyboard access.",
+        "how_to_fix": "Replace the div with a native <button type='submit'> element, which is focusable and keyboard-operable by default.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html",
+        "source": "subagent:operable"
+      },
+      {
+        "id": "F008",
+        "tier": "proven",
+        "sc": "2.1.2",
+        "title": "Keyboard focus trap in the terms section",
+        "principle": "operable",
+        "severity": "critical",
+        "page": "quiz-signup.html",
+        "selector": "#terms-first",
+        "fact_ids": [
+          "focus-fca4a983"
+        ],
+        "reason": "Repeated Tab presses cycle focus only between #terms-first and #terms-last; the #agree checkbox and a page link are unreachable by keyboard.",
+        "who_is_affected": "Keyboard users become stuck in the terms section and cannot navigate to the rest of the form or complete the sign-up.",
+        "how_to_fix": "Remove the keydown handlers that intercept Tab in the terms section. If modal-style focus containment is intended, implement it only while the modal is explicitly open and provide an Escape key to exit.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html",
+        "source": "subagent:operable"
+      },
+      {
+        "id": "F009",
+        "tier": "proven",
+        "sc": "2.2.1",
+        "title": "Meta refresh redirects the page after 5 minutes with no user control",
+        "principle": "operable",
+        "severity": "critical",
+        "page": "quiz-signup.html",
+        "selector": "meta[http-equiv=\"refresh\"]",
+        "fact_ids": [
+          "axe-a10cd7fe"
+        ],
+        "reason": "The meta refresh tag forces a page redirect after 300 seconds with no mechanism for the user to turn off, adjust, or extend the time limit.",
+        "who_is_affected": "People with cognitive or motor disabilities need more time to complete tasks and may be unable to finish the form before the page redirects.",
+        "how_to_fix": "Remove the meta refresh tag. If a session timeout is required, replace it with a server-side mechanism that warns the user and offers options to extend the session.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable.html",
+        "source": "subagent:operable"
+      },
+      {
+        "id": "F010",
+        "tier": "proven",
+        "sc": "2.4.7",
+        "title": "Custom radio inputs have no visible focus indicator",
+        "principle": "operable",
+        "severity": "serious",
+        "page": "quiz-signup.html",
+        "selector": "#signup-form > div:nth-of-type(6) > div:nth-of-type(1) > label:nth-of-type(1) > input",
+        "fact_ids": [
+          "focus-be564984"
+        ],
+        "reason": "The element's outline, box-shadow, border, background, color, and underline were identical with and without keyboard focus, confirming the focused state is invisible.",
+        "who_is_affected": "Keyboard users cannot tell which element is active without a visible focus indicator and may become disoriented navigating the quiz level options.",
+        "how_to_fix": "Remove the CSS rule '.level-radio:focus-visible { outline: none; }' and replace it with a visible focus style such as 'outline: 3px solid #4a4a55; outline-offset: 2px'.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html",
+        "source": "subagent:operable"
+      },
+      {
+        "id": "F011",
+        "tier": "proven",
+        "sc": "2.5.8",
+        "title": "Help button 'Help about levels' has insufficient target size",
+        "principle": "operable",
+        "severity": "serious",
+        "page": "quiz-signup.html",
+        "selector": "button[aria-label=\"Help about levels\"]",
+        "fact_ids": [
+          "axe-df0a41ad"
+        ],
+        "reason": "Target size is 16px by 16px and safe clickable space has a diameter of 8px, both below the required minimum of 24px.",
+        "who_is_affected": "People with limited motor control struggle to accurately tap or click small targets, especially on touch screens.",
+        "how_to_fix": "Increase the .help-icon width and height to at least 24px and add padding so the safe clickable space reaches at least 24px in diameter.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+        "source": "subagent:operable"
+      },
+      {
+        "id": "F012",
+        "tier": "proven",
+        "sc": "2.5.8",
+        "title": "Help button 'Help about timing' has insufficient target size",
+        "principle": "operable",
+        "severity": "serious",
+        "page": "quiz-signup.html",
+        "selector": "button[aria-label=\"Help about timing\"]",
+        "fact_ids": [
+          "axe-5d9d842b"
+        ],
+        "reason": "Target size is 16px by 16px and safe clickable space has a diameter of 8px, both below the required minimum of 24px.",
+        "who_is_affected": "People with limited motor control struggle to accurately tap or click small targets, especially on touch screens.",
+        "how_to_fix": "Increase the .help-icon width and height to at least 24px and add padding so the safe clickable space reaches at least 24px in diameter.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+        "source": "subagent:operable"
+      },
+      {
+        "id": "F013",
+        "tier": "flagged",
+        "sc": "2.4.3",
+        "title": "Focus order is disrupted by the terms section keyboard trap",
+        "principle": "operable",
+        "severity": "critical",
+        "page": "quiz-signup.html",
+        "selector": "#terms-box",
+        "fact_ids": [],
+        "reason": "The programmatic focus trap between #terms-first and #terms-last prevents keyboard focus from reaching the agree checkbox and other subsequent elements, breaking the logical Tab order through the form.",
+        "who_is_affected": "Keyboard users and screen reader users become confused when focus does not move in a logical sequence and important form controls are unreachable.",
+        "how_to_fix": "Remove the Tab-intercepting keydown handlers so focus flows naturally through the terms content and on to the #agree checkbox and remaining form controls.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html",
+        "source": "subagent:operable"
+      },
+      {
+        "id": "F014",
+        "tier": "flagged",
+        "sc": "2.4.4",
+        "title": "Link with ambiguous text 'Click here'",
+        "principle": "operable",
+        "severity": "serious",
+        "page": "quiz-signup.html",
+        "selector": "a[href=\"course.html#rules\"]",
+        "fact_ids": [],
+        "reason": "The link text 'Click here' does not describe its destination or purpose; screen reader users listing page links cannot determine where it leads.",
+        "who_is_affected": "Screen reader users often navigate by listing all links on a page; ambiguous link text makes it impossible to choose the right one.",
+        "how_to_fix": "Replace 'Click here' with a descriptive phrase such as 'View course rules' that identifies the destination.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html",
+        "source": "subagent:operable"
+      },
+      {
+        "id": "F015",
+        "tier": "flagged",
+        "sc": "2.4.6",
+        "title": "Date field has no format instructions",
+        "principle": "operable",
+        "severity": "moderate",
+        "page": "quiz-signup.html",
+        "selector": "#quiz-date",
+        "fact_ids": [],
+        "reason": "The date field has a label 'Date' but provides no hint about the expected format; the JavaScript validates DD/MM/YYYY but users are never told this requirement.",
+        "who_is_affected": "Screen reader users and users with cognitive disabilities need labels or instructions that clearly describe what each input expects.",
+        "how_to_fix": "Add visible hint text or a placeholder (e.g., placeholder='DD/MM/YYYY') and link it to the input with aria-describedby.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html",
+        "source": "subagent:operable"
+      },
+      {
+        "id": "F016",
+        "tier": "proven",
+        "sc": "3.1.1",
+        "title": "HTML element missing lang attribute",
+        "principle": "understandable",
+        "severity": "serious",
+        "page": "quiz-signup.html",
+        "selector": "html",
+        "fact_ids": [
+          "axe-6a8c18df"
+        ],
+        "reason": "The html element does not have a lang attribute, as confirmed by the axe html-has-lang rule.",
+        "who_is_affected": "Screen readers use the language attribute to select the correct voice and pronunciation rules; without it, content may be spoken incorrectly.",
+        "how_to_fix": "Add lang='en' to the opening <html> tag.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html",
+        "source": "subagent:understandable"
+      },
+      {
+        "id": "F017",
+        "tier": "flagged",
+        "sc": "3.2.2",
+        "title": "Course select navigates the page on value change without warning",
+        "principle": "understandable",
+        "severity": "serious",
+        "page": "quiz-signup.html",
+        "selector": "#course-select",
+        "fact_ids": [],
+        "reason": "The course select element's change listener immediately navigates to index.html when 'maths' or 'writing' is chosen, with no prior warning to the user.",
+        "who_is_affected": "Keyboard users and people with cognitive disabilities are disoriented by unexpected page navigation triggered by a form input change.",
+        "how_to_fix": "Remove the automatic navigation on change. If the intent is to route users to a different sign-up flow, add an explanatory message and a manual continue button instead.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/on-input.html",
+        "source": "subagent:understandable"
+      },
+      {
+        "id": "F018",
+        "tier": "flagged",
+        "sc": "3.3.1",
+        "title": "Form errors identified by color only with no text description",
+        "principle": "understandable",
+        "severity": "serious",
+        "page": "quiz-signup.html",
+        "selector": "#email, #quiz-date",
+        "fact_ids": [],
+        "reason": "When validation fails the script applies a red border class but provides no text error message, no aria-invalid attribute, and no aria-describedby pointing to an error description.",
+        "who_is_affected": "Blind users and people with cognitive disabilities need errors described in text to understand what went wrong and which field to correct.",
+        "how_to_fix": "Add aria-invalid='true' to invalid fields on submit, insert a visible error message for each field that explains what is wrong, and link each field to its error message using aria-describedby.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html",
+        "source": "subagent:understandable"
+      },
+      {
+        "id": "F019",
+        "tier": "flagged",
+        "sc": "3.3.2",
+        "title": "Date field lacks format instructions",
+        "principle": "understandable",
+        "severity": "moderate",
+        "page": "quiz-signup.html",
+        "selector": "#quiz-date",
+        "fact_ids": [],
+        "reason": "The date input has the label 'Date' but no instruction about the required format; the JavaScript expects DD/MM/YYYY but this is not communicated to the user.",
+        "who_is_affected": "People with cognitive disabilities and screen reader users need clear instructions to understand what format each form field expects.",
+        "how_to_fix": "Add hint text next to the field indicating the required format, for example 'Format: DD/MM/YYYY', and reference it via aria-describedby.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html",
+        "source": "subagent:understandable"
+      },
+      {
+        "id": "F020",
+        "tier": "flagged",
+        "sc": "3.3.3",
+        "title": "Validation errors lack specific correction suggestions",
+        "principle": "understandable",
+        "severity": "moderate",
+        "page": "quiz-signup.html",
+        "selector": "#email, #quiz-date",
+        "fact_ids": [],
+        "reason": "When email or date validation fails no correction suggestion is provided; users are not told what a valid value looks like.",
+        "who_is_affected": "People with cognitive disabilities and screen reader users need concrete suggestions to correct mistakes without having to guess.",
+        "how_to_fix": "Show specific error messages such as 'Enter a valid email address, for example name@example.com' and 'Enter the date as DD/MM/YYYY, for example 25/09/2026'.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html",
+        "source": "subagent:understandable"
+      },
+      {
+        "id": "F021",
+        "tier": "proven",
+        "sc": "4.1.2",
+        "title": "Custom checkbox missing required aria-checked attribute",
+        "principle": "robust",
+        "severity": "critical",
+        "page": "quiz-signup.html",
+        "selector": "#agree",
+        "fact_ids": [
+          "axe-82f21c93"
+        ],
+        "reason": "The span element with role='checkbox' is missing the required aria-checked attribute, so assistive technology cannot announce or update the checked state.",
+        "who_is_affected": "Screen reader users rely on name, role, and value to understand and interact with every control; without aria-checked, the checkbox state is invisible to them.",
+        "how_to_fix": "Add aria-checked='false' to the span initially and update it to 'true' via JavaScript when the user activates the checkbox.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
+        "source": "subagent:robust"
+      },
+      {
+        "id": "F022",
+        "tier": "proven",
+        "sc": "4.1.2",
+        "title": "Close-terms button has no accessible name",
+        "principle": "robust",
+        "severity": "critical",
+        "page": "quiz-signup.html",
+        "selector": "#close-terms",
+        "fact_ids": [
+          "axe-5a7ee1d4"
+        ],
+        "reason": "The button contains only an aria-hidden SVG icon and has no aria-label, aria-labelledby, title, or inner text, leaving it with no accessible name.",
+        "who_is_affected": "Screen reader users cannot understand what the button does and may not know how to dismiss the terms section.",
+        "how_to_fix": "Add aria-label='Close terms' to the button element.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
+        "source": "subagent:robust"
+      },
+      {
+        "id": "F023",
+        "tier": "proven",
+        "sc": "4.1.2",
+        "title": "Email input has no programmatic label",
+        "principle": "robust",
+        "severity": "critical",
+        "page": "quiz-signup.html",
+        "selector": "#email",
+        "fact_ids": [
+          "axe-a17f85a7"
+        ],
+        "reason": "The email input has no explicit label element, no implicit wrapped label, and no aria-label or aria-labelledby attribute, so assistive technology cannot announce its purpose.",
+        "who_is_affected": "Screen reader users cannot determine what information the email field requires without a programmatic label.",
+        "how_to_fix": "Replace <span class='field-name'>Email</span> with <label for='email'>Email</label> so the label is programmatically associated with the input.",
+        "fixable": true,
+        "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
+        "source": "subagent:robust"
+      }
+    ],
+    "out_of_reach": [
+      {
+        "sc": "1.2.1",
+        "title": "Audio-only and Video-only (Prerecorded)",
+        "reason": "No audio-only or video-only content is present in the changed pages."
+      },
+      {
+        "sc": "1.2.2",
+        "title": "Captions (Prerecorded)",
+        "reason": "No prerecorded video content is present in the changed pages."
+      },
+      {
+        "sc": "1.2.3",
+        "title": "Audio Description or Media Alternative (Prerecorded)",
+        "reason": "No prerecorded synchronized media is present in the changed pages."
+      },
+      {
+        "sc": "1.2.4",
+        "title": "Captions (Live)",
+        "reason": "No live media is present in the changed pages."
+      },
+      {
+        "sc": "1.2.5",
+        "title": "Audio Description (Prerecorded)",
+        "reason": "No prerecorded video is present in the changed pages."
+      },
+      {
+        "sc": "1.4.4",
+        "title": "Resize Text",
+        "reason": "Verifying that text remains readable at 200% browser zoom requires runtime manual testing that cannot be performed from static code alone."
+      },
+      {
+        "sc": "1.4.10",
+        "title": "Reflow",
+        "reason": "Checking that no horizontal scrolling occurs at 320 CSS pixels requires runtime responsive testing that cannot be performed from static code alone."
+      },
+      {
+        "sc": "1.4.12",
+        "title": "Text Spacing",
+        "reason": "Verifying that content survives override text spacing requires runtime browser testing with injected CSS that cannot be performed from static code alone."
+      },
+      {
+        "sc": "2.3.1",
+        "title": "Three Flashes or Below Threshold",
+        "reason": "Detecting rapidly flashing content requires frame-by-frame video analysis that cannot be performed from static code alone."
+      },
+      {
+        "sc": "2.4.5",
+        "title": "Multiple Ways",
+        "reason": "Confirming more than one navigation route to the new page requires reviewing the full site information architecture beyond this pull request."
+      },
+      {
+        "sc": "3.2.3",
+        "title": "Consistent Navigation",
+        "reason": "Verifying that navigation appears in the same order across all pages requires a cross-page review that goes beyond the changed files in this pull request."
+      },
+      {
+        "sc": "3.2.4",
+        "title": "Consistent Identification",
+        "reason": "Confirming that functionally identical components are labeled consistently across the whole site requires a cross-page review beyond this pull request."
+      },
+      {
+        "sc": "1.4.11",
+        "title": "Non-text Contrast",
+        "reason": "No engine fact was produced for non-text contrast; verifying control boundary contrast for the custom radio and checkbox against adjacent colors requires manual measurement outside code review."
+      }
+    ],
+    "not_scanned": []
+  },
+  "fixes": {
+    "schema_version": "1.0",
+    "pr_id": "pr-1",
+    "fixes": [
+      {
+        "finding_id": "F001",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html"
+        ],
+        "explanation": "Changed autocomplete='nick-name' to autocomplete='username' on the display-name input, which is a valid HTML autofill token."
+      },
+      {
+        "finding_id": "F002",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/styles.css"
+        ],
+        "explanation": "Changed the .hint text color from #9a9a9a to #767676, which achieves a 4.5:1 contrast ratio against #ffffff."
+      },
+      {
+        "finding_id": "F003",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html"
+        ],
+        "explanation": "Replaced alt='image' with alt='Cell Explorer badge' on the badge image to describe the graphic meaningfully."
+      },
+      {
+        "finding_id": "F004",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html"
+        ],
+        "explanation": "Replaced 'press the green button on the right' with 'press Sign up' so the instruction uses the button label instead of color and position."
+      },
+      {
+        "finding_id": "F005",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html",
+          "codes/fixture/src/quiz-signup.js",
+          "codes/fixture/src/styles.css"
+        ],
+        "explanation": "Added aria-invalid='true' to invalid fields on submit, added a visible field-error paragraph with a text error message for each field, and added the .field-error CSS rule."
+      },
+      {
+        "finding_id": "F006",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.js"
+        ],
+        "explanation": "Added a document-level Escape key listener that hides all open help panels so keyboard users can dismiss them."
+      },
+      {
+        "finding_id": "F007",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html",
+          "codes/fixture/src/quiz-signup.js"
+        ],
+        "explanation": "Replaced the div#submit-signup with a native button[type=submit] and changed the JS handler from a click listener on the div to a form submit listener so the button is keyboard-operable by default."
+      },
+      {
+        "finding_id": "F008",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.js"
+        ],
+        "explanation": "Removed the keydown handlers on #terms-first and #terms-last that intercepted Tab and trapped keyboard focus in the terms section."
+      },
+      {
+        "finding_id": "F009",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html"
+        ],
+        "explanation": "Removed the meta[http-equiv=refresh] tag that redirected the page after 300 seconds with no user control."
+      },
+      {
+        "finding_id": "F010",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/styles.css"
+        ],
+        "explanation": "Replaced '.level-radio:focus-visible { outline: none }' with a visible 3px solid outline so keyboard focus on the radio buttons is visible."
+      },
+      {
+        "finding_id": "F011",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/styles.css"
+        ],
+        "explanation": "Increased .help-icon width and height from 16px to 24px (meeting the 24px minimum target size) and updated line-height to match."
+      },
+      {
+        "finding_id": "F012",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/styles.css"
+        ],
+        "explanation": "The same .help-icon CSS change that fixes F011 also raises the 'Help about timing' button to 24px, meeting the minimum target size."
+      },
+      {
+        "finding_id": "F013",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.js"
+        ],
+        "explanation": "The removal of the Tab-trapping keydown handlers (F008 fix) also restores the natural focus order through the terms section, resolving this finding."
+      },
+      {
+        "finding_id": "F014",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html"
+        ],
+        "explanation": "Replaced the link text 'Click here' with 'View course rules' so the link purpose is clear from its text alone."
+      },
+      {
+        "finding_id": "F015",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html"
+        ],
+        "explanation": "Added placeholder='DD/MM/YYYY', a visible hint paragraph 'Format: DD/MM/YYYY, for example 25/09/2026', and aria-describedby linking the date input to both the hint and the error element."
+      },
+      {
+        "finding_id": "F016",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html"
+        ],
+        "explanation": "Added lang='en' to the opening html element so screen readers select the correct language voice and pronunciation rules."
+      },
+      {
+        "finding_id": "F017",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.js"
+        ],
+        "explanation": "Removed the course select change listener that immediately navigated to index.html when 'maths' or 'writing' was chosen, eliminating the unexpected context change."
+      },
+      {
+        "finding_id": "F018",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html",
+          "codes/fixture/src/quiz-signup.js",
+          "codes/fixture/src/styles.css"
+        ],
+        "explanation": "The F005 fix also covers F018: aria-invalid is set on invalid fields and a visible text error message is shown, so errors are no longer indicated by color alone."
+      },
+      {
+        "finding_id": "F019",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html"
+        ],
+        "explanation": "The F015 fix also covers F019: a visible hint paragraph with the required format is shown next to the date field and linked via aria-describedby."
+      },
+      {
+        "finding_id": "F020",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.js"
+        ],
+        "explanation": "The F005/F018 fix also covers F020: specific error messages with correction examples are now shown for both the email and date fields on validation failure."
+      },
+      {
+        "finding_id": "F021",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html",
+          "codes/fixture/src/quiz-signup.js"
+        ],
+        "explanation": "Added aria-checked='false' to the #agree span initially and updated the click handler to toggle the attribute between 'true' and 'false' so assistive technology can announce the checked state."
+      },
+      {
+        "finding_id": "F022",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html"
+        ],
+        "explanation": "Added aria-label='Close terms' to the #close-terms button so its purpose is announced to screen reader users."
+      },
+      {
+        "finding_id": "F023",
+        "status": "fixed",
+        "files_changed": [
+          "codes/fixture/src/quiz-signup.html"
+        ],
+        "explanation": "Replaced the span.field-name for the Email field with a proper label[for=email] element so the input has a programmatic label."
+      }
+    ],
+    "not_fixed": []
+  },
+  "verify": {
+    "base": {
+      "ref": "demo/pr-1-quiz-signup",
+      "sha": "250923a3204cbd037061261fd37560d342bf1223"
+    },
+    "head": {
+      "ref": "demo/pr-1-fixed",
+      "sha": "b4ea6e8c7ab80a45eb4762650637e82eff425a5a"
+    },
+    "rule": "verified means the test failed on base and passed on head. Nothing else counts.",
+    "summary": {
+      "verified": 23,
+      "not_proving": 0,
+      "still_failing": 0,
+      "error": 0,
+      "total": 23
+    },
+    "results": [
+      {
+        "test": "test_pr1_F001.py::test_display_name_autocomplete_valid[chromium]",
+        "finding_id": "F001",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: autocomplete='nick-name' is the invalid 'nick-name' token; a valid token such as 'username' is required",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F002.py::test_hint_text_contrast[chromium]",
+        "finding_id": "F002",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: .hint: 2.81:1 is below 4.5:1 (#9a9a9a on #ffffff)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F003.py::test_badge_image_meaningful_alt[chromium]",
+        "finding_id": "F003",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: badge image accessible name is the generic word 'image'; it must describe the image content",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F004.py::test_submit_instruction_does_not_use_color_or_position[chromium]",
+        "finding_id": "F004",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: Instruction still references the color 'green' to identify a control (WCAG 1.3.3)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F005.py::test_invalid_field_has_aria_invalid_and_visible_error[chromium]",
+        "finding_id": "F005",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: #email aria-invalid='None' after failed submit; expected 'true'",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F006.py::test_escape_dismisses_help_panel[chromium]",
+        "finding_id": "F006",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: Help panel is still visible after Escape; keyboard users cannot dismiss it",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F007.py::test_submit_is_keyboard_operable_button[chromium]",
+        "finding_id": "F007",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: #submit-signup is a <div> element; it must be a <button> to be keyboard-operable",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F008.py::test_no_focus_trap_in_terms[chromium]",
+        "finding_id": "F008",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: Keyboard focus is trapped: cycle=['#terms-first', '#terms-last'], unreachable=['#agree', '#signup-form > p:nth-of-type(2) > a']",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F009.py::test_no_meta_refresh[chromium]",
+        "finding_id": "F009",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: A meta[http-equiv=refresh] tag exists; the page will redirect without user control (WCAG 2.2.2 / 3.2.5)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F010.py::test_level_radio_focus_indicator_visible[chromium]",
+        "finding_id": "F010",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: Keyboard focus on .level-radio does not produce a visible focus indicator (WCAG 2.4.7)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F011.py::test_help_about_levels_target_size[chromium]",
+        "finding_id": "F011",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: 'Help about levels' button target size is 16x16px; minimum required is 24.0x24.0px (WCAG 2.5.8)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F012.py::test_help_about_timing_target_size[chromium]",
+        "finding_id": "F012",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: 'Help about timing' button target size is 16x16px; minimum required is 24.0x24.0px (WCAG 2.5.8)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F013.py::test_terms_section_not_in_focus_trap[chromium]",
+        "finding_id": "F013",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: Keyboard focus does not escape the page; elements unreachable: ['#agree', '#signup-form > p:nth-of-type(2) > a']",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F014.py::test_course_rules_link_name_is_descriptive[chromium]",
+        "finding_id": "F014",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: Link accessible name is 'Click here'; vague link text does not describe the destination (WCAG 2.4.6 / 2.4.9)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F015.py::test_date_input_has_visible_format_hint[chromium]",
+        "finding_id": "F015",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: #quiz-date has no aria-describedby; the format hint is not programmatically linked",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F016.py::test_html_lang_attribute_present[chromium]",
+        "finding_id": "F016",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: The <html> element has no lang attribute; screen readers cannot select the correct language voice (WCAG 3.1.1)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F017.py::test_course_select_change_does_not_navigate[chromium]",
+        "finding_id": "F017",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: Selecting 'maths' navigated away from http://127.0.0.1:52739/quiz-signup.html to http://127.0.0.1:52739/index.html; an on-change navigation is an unexpected context change (WCAG 3.2.2)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F018.py::test_validation_error_has_text_not_color_only[chromium]",
+        "finding_id": "F018",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: No visible text error message for the email field after failed submit; error is indicated by color alone (WCAG 1.4.1)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F019.py::test_date_input_format_hint_is_visible[chromium]",
+        "finding_id": "F019",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: No #quiz-date-hint element found; format instructions are missing (WCAG 1.3.5 / 3.3.2)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F020.py::test_error_message_includes_correction_example[chromium]",
+        "finding_id": "F020",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: Date field error message is not visible after failed submit",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F021.py::test_agree_checkbox_exposes_checked_state[chromium]",
+        "finding_id": "F021",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: #agree aria-checked='None' before interaction; a custom checkbox must expose its state via aria-checked (WCAG 4.1.2)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F022.py::test_close_terms_button_has_accessible_name[chromium]",
+        "finding_id": "F022",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: The #close-terms button has no accessible name; screen reader users cannot identify its purpose (WCAG 4.1.2)",
+        "head_message": "",
+        "verdict": "verified"
+      },
+      {
+        "test": "test_pr1_F023.py::test_email_input_has_programmatic_label[chromium]",
+        "finding_id": "F023",
+        "base": "failed",
+        "head": "passed",
+        "base_message": "AssertionError: axe violations: [('label', [['#email']])]",
+        "head_message": "",
+        "verdict": "verified"
+      }
+    ],
+    "test_files_not_collected": [],
+    "fixes_without_test": [],
+    "run": {
+      "started_at": "2026-09-25T17:50:56+00:00",
+      "duration_s": 14.9
+    }
+  },
+  "after": {
+    "head": {
+      "ref": "demo/pr-1-fixed",
+      "sha": "b4ea6e8c7ab80a45eb4762650637e82eff425a5a"
+    },
+    "summary": {
+      "pages_total": 4,
+      "pages_scanned": 4,
+      "pages_not_scanned": 0,
+      "facts_total": 0,
+      "facts_introduced": 0,
+      "by_kind": {}
+    },
+    "remaining_facts": []
+  },
+  "narration": [
+    {
+      "page": "quiz-signup.html",
+      "before": [
+        "link, Skip to main content",
+        "link, OpenClass",
+        "list",
+        "link, Courses",
+        "link, Biology basics",
+        "link, Quiz sign-up",
+        "link, Biology basics",
+        "heading, Sign up for the Biology quiz, level 1",
+        "img, image",
+        "textbox, unlabeled",
+        "textbox, Display name",
+        "textbox, Course code",
+        "combobox, Course",
+        "textbox, Date",
+        "radio, Starter, checked",
+        "radio, Core",
+        "radio, Stretch",
+        "button, Help about levels",
+        "button, Help about timing",
+        "heading, Quiz terms, level 2",
+        "button, unlabeled",
+        "link, full quiz rules",
+        "link, course list",
+        "checkbox, I agree to the quiz terms",
+        "link, Click here"
+      ],
+      "after": [
+        "link, Skip to main content",
+        "link, OpenClass",
+        "list",
+        "link, Courses",
+        "link, Biology basics",
+        "link, Quiz sign-up",
+        "link, Biology basics",
+        "heading, Sign up for the Biology quiz, level 1",
+        "img, Cell Explorer badge",
+        "textbox, Email",
+        "textbox, Display name",
+        "textbox, Course code",
+        "combobox, Course",
+        "textbox, Date",
+        "radio, Starter, checked",
+        "radio, Core",
+        "radio, Stretch",
+        "button, Help about levels",
+        "button, Help about timing",
+        "heading, Quiz terms, level 2",
+        "button, Close terms",
+        "link, full quiz rules",
+        "link, course list",
+        "checkbox, I agree to the quiz terms",
+        "link, View course rules",
+        "button, Sign up"
+      ]
+    }
+  ]
+}

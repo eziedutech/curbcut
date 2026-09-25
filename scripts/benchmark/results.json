@@ -1,0 +1,660 @@
+{
+  "schema_version": "1.0",
+  "runs": [
+    {
+      "run": "pr-1",
+      "pr": "pr-1",
+      "head_sha": "250923a3204cbd037061261fd37560d342bf1223",
+      "axe_only": {
+        "found": 8,
+        "planted": 18,
+        "judgment_only_found": 0,
+        "judgment_only_planted": 7,
+        "decoys_hit": 0,
+        "decoys": 6,
+        "items": 9,
+        "unmatched": [],
+        "decoy_hits": [],
+        "by_principle": {
+          "perceivable": {
+            "found": 2,
+            "planted": 5
+          },
+          "operable": {
+            "found": 2,
+            "planted": 6
+          },
+          "understandable": {
+            "found": 1,
+            "planted": 4
+          },
+          "robust": {
+            "found": 3,
+            "planted": 3
+          }
+        },
+        "per_issue": [
+          {
+            "gt_id": "P1-01",
+            "sc": "3.1.1",
+            "principle": "understandable",
+            "engine_signal": "axe:html-has-lang",
+            "found": true,
+            "by": [
+              "axe-6a8c18df"
+            ]
+          },
+          {
+            "gt_id": "P1-02",
+            "sc": "2.2.1",
+            "principle": "operable",
+            "engine_signal": "axe:meta-refresh",
+            "found": true,
+            "by": [
+              "axe-a10cd7fe"
+            ]
+          },
+          {
+            "gt_id": "P1-03",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:label",
+            "found": true,
+            "by": [
+              "axe-a17f85a7"
+            ]
+          },
+          {
+            "gt_id": "P1-04",
+            "sc": "1.4.3",
+            "principle": "perceivable",
+            "engine_signal": "axe:color-contrast",
+            "found": true,
+            "by": [
+              "axe-43c1c80f"
+            ]
+          },
+          {
+            "gt_id": "P1-05",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:button-name",
+            "found": true,
+            "by": [
+              "axe-5a7ee1d4"
+            ]
+          },
+          {
+            "gt_id": "P1-06",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:aria-required-attr",
+            "found": true,
+            "by": [
+              "axe-82f21c93"
+            ]
+          },
+          {
+            "gt_id": "P1-07",
+            "sc": "1.3.5",
+            "principle": "perceivable",
+            "engine_signal": "axe:autocomplete-valid",
+            "found": true,
+            "by": [
+              "axe-60dbbd10"
+            ]
+          },
+          {
+            "gt_id": "P1-08",
+            "sc": "2.1.2",
+            "principle": "operable",
+            "engine_signal": "engine:focus_trap",
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-09",
+            "sc": "2.4.7",
+            "principle": "operable",
+            "engine_signal": "engine:focus_not_visible",
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-10",
+            "sc": "2.1.1",
+            "principle": "operable",
+            "engine_signal": "engine:clickable_not_focusable",
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-11",
+            "sc": "1.3.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-12",
+            "sc": "3.3.1",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-13",
+            "sc": "1.1.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-14",
+            "sc": "2.4.4",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-15",
+            "sc": "1.3.3",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-16",
+            "sc": "2.5.8",
+            "principle": "operable",
+            "engine_signal": "axe:target-size",
+            "found": true,
+            "by": [
+              "axe-df0a41ad",
+              "axe-5d9d842b"
+            ]
+          },
+          {
+            "gt_id": "P1-17",
+            "sc": "3.3.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-18",
+            "sc": "3.2.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          }
+        ]
+      },
+      "engine": {
+        "found": 11,
+        "planted": 18,
+        "judgment_only_found": 0,
+        "judgment_only_planted": 7,
+        "decoys_hit": 0,
+        "decoys": 6,
+        "items": 13,
+        "unmatched": [],
+        "decoy_hits": [],
+        "by_principle": {
+          "perceivable": {
+            "found": 2,
+            "planted": 5
+          },
+          "operable": {
+            "found": 5,
+            "planted": 6
+          },
+          "understandable": {
+            "found": 1,
+            "planted": 4
+          },
+          "robust": {
+            "found": 3,
+            "planted": 3
+          }
+        },
+        "per_issue": [
+          {
+            "gt_id": "P1-01",
+            "sc": "3.1.1",
+            "principle": "understandable",
+            "engine_signal": "axe:html-has-lang",
+            "found": true,
+            "by": [
+              "axe-6a8c18df"
+            ]
+          },
+          {
+            "gt_id": "P1-02",
+            "sc": "2.2.1",
+            "principle": "operable",
+            "engine_signal": "axe:meta-refresh",
+            "found": true,
+            "by": [
+              "axe-a10cd7fe"
+            ]
+          },
+          {
+            "gt_id": "P1-03",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:label",
+            "found": true,
+            "by": [
+              "axe-a17f85a7"
+            ]
+          },
+          {
+            "gt_id": "P1-04",
+            "sc": "1.4.3",
+            "principle": "perceivable",
+            "engine_signal": "axe:color-contrast",
+            "found": true,
+            "by": [
+              "axe-43c1c80f",
+              "contr-7ad405bb"
+            ]
+          },
+          {
+            "gt_id": "P1-05",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:button-name",
+            "found": true,
+            "by": [
+              "axe-5a7ee1d4"
+            ]
+          },
+          {
+            "gt_id": "P1-06",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:aria-required-attr",
+            "found": true,
+            "by": [
+              "axe-82f21c93"
+            ]
+          },
+          {
+            "gt_id": "P1-07",
+            "sc": "1.3.5",
+            "principle": "perceivable",
+            "engine_signal": "axe:autocomplete-valid",
+            "found": true,
+            "by": [
+              "axe-60dbbd10"
+            ]
+          },
+          {
+            "gt_id": "P1-08",
+            "sc": "2.1.2",
+            "principle": "operable",
+            "engine_signal": "engine:focus_trap",
+            "found": true,
+            "by": [
+              "focus-fca4a983"
+            ]
+          },
+          {
+            "gt_id": "P1-09",
+            "sc": "2.4.7",
+            "principle": "operable",
+            "engine_signal": "engine:focus_not_visible",
+            "found": true,
+            "by": [
+              "focus-be564984"
+            ]
+          },
+          {
+            "gt_id": "P1-10",
+            "sc": "2.1.1",
+            "principle": "operable",
+            "engine_signal": "engine:clickable_not_focusable",
+            "found": true,
+            "by": [
+              "click-4816a2a4"
+            ]
+          },
+          {
+            "gt_id": "P1-11",
+            "sc": "1.3.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-12",
+            "sc": "3.3.1",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-13",
+            "sc": "1.1.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-14",
+            "sc": "2.4.4",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-15",
+            "sc": "1.3.3",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-16",
+            "sc": "2.5.8",
+            "principle": "operable",
+            "engine_signal": "axe:target-size",
+            "found": true,
+            "by": [
+              "axe-df0a41ad",
+              "axe-5d9d842b"
+            ]
+          },
+          {
+            "gt_id": "P1-17",
+            "sc": "3.3.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-18",
+            "sc": "3.2.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          }
+        ]
+      },
+      "curbcut": {
+        "found": 16,
+        "planted": 18,
+        "judgment_only_found": 5,
+        "judgment_only_planted": 7,
+        "decoys_hit": 0,
+        "decoys": 6,
+        "items": 23,
+        "unmatched": [
+          {
+            "id": "F004",
+            "scs": [
+              "1.3.3"
+            ],
+            "label": "flagged:Form instruction relies on color and position to identify the submit button"
+          },
+          {
+            "id": "F005",
+            "scs": [
+              "1.4.1"
+            ],
+            "label": "flagged:Form validation error state indicated by color only"
+          },
+          {
+            "id": "F006",
+            "scs": [
+              "1.4.13"
+            ],
+            "label": "flagged:Help popups lack a keyboard-accessible dismiss mechanism"
+          },
+          {
+            "id": "F013",
+            "scs": [
+              "2.4.3"
+            ],
+            "label": "flagged:Focus order is disrupted by the terms section keyboard trap"
+          },
+          {
+            "id": "F015",
+            "scs": [
+              "2.4.6"
+            ],
+            "label": "flagged:Date field has no format instructions"
+          },
+          {
+            "id": "F020",
+            "scs": [
+              "3.3.3"
+            ],
+            "label": "flagged:Validation errors lack specific correction suggestions"
+          }
+        ],
+        "decoy_hits": [],
+        "by_principle": {
+          "perceivable": {
+            "found": 3,
+            "planted": 5
+          },
+          "operable": {
+            "found": 6,
+            "planted": 6
+          },
+          "understandable": {
+            "found": 4,
+            "planted": 4
+          },
+          "robust": {
+            "found": 3,
+            "planted": 3
+          }
+        },
+        "per_issue": [
+          {
+            "gt_id": "P1-01",
+            "sc": "3.1.1",
+            "principle": "understandable",
+            "engine_signal": "axe:html-has-lang",
+            "found": true,
+            "by": [
+              "F016"
+            ]
+          },
+          {
+            "gt_id": "P1-02",
+            "sc": "2.2.1",
+            "principle": "operable",
+            "engine_signal": "axe:meta-refresh",
+            "found": true,
+            "by": [
+              "F009"
+            ]
+          },
+          {
+            "gt_id": "P1-03",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:label",
+            "found": true,
+            "by": [
+              "F023"
+            ]
+          },
+          {
+            "gt_id": "P1-04",
+            "sc": "1.4.3",
+            "principle": "perceivable",
+            "engine_signal": "axe:color-contrast",
+            "found": true,
+            "by": [
+              "F002"
+            ]
+          },
+          {
+            "gt_id": "P1-05",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:button-name",
+            "found": true,
+            "by": [
+              "F022"
+            ]
+          },
+          {
+            "gt_id": "P1-06",
+            "sc": "4.1.2",
+            "principle": "robust",
+            "engine_signal": "axe:aria-required-attr",
+            "found": true,
+            "by": [
+              "F021"
+            ]
+          },
+          {
+            "gt_id": "P1-07",
+            "sc": "1.3.5",
+            "principle": "perceivable",
+            "engine_signal": "axe:autocomplete-valid",
+            "found": true,
+            "by": [
+              "F001"
+            ]
+          },
+          {
+            "gt_id": "P1-08",
+            "sc": "2.1.2",
+            "principle": "operable",
+            "engine_signal": "engine:focus_trap",
+            "found": true,
+            "by": [
+              "F008"
+            ]
+          },
+          {
+            "gt_id": "P1-09",
+            "sc": "2.4.7",
+            "principle": "operable",
+            "engine_signal": "engine:focus_not_visible",
+            "found": true,
+            "by": [
+              "F010"
+            ]
+          },
+          {
+            "gt_id": "P1-10",
+            "sc": "2.1.1",
+            "principle": "operable",
+            "engine_signal": "engine:clickable_not_focusable",
+            "found": true,
+            "by": [
+              "F007"
+            ]
+          },
+          {
+            "gt_id": "P1-11",
+            "sc": "1.3.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-12",
+            "sc": "3.3.1",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F018"
+            ]
+          },
+          {
+            "gt_id": "P1-13",
+            "sc": "1.1.1",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F003"
+            ]
+          },
+          {
+            "gt_id": "P1-14",
+            "sc": "2.4.4",
+            "principle": "operable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F014"
+            ]
+          },
+          {
+            "gt_id": "P1-15",
+            "sc": "1.3.3",
+            "principle": "perceivable",
+            "engine_signal": null,
+            "found": false,
+            "by": []
+          },
+          {
+            "gt_id": "P1-16",
+            "sc": "2.5.8",
+            "principle": "operable",
+            "engine_signal": "axe:target-size",
+            "found": true,
+            "by": [
+              "F011",
+              "F012"
+            ]
+          },
+          {
+            "gt_id": "P1-17",
+            "sc": "3.3.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F019"
+            ]
+          },
+          {
+            "gt_id": "P1-18",
+            "sc": "3.2.2",
+            "principle": "understandable",
+            "engine_signal": null,
+            "found": true,
+            "by": [
+              "F017"
+            ]
+          }
+        ]
+      },
+      "scan_seconds": 6.16,
+      "verify": {
+        "verified": 23,
+        "not_proving": 0,
+        "still_failing": 0,
+        "error": 0,
+        "total": 23
+      }
+    }
+  ]
+}
