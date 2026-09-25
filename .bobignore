@@ -1,2 +1,7 @@
 # Benchmark ground truth: Bob must never read it during a review
 scripts/benchmark/
+
+# Large or binary files that would only spend Bobcoin
+codes/engine/curbcut/vendor/
+codes/fixture/src/media/
+resources/wcag-source/

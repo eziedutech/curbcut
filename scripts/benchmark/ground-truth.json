@@ -1,0 +1,554 @@
+{
+  "schema_version": "1.0",
+  "note": "Planted issues and decoys in the OpenClass fixture, written by the same team that built CurbCut. engine_signal is the deterministic check that fires on the element with axe-core 4.13.0 and the CurbCut engine, or null when only judgment can find it.",
+  "fixture_root": "codes/fixture/src",
+  "prs": [
+    {
+      "id": "pr-1",
+      "base": "main",
+      "head": "demo/pr-1-quiz-signup",
+      "counts": {
+        "issues": 18,
+        "decoys": 6,
+        "engine_detectable": 11,
+        "judgment_only": 7,
+        "by_principle": {
+          "perceivable": 5,
+          "operable": 6,
+          "understandable": 4,
+          "robust": 3
+        }
+      },
+      "issues": [
+        {
+          "gt_id": "P1-01",
+          "sc": "3.1.1",
+          "also_accept_sc": [],
+          "principle": "understandable",
+          "page": "quiz-signup.html",
+          "selector": "html",
+          "description": "The page has no lang attribute, so screen readers may read it with the wrong voice.",
+          "engine_signal": "axe:html-has-lang",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-02",
+          "sc": "2.2.1",
+          "also_accept_sc": [],
+          "principle": "operable",
+          "page": "quiz-signup.html",
+          "selector": "meta[http-equiv=\"refresh\"]",
+          "description": "The page redirects to the course page after 300 seconds with no warning or way to extend.",
+          "engine_signal": "axe:meta-refresh",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-03",
+          "sc": "4.1.2",
+          "also_accept_sc": [
+            "1.3.1",
+            "3.3.2"
+          ],
+          "principle": "robust",
+          "page": "quiz-signup.html",
+          "selector": "#email",
+          "description": "The email field has a visible word next to it but no programmatic label.",
+          "engine_signal": "axe:label",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-04",
+          "sc": "1.4.3",
+          "also_accept_sc": [],
+          "principle": "perceivable",
+          "page": "quiz-signup.html",
+          "selector": ".hint",
+          "description": "Hint text is #9a9a9a on white, a contrast ratio of 2.81:1.",
+          "engine_signal": "axe:color-contrast",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-05",
+          "sc": "4.1.2",
+          "also_accept_sc": [],
+          "principle": "robust",
+          "page": "quiz-signup.html",
+          "selector": "#close-terms",
+          "description": "The close button contains only an icon and has no accessible name.",
+          "engine_signal": "axe:button-name",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-06",
+          "sc": "4.1.2",
+          "also_accept_sc": [],
+          "principle": "robust",
+          "page": "quiz-signup.html",
+          "selector": "#agree",
+          "description": "The custom checkbox has role checkbox but no aria-checked state.",
+          "engine_signal": "axe:aria-required-attr",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-07",
+          "sc": "1.3.5",
+          "also_accept_sc": [],
+          "principle": "perceivable",
+          "page": "quiz-signup.html",
+          "selector": "#display-name",
+          "description": "The autocomplete value nick-name is not a valid token.",
+          "engine_signal": "axe:autocomplete-valid",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-08",
+          "sc": "2.1.2",
+          "also_accept_sc": [],
+          "principle": "operable",
+          "page": "quiz-signup.html",
+          "selector": "#terms-box",
+          "description": "Tab and Shift+Tab loop between the two links in the terms box; keyboard users cannot leave it.",
+          "engine_signal": "engine:focus_trap",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-09",
+          "sc": "2.4.7",
+          "also_accept_sc": [],
+          "principle": "operable",
+          "page": "quiz-signup.html",
+          "selector": ".level-radio",
+          "description": "The custom level radios remove the outline on focus and show no other indicator.",
+          "engine_signal": "engine:focus_not_visible",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-10",
+          "sc": "2.1.1",
+          "also_accept_sc": [
+            "4.1.2"
+          ],
+          "principle": "operable",
+          "page": "quiz-signup.html",
+          "selector": "#submit-signup",
+          "description": "The Sign up control is a div with a click handler; it cannot be reached or activated with a keyboard.",
+          "engine_signal": "engine:clickable_not_focusable",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-11",
+          "sc": "1.3.1",
+          "also_accept_sc": [],
+          "principle": "perceivable",
+          "page": "quiz-signup.html",
+          "selector": ".quiz-options",
+          "description": "The level radios have no fieldset and legend, so the question Choose your level is not tied to them.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-12",
+          "sc": "3.3.1",
+          "also_accept_sc": [
+            "1.4.1"
+          ],
+          "principle": "understandable",
+          "page": "quiz-signup.html",
+          "selector": "#email",
+          "description": "Invalid fields only turn red; there is no text describing the error.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-13",
+          "sc": "1.1.1",
+          "also_accept_sc": [],
+          "principle": "perceivable",
+          "page": "quiz-signup.html",
+          "selector": ".quiz-badge img",
+          "description": "The badge image has alt=\"image\", which says nothing about the badge.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-14",
+          "sc": "2.4.4",
+          "also_accept_sc": [],
+          "principle": "operable",
+          "page": "quiz-signup.html",
+          "selector": "#signup-form a[href=\"course.html#rules\"]",
+          "description": "A link reads only \"Click here\", in its own paragraph, with no programmatic context.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-15",
+          "sc": "1.3.3",
+          "also_accept_sc": [
+            "1.4.1"
+          ],
+          "principle": "perceivable",
+          "page": "quiz-signup.html",
+          "selector": "#submit-signup",
+          "description": "The instruction refers to the green button on the right, relying on colour and position.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-16",
+          "sc": "2.5.8",
+          "also_accept_sc": [],
+          "principle": "operable",
+          "page": "quiz-signup.html",
+          "selector": ".help-icon",
+          "description": "Two 16 by 16 px help buttons sit next to each other with no spacing.",
+          "engine_signal": "axe:target-size",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-17",
+          "sc": "3.3.2",
+          "also_accept_sc": [],
+          "principle": "understandable",
+          "page": "quiz-signup.html",
+          "selector": "#quiz-date",
+          "description": "The date field requires DD/MM/YYYY but does not say so.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P1-18",
+          "sc": "3.2.2",
+          "also_accept_sc": [],
+          "principle": "understandable",
+          "page": "quiz-signup.html",
+          "selector": "#course-select",
+          "description": "Choosing another course in the select immediately navigates away from the form.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        }
+      ],
+      "decoys": [
+        {
+          "gt_id": "D1-01",
+          "page": "quiz-signup.html",
+          "selector": ".help-text",
+          "looks_like_sc": "1.4.3",
+          "why_correct": "Grey text #595959 on white is 7.0:1, above 4.5:1."
+        },
+        {
+          "gt_id": "D1-02",
+          "page": "quiz-signup.html",
+          "selector": ".flourish",
+          "looks_like_sc": "1.1.1",
+          "why_correct": "Purely decorative image with alt=\"\"."
+        },
+        {
+          "gt_id": "D1-03",
+          "page": "quiz-signup.html",
+          "selector": "#course-code",
+          "looks_like_sc": "3.3.2",
+          "why_correct": "The label is visually hidden but present and associated; the field is read-only and prefilled."
+        },
+        {
+          "gt_id": "D1-04",
+          "page": "quiz-signup.html",
+          "selector": "#course-select",
+          "looks_like_sc": "2.4.7",
+          "why_correct": "The outline is removed but replaced with a 3 px box-shadow focus ring."
+        },
+        {
+          "gt_id": "D1-05",
+          "page": "quiz-signup.html",
+          "selector": "#form-status",
+          "looks_like_sc": "4.1.3",
+          "why_correct": "A polite live region used correctly for the status message."
+        },
+        {
+          "gt_id": "D1-06",
+          "page": "quiz-signup.html",
+          "selector": "#page-title",
+          "looks_like_sc": "2.4.3",
+          "why_correct": "tabindex=\"-1\" on the heading only allows programmatic focus; it adds nothing to the tab order."
+        }
+      ]
+    },
+    {
+      "id": "pr-2",
+      "base": "main",
+      "head": "demo/pr-2-lesson-media",
+      "counts": {
+        "issues": 16,
+        "decoys": 6,
+        "engine_detectable": 7,
+        "judgment_only": 9,
+        "by_principle": {
+          "perceivable": 9,
+          "operable": 4,
+          "understandable": 1,
+          "robust": 2
+        }
+      },
+      "issues": [
+        {
+          "gt_id": "P2-01",
+          "sc": "1.1.1",
+          "also_accept_sc": [],
+          "principle": "perceivable",
+          "page": "lesson-media.html",
+          "selector": "img[src=\"img/leaf.svg\"]",
+          "description": "The leaf image has no alt attribute at all.",
+          "engine_signal": "axe:image-alt",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-02",
+          "sc": "1.1.1",
+          "also_accept_sc": [
+            "1.4.5"
+          ],
+          "principle": "perceivable",
+          "page": "lesson-media.html",
+          "selector": "img[src=\"img/stages-chart.svg\"]",
+          "description": "An image of text describing the two stages has alt=\"chart\"; its text is not available.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-03",
+          "sc": "1.2.2",
+          "also_accept_sc": [],
+          "principle": "perceivable",
+          "page": "lesson-media.html",
+          "selector": "video[src=\"media/intro.webm\"]",
+          "description": "Video 1 has no captions track.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-04",
+          "sc": "1.4.2",
+          "also_accept_sc": [],
+          "principle": "perceivable",
+          "page": "lesson-media.html",
+          "selector": "audio",
+          "description": "Background audio starts automatically, loops, and has no control to stop it.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-05",
+          "sc": "1.3.1",
+          "also_accept_sc": [],
+          "principle": "perceivable",
+          "page": "lesson-media.html",
+          "selector": ".data-table:not(:has(caption))",
+          "description": "The growth data table uses td for its header row; no header cells or scope.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-06",
+          "sc": "2.2.2",
+          "also_accept_sc": [],
+          "principle": "operable",
+          "page": "lesson-media.html",
+          "selector": "#facts-carousel",
+          "description": "The facts carousel advances every 3 seconds with no pause control.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-07",
+          "sc": "4.1.2",
+          "also_accept_sc": [],
+          "principle": "robust",
+          "page": "lesson-media.html",
+          "selector": "iframe",
+          "description": "The practice iframe has no title.",
+          "engine_signal": "axe:frame-title",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-08",
+          "sc": "2.4.4",
+          "also_accept_sc": [],
+          "principle": "operable",
+          "page": "lesson-media.html",
+          "selector": ".further a[href=\"lesson.html\"], .further a[href=\"course.html\"]",
+          "description": "Two links read only \"More\" and go to different places.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-09",
+          "sc": "1.4.3",
+          "also_accept_sc": [],
+          "principle": "perceivable",
+          "page": "lesson-media.html",
+          "selector": ".figure-caption",
+          "description": "White caption text on #7fb3d5 has a contrast ratio of 2.25:1.",
+          "engine_signal": "axe:color-contrast",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-10",
+          "sc": "1.4.4",
+          "also_accept_sc": [],
+          "principle": "perceivable",
+          "page": "lesson-media.html",
+          "selector": ".key-point",
+          "description": "The key point box has a fixed 44 px height with overflow hidden, so enlarged text is cut off.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-11",
+          "sc": "4.1.2",
+          "also_accept_sc": [
+            "2.1.1"
+          ],
+          "principle": "robust",
+          "page": "lesson-media.html",
+          "selector": "#more-trigger",
+          "description": "The equation toggle is a div with aria-expanded and a click handler; no role and no keyboard access.",
+          "engine_signal": "axe:aria-allowed-attr",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-12",
+          "sc": "1.3.1",
+          "also_accept_sc": [],
+          "principle": "perceivable",
+          "page": "lesson-media.html",
+          "selector": ".glossary",
+          "description": "The glossary ul contains div children instead of li.",
+          "engine_signal": "axe:list",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-13",
+          "sc": "1.4.4",
+          "also_accept_sc": [],
+          "principle": "perceivable",
+          "page": "lesson-media.html",
+          "selector": "meta[name=\"viewport\"]",
+          "description": "The viewport disables zoom with user-scalable=no and maximum-scale=1.",
+          "engine_signal": "axe:meta-viewport",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-14",
+          "sc": "2.4.3",
+          "also_accept_sc": [],
+          "principle": "operable",
+          "page": "lesson-media.html",
+          "selector": ".next-lesson",
+          "description": "The Next lesson link has tabindex=\"1\", so it receives focus first, before the skip link and navigation.",
+          "engine_signal": "engine:positive_tabindex",
+          "expected_tier": "proven",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-15",
+          "sc": "3.1.2",
+          "also_accept_sc": [],
+          "principle": "understandable",
+          "page": "lesson-media.html",
+          "selector": "#main > p:nth-of-type(2)",
+          "description": "An Indonesian sentence has no lang attribute.",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        },
+        {
+          "gt_id": "P2-16",
+          "sc": "2.4.2",
+          "also_accept_sc": [],
+          "principle": "operable",
+          "page": "lesson-media.html",
+          "selector": "title",
+          "description": "The page title is only \"Page\".",
+          "engine_signal": null,
+          "expected_tier": "flagged",
+          "fixable": true
+        }
+      ],
+      "decoys": [
+        {
+          "gt_id": "D2-01",
+          "page": "lesson-media.html",
+          "selector": "video:has(track)",
+          "looks_like_sc": "1.2.2",
+          "why_correct": "Video 2 has an English captions track."
+        },
+        {
+          "gt_id": "D2-02",
+          "page": "lesson-media.html",
+          "selector": ".divider",
+          "looks_like_sc": "1.1.1",
+          "why_correct": "Decorative divider with alt=\"\"."
+        },
+        {
+          "gt_id": "D2-03",
+          "page": "lesson-media.html",
+          "selector": ".data-table:has(caption)",
+          "looks_like_sc": "1.3.1",
+          "why_correct": "The second table has a caption and th with scope."
+        },
+        {
+          "gt_id": "D2-04",
+          "page": "lesson-media.html",
+          "selector": ".further a[href=\"lesson.html#main\"]",
+          "looks_like_sc": "2.4.4",
+          "why_correct": "Visible text \"More\" with aria-label \"More about leaf structure\"; the name is specific and contains the visible text (2.5.3)."
+        },
+        {
+          "gt_id": "D2-05",
+          "page": "lesson-media.html",
+          "selector": ".divider",
+          "looks_like_sc": "2.3.3",
+          "why_correct": "The divider fades slowly over 6 s and stops under prefers-reduced-motion."
+        },
+        {
+          "gt_id": "D2-06",
+          "page": "lesson-media.html",
+          "selector": "span[lang=\"id\"]",
+          "looks_like_sc": "3.1.2",
+          "why_correct": "The Indonesian phrase in the following paragraph is marked lang=\"id\"."
+        }
+      ]
+    }
+  ]
+}

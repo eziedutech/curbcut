@@ -1,0 +1,24 @@
+[project]
+name = "curbcut"
+version = "0.1.0"
+description = "Deterministic accessibility engine for CurbCut: scan, validate, verify, sarif."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = "==3.14.*"
+# Versions checked on PyPI on 25 Sep 2026 and pinned exactly.
+dependencies = [
+    "playwright==1.63.0",
+    "pytest==9.1.1",
+    "pytest-playwright==0.9.0",
+    "jsonschema==4.26.0",
+]
+
+[project.scripts]
+curbcut = "curbcut.cli:main"
+
+[build-system]
+requires = ["uv_build==0.12.19"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
