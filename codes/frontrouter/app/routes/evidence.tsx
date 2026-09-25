@@ -37,6 +37,7 @@ const COLUMNS = [
 
 export default function Evidence() {
   const runs = (benchmark as { runs: Run[] }).runs;
+  const pr1 = runs.filter((r) => r.run.startsWith("pr-1")).map((r) => r.curbcut.found);
   return (
     <Flex direction="column" gap="6">
       <Box>
@@ -142,6 +143,14 @@ export default function Evidence() {
           Limits of this benchmark
         </Heading>
         <ul className="cc-list">
+          {pr1.length > 1 && (
+            <li>
+              <Text>
+                Two runs on PR-1 found {pr1.join(" and ")} issues. Differences of this size are run-to-run variation in
+                IBM Bob's judgment, not an improvement.
+              </Text>
+            </li>
+          )}
           <li>
             <Text>The issues were planted by the same team that built CurbCut.</Text>
           </li>

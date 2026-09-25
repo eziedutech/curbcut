@@ -125,17 +125,15 @@ cd codes/backpy && uv run pytest
 
 Scored by [`scripts/benchmark/score.py`](scripts/benchmark/score.py) against the issues planted in [OpenClass](codes/fixture) ([ground truth](scripts/benchmark/ground-truth.json)). A finding counts only when it points at the same DOM element with an accepted success criterion.
 
-**PR-1, quiz sign-up form** (18 planted issues, 6 decoys):
+| Pull request | axe-core alone | CurbCut engine | **CurbCut with IBM Bob** | Decoys flagged |
+|---|---|---|---|---|
+| PR-1 quiz sign-up, run 1 | 8 of 18 | 11 of 18 | **16 of 18** | 0 of 6 |
+| PR-1 quiz sign-up, run 2 | 8 of 18 | 11 of 18 | **14 of 18** | 0 of 6 |
+| PR-2 lesson media | 6 of 16 | 7 of 16 | **14 of 16** | 0 of 6 |
 
-| Method | Issues found | Judgment-only issues | Decoys flagged |
-|---|---|---|---|
-| axe-core alone | 8 of 18 | 0 of 7 | 0 |
-| CurbCut engine | 11 of 18 | 0 of 7 | 0 |
-| **CurbCut with IBM Bob** | **16 of 18** | **5 of 7** | **0** |
-
-- **23 of 23 fixes verified**: each test fails on the pull request and passes on the fixed branch.
-- After the fix, the engine finds 0 of the 13 measured violations.
-- Missed: a radio group without fieldset and legend, and one finding whose selector pointed at the neighbouring paragraph.
+- **23 of 23 fixes on PR-1 verified**: each test fails on the pull request and passes on the fixed branch. After the fix, the engine finds 0 of the 13 measured violations.
+- The engine is deterministic: both PR-1 runs produced the same facts. The two runs differ only in IBM Bob's judgment findings (5 and 3 of 7), which is run-to-run variation.
+- Missed in both PR-1 runs: a radio group without fieldset and legend, and a sensory instruction whose finding pointed at the neighbouring paragraph.
 
 ## What it does not claim
 
