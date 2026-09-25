@@ -55,3 +55,10 @@ def test_clickable_div_found(page):
 def test_accessible_name_from_chromium(page):
     page.set_content("<button id='b' aria-label='Close quiz terms'><svg aria-hidden='true'></svg></button>")
     assert browser.ax_node(page, "#b") == {"name": "Close quiz terms", "role": "button", "ignored": False}
+
+
+def test_narration_names_gaps_only_where_a_name_is_required():
+    from curbcut.report import narrate
+    snap = '- list:\n  - listitem\n- button\n- img "chart"\n- img\n- textbox "Email"\n- radio "Core" [checked]\n- heading "Quiz" [level=1]'
+    assert narrate(snap) == ["list", "button, unlabeled", "img, chart", "img, no description",
+                             "textbox, Email", "radio, Core, checked", "heading, Quiz, level 1"]
