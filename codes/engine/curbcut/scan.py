@@ -197,9 +197,16 @@ def scan(repo: Path, base: str, head: str, out: Path, all_pages: bool = False) -
             "by_kind": dict(sorted(by_kind.items())),
         },
         "digest": digest,
-        **body,
+        "pages": pages,
+        "facts": facts,
+        # Accessibility tree snapshots feed the screen reader narration in the dashboard. They sit in a
+        # separate file so reviewers reading facts.json do not pay for them.
+        "snapshots_file": out.with_name("snapshots.json").name,
         "run": {"started_at": started_at, "duration_s": round(time.perf_counter() - started, 2)},
     }
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+    out.with_name("snapshots.json").write_text(
+        json.dumps({"schema_version": "1.0", "head": head_sha, "snapshots": snapshots}, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8", newline="\n")
     return result
