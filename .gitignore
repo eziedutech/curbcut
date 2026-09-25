@@ -1,0 +1,26 @@
+# Private working material, never published
+credentials/
+agents/
+docs/
+resources/
+project-global-rule.md
+CLAUDE.md
+read_folder.md
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+build/
+.react-router/
+
+# Local environment
+.env
+.env.*
+!.env.example
+*.log
