@@ -27,3 +27,6 @@ build/
 
 # Engine self-test output
 reports/curbcut/_selftest/
+
+# Raw screen recordings are large; only the final video link is submitted
+assets/video/
