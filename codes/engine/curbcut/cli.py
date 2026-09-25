@@ -75,6 +75,32 @@ def cmd_sarif(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_report(a: argparse.Namespace) -> int:
+    from .report import build_report
+    repo = _repo()
+    report_dir = _abs(repo, a.dir or f"reports/curbcut/{a.id}")
+    out = _abs(repo, a.out) if a.out else report_dir / "report.json"
+    r = build_report(repo, a.id, report_dir, _abs(repo, a.after) if a.after else None, out)
+    s = r["review"]["summary"]
+    v = r["verify"]["summary"]["verified"] if r["verify"] else "no verify.json"
+    print(f"report {a.id}: proven {s['proven']}, flagged {s['flagged']}, out of reach {s['out_of_reach']}, "
+          f"not scanned {s['not_scanned']}, verified fixes {v} -> {out}")
+    return 0
+
+
+def cmd_publish(a: argparse.Namespace) -> int:
+    import os
+    from .report import publish
+    repo = _repo()
+    token = os.environ.get("CURBCUT_INGEST_TOKEN", "")
+    if not token:
+        print("error: CURBCUT_INGEST_TOKEN is not set", file=sys.stderr)
+        return 2
+    res = publish(_abs(repo, a.report), a.url, token)
+    print(f"published {res['id']} at {res['head_sha'][:7]} to {a.url}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="curbcut", description="CurbCut deterministic accessibility engine.")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -103,6 +129,18 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("findings")
     p.add_argument("--out")
     p.set_defaults(func=cmd_sarif)
+
+    p = sub.add_parser("report", help="Assemble report.json from facts, findings, fixes and verify.")
+    p.add_argument("--id", required=True)
+    p.add_argument("--dir", help="Folder with findings.json and friends. Default reports/curbcut/<id>.")
+    p.add_argument("--after", help="Folder with a scan of the fixed branch, for before and after narration.")
+    p.add_argument("--out")
+    p.set_defaults(func=cmd_report)
+
+    p = sub.add_parser("publish", help="POST report.json to the dashboard. Token from CURBCUT_INGEST_TOKEN.")
+    p.add_argument("report")
+    p.add_argument("--url", required=True, help="Dashboard base URL, for example https://curbcut.eziedutech.dev")
+    p.set_defaults(func=cmd_publish)
 
     args = parser.parse_args(argv)
     try:
