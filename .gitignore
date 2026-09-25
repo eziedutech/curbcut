@@ -24,3 +24,6 @@ build/
 .env.*
 !.env.example
 *.log
+
+# Engine self-test output
+reports/curbcut/_selftest/
