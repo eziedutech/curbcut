@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0",
+  "id": "pr-1",
+  "base": {
+    "ref": "demo/pr-1-quiz-signup",
+    "sha": "250923a3204cbd037061261fd37560d342bf1223"
+  },
+  "head": {
+    "ref": "demo/pr-1-fixed",
+    "sha": "b4ea6e8c7ab80a45eb4762650637e82eff425a5a"
+  },
+  "tests_dir": "tests/a11y",
+  "rule": "verified means the test failed on base and passed on head. Nothing else counts.",
+  "summary": {
+    "verified": 23,
+    "not_proving": 0,
+    "still_failing": 0,
+    "error": 0,
+    "total": 23
+  },
+  "results": [
+    {
+      "test": "test_pr1_F001.py::test_display_name_autocomplete_valid[chromium]",
+      "finding_id": "F001",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: autocomplete='nick-name' is the invalid 'nick-name' token; a valid token such as 'username' is required",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F002.py::test_hint_text_contrast[chromium]",
+      "finding_id": "F002",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: .hint: 2.81:1 is below 4.5:1 (#9a9a9a on #ffffff)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F003.py::test_badge_image_meaningful_alt[chromium]",
+      "finding_id": "F003",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: badge image accessible name is the generic word 'image'; it must describe the image content",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F004.py::test_submit_instruction_does_not_use_color_or_position[chromium]",
+      "finding_id": "F004",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: Instruction still references the color 'green' to identify a control (WCAG 1.3.3)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F005.py::test_invalid_field_has_aria_invalid_and_visible_error[chromium]",
+      "finding_id": "F005",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: #email aria-invalid='None' after failed submit; expected 'true'",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F006.py::test_escape_dismisses_help_panel[chromium]",
+      "finding_id": "F006",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: Help panel is still visible after Escape; keyboard users cannot dismiss it",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F007.py::test_submit_is_keyboard_operable_button[chromium]",
+      "finding_id": "F007",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: #submit-signup is a <div> element; it must be a <button> to be keyboard-operable",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F008.py::test_no_focus_trap_in_terms[chromium]",
+      "finding_id": "F008",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: Keyboard focus is trapped: cycle=['#terms-first', '#terms-last'], unreachable=['#agree', '#signup-form > p:nth-of-type(2) > a']",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F009.py::test_no_meta_refresh[chromium]",
+      "finding_id": "F009",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: A meta[http-equiv=refresh] tag exists; the page will redirect without user control (WCAG 2.2.2 / 3.2.5)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F010.py::test_level_radio_focus_indicator_visible[chromium]",
+      "finding_id": "F010",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: Keyboard focus on .level-radio does not produce a visible focus indicator (WCAG 2.4.7)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F011.py::test_help_about_levels_target_size[chromium]",
+      "finding_id": "F011",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: 'Help about levels' button target size is 16x16px; minimum required is 24.0x24.0px (WCAG 2.5.8)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F012.py::test_help_about_timing_target_size[chromium]",
+      "finding_id": "F012",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: 'Help about timing' button target size is 16x16px; minimum required is 24.0x24.0px (WCAG 2.5.8)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F013.py::test_terms_section_not_in_focus_trap[chromium]",
+      "finding_id": "F013",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: Keyboard focus does not escape the page; elements unreachable: ['#agree', '#signup-form > p:nth-of-type(2) > a']",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F014.py::test_course_rules_link_name_is_descriptive[chromium]",
+      "finding_id": "F014",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: Link accessible name is 'Click here'; vague link text does not describe the destination (WCAG 2.4.6 / 2.4.9)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F015.py::test_date_input_has_visible_format_hint[chromium]",
+      "finding_id": "F015",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: #quiz-date has no aria-describedby; the format hint is not programmatically linked",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F016.py::test_html_lang_attribute_present[chromium]",
+      "finding_id": "F016",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: The <html> element has no lang attribute; screen readers cannot select the correct language voice (WCAG 3.1.1)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F017.py::test_course_select_change_does_not_navigate[chromium]",
+      "finding_id": "F017",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: Selecting 'maths' navigated away from http://127.0.0.1:52739/quiz-signup.html to http://127.0.0.1:52739/index.html; an on-change navigation is an unexpected context change (WCAG 3.2.2)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F018.py::test_validation_error_has_text_not_color_only[chromium]",
+      "finding_id": "F018",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: No visible text error message for the email field after failed submit; error is indicated by color alone (WCAG 1.4.1)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F019.py::test_date_input_format_hint_is_visible[chromium]",
+      "finding_id": "F019",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: No #quiz-date-hint element found; format instructions are missing (WCAG 1.3.5 / 3.3.2)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F020.py::test_error_message_includes_correction_example[chromium]",
+      "finding_id": "F020",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: Date field error message is not visible after failed submit",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F021.py::test_agree_checkbox_exposes_checked_state[chromium]",
+      "finding_id": "F021",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: #agree aria-checked='None' before interaction; a custom checkbox must expose its state via aria-checked (WCAG 4.1.2)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F022.py::test_close_terms_button_has_accessible_name[chromium]",
+      "finding_id": "F022",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: The #close-terms button has no accessible name; screen reader users cannot identify its purpose (WCAG 4.1.2)",
+      "head_message": "",
+      "verdict": "verified"
+    },
+    {
+      "test": "test_pr1_F023.py::test_email_input_has_programmatic_label[chromium]",
+      "finding_id": "F023",
+      "base": "failed",
+      "head": "passed",
+      "base_message": "AssertionError: axe violations: [('label', [['#email']])]",
+      "head_message": "",
+      "verdict": "verified"
+    }
+  ],
+  "test_files_not_collected": [],
+  "fixes_without_test": [],
+  "log_tail": {
+    "base": "2739/quiz-signup.html'>\nbase_url = 'http://127.0.0.1:52739/'\n\n    def test_close_terms_button_has_accessible_name(page: Page, base_url: str) -> None:\n        open_page(page, \"quiz-signup.html\")\n        name = accessible_name(page, \"#close-terms\")\n>       assert name.strip(), (\n            \"The #close-terms button has no accessible name; screen reader users cannot identify \"\n            \"its purpose (WCAG 4.1.2)\"\n        )\nE       AssertionError: The #close-terms button has no accessible name; screen reader users cannot identify its purpose (WCAG 4.1.2)\nE       assert ''\nE        +  where '' = <built-in method strip of str object at 0x00007FFFCEC92790>()\nE        +    where <built-in method strip of str object at 0x00007FFFCEC92790> = ''.strip\n\ntests\\a11y\\test_pr1_F022.py:9: AssertionError\n______________ test_email_input_has_programmatic_label[chromium] ______________\n\npage = <Page url='http://127.0.0.1:52739/quiz-signup.html'>\nbase_url = 'http://127.0.0.1:52739/'\n\n    def test_email_input_has_programmatic_label(page: Page, base_url: str) -> None:\n        open_page(page, \"quiz-signup.html\")\n        # axe's label rule checks that every form control has a programmatic label.\n>       assert_no_axe_violations(page, rules=[\"label\"], include=\"#email\")\n\ntests\\a11y\\test_pr1_F023.py:9: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npage = <Page url='http://127.0.0.1:52739/quiz-signup.html'>, rules = ['label']\ninclude = '#email'\n\n    def assert_no_axe_violations(page: Page, rules: list[str], include: str | None = None) -> None:\n        found = axe_violations(page, rules=rules, include=include)\n        detail = [(v[\"id\"], [n[\"target\"] for n in v[\"nodes\"]]) for v in found]\n>       assert not found, f\"axe violations: {detail}\"\n               ^^^^^^^^^\nE       AssertionError: axe violations: [('label', [['#email']])]\n\ncodes\\engine\\curbcut\\testkit.py:36: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/a11y/test_pr1_F001.py::test_display_name_autocomplete_valid[chromium]\nFAILED tests/a11y/test_pr1_F002.py::test_hint_text_contrast[chromium] - Asser...\nFAILED tests/a11y/test_pr1_F003.py::test_badge_image_meaningful_alt[chromium]\nFAILED tests/a11y/test_pr1_F004.py::test_submit_instruction_does_not_use_color_or_position[chromium]\nFAILED tests/a11y/test_pr1_F005.py::test_invalid_field_has_aria_invalid_and_visible_error[chromium]\nFAILED tests/a11y/test_pr1_F006.py::test_escape_dismisses_help_panel[chromium]\nFAILED tests/a11y/test_pr1_F007.py::test_submit_is_keyboard_operable_button[chromium]\nFAILED tests/a11y/test_pr1_F008.py::test_no_focus_trap_in_terms[chromium] - A...\nFAILED tests/a11y/test_pr1_F009.py::test_no_meta_refresh[chromium] - Assertio...\nFAILED tests/a11y/test_pr1_F010.py::test_level_radio_focus_indicator_visible[chromium]\nFAILED tests/a11y/test_pr1_F011.py::test_help_about_levels_target_size[chromium]\nFAILED tests/a11y/test_pr1_F012.py::test_help_about_timing_target_size[chromium]\nFAILED tests/a11y/test_pr1_F013.py::test_terms_section_not_in_focus_trap[chromium]\nFAILED tests/a11y/test_pr1_F014.py::test_course_rules_link_name_is_descriptive[chromium]\nFAILED tests/a11y/test_pr1_F015.py::test_date_input_has_visible_format_hint[chromium]\nFAILED tests/a11y/test_pr1_F016.py::test_html_lang_attribute_present[chromium]\nFAILED tests/a11y/test_pr1_F017.py::test_course_select_change_does_not_navigate[chromium]\nFAILED tests/a11y/test_pr1_F018.py::test_validation_error_has_text_not_color_only[chromium]\nFAILED tests/a11y/test_pr1_F019.py::test_date_input_format_hint_is_visible[chromium]\nFAILED tests/a11y/test_pr1_F020.py::test_error_message_includes_correction_example[chromium]\nFAILED tests/a11y/test_pr1_F021.py::test_agree_checkbox_exposes_checked_state[chromium]\nFAILED tests/a11y/test_pr1_F022.py::test_close_terms_button_has_accessible_name[chromium]\nFAILED tests/a11y/test_pr1_F023.py::test_email_input_has_programmatic_label[chromium]\n23 failed in 6.10s\n",
+    "head": ".......................                                                  [100%]\n23 passed in 5.20s\n"
+  },
+  "run": {
+    "started_at": "2026-09-25T17:50:56+00:00",
+    "duration_s": 14.9
+  }
+}

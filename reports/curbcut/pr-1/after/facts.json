@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "tool": {
+    "name": "curbcut",
+    "version": "0.1.0",
+    "axe_core": "4.13.0",
+    "chromium": "153.0.8010.12",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  "base": {
+    "ref": "main",
+    "sha": "736bb7f59d65e44d58d9b66679ce77eaca92c996"
+  },
+  "head": {
+    "ref": "demo/pr-1-fixed",
+    "sha": "b4ea6e8c7ab80a45eb4762650637e82eff425a5a"
+  },
+  "fixture_root": "codes/fixture/src",
+  "summary": {
+    "pages_total": 4,
+    "pages_scanned": 4,
+    "pages_not_scanned": 0,
+    "facts_total": 0,
+    "facts_introduced": 0,
+    "by_kind": {}
+  },
+  "digest": "f185186b69d25cb9cf2dabf39c796e5128593a79f4bae4b99d3c07461602aabf",
+  "pages": [
+    {
+      "page": "course.html",
+      "change": "modified",
+      "scanned": true,
+      "reason": null,
+      "focus_sequence": [
+        "body > a",
+        "body > header > a",
+        "body > header > nav > ul > li:nth-of-type(1) > a",
+        "body > header > nav > ul > li:nth-of-type(2) > a",
+        "body > header > nav > ul > li:nth-of-type(3) > a",
+        "#main > nav > a",
+        "#main > ol > li:nth-of-type(1) > a",
+        "#main > p:nth-of-type(2) > a"
+      ]
+    },
+    {
+      "page": "index.html",
+      "change": "modified",
+      "scanned": true,
+      "reason": null,
+      "focus_sequence": [
+        "body > a",
+        "body > header > a",
+        "body > header > nav > ul > li:nth-of-type(1) > a",
+        "body > header > nav > ul > li:nth-of-type(2) > a",
+        "body > header > nav > ul > li:nth-of-type(3) > a",
+        "#main > ul > li:nth-of-type(1) > a"
+      ]
+    },
+    {
+      "page": "lesson.html",
+      "change": "dependency",
+      "scanned": true,
+      "reason": null,
+      "focus_sequence": [
+        "body > a",
+        "body > header > a",
+        "body > header > nav > ul > li:nth-of-type(1) > a",
+        "body > header > nav > ul > li:nth-of-type(2) > a",
+        "#main > nav > a:nth-of-type(1)",
+        "#main > nav > a:nth-of-type(2)",
+        "#mark-complete"
+      ]
+    },
+    {
+      "page": "quiz-signup.html",
+      "change": "added",
+      "scanned": true,
+      "reason": null,
+      "focus_sequence": [
+        "body > a",
+        "body > header > a",
+        "body > header > nav > ul > li:nth-of-type(1) > a",
+        "body > header > nav > ul > li:nth-of-type(2) > a",
+        "body > header > nav > ul > li:nth-of-type(3) > a",
+        "#main > nav > a",
+        "#email",
+        "#display-name",
+        "#course-code",
+        "#course-select",
+        "#quiz-date",
+        "#signup-form > div:nth-of-type(6) > div:nth-of-type(1) > label:nth-of-type(1) > input",
+        "#signup-form > div:nth-of-type(6) > div:nth-of-type(2) > button:nth-of-type(1)",
+        "#signup-form > div:nth-of-type(6) > div:nth-of-type(2) > button:nth-of-type(2)",
+        "#close-terms",
+        "#terms-box",
+        "#terms-first",
+        "#terms-last",
+        "#agree",
+        "#signup-form > p:nth-of-type(2) > a",
+        "#submit-signup"
+      ]
+    }
+  ],
+  "facts": [],
+  "snapshots_file": "snapshots.json",
+  "run": {
+    "started_at": "2026-09-25T17:44:38+00:00",
+    "duration_s": 4.94
+  }
+}

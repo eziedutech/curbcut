@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "pr_id": "pr-1",
+  "fixes": [
+    {
+      "finding_id": "F001",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.html"],
+      "explanation": "Changed autocomplete='nick-name' to autocomplete='username' on the display-name input, which is a valid HTML autofill token."
+    },
+    {
+      "finding_id": "F002",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/styles.css"],
+      "explanation": "Changed the .hint text color from #9a9a9a to #767676, which achieves a 4.5:1 contrast ratio against #ffffff."
+    },
+    {
+      "finding_id": "F003",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.html"],
+      "explanation": "Replaced alt='image' with alt='Cell Explorer badge' on the badge image to describe the graphic meaningfully."
+    },
+    {
+      "finding_id": "F004",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.html"],
+      "explanation": "Replaced 'press the green button on the right' with 'press Sign up' so the instruction uses the button label instead of color and position."
+    },
+    {
+      "finding_id": "F005",
+      "status": "fixed",
+      "files_changed": [
+        "codes/fixture/src/quiz-signup.html",
+        "codes/fixture/src/quiz-signup.js",
+        "codes/fixture/src/styles.css"
+      ],
+      "explanation": "Added aria-invalid='true' to invalid fields on submit, added a visible field-error paragraph with a text error message for each field, and added the .field-error CSS rule."
+    },
+    {
+      "finding_id": "F006",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.js"],
+      "explanation": "Added a document-level Escape key listener that hides all open help panels so keyboard users can dismiss them."
+    },
+    {
+      "finding_id": "F007",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.html", "codes/fixture/src/quiz-signup.js"],
+      "explanation": "Replaced the div#submit-signup with a native button[type=submit] and changed the JS handler from a click listener on the div to a form submit listener so the button is keyboard-operable by default."
+    },
+    {
+      "finding_id": "F008",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.js"],
+      "explanation": "Removed the keydown handlers on #terms-first and #terms-last that intercepted Tab and trapped keyboard focus in the terms section."
+    },
+    {
+      "finding_id": "F009",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.html"],
+      "explanation": "Removed the meta[http-equiv=refresh] tag that redirected the page after 300 seconds with no user control."
+    },
+    {
+      "finding_id": "F010",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/styles.css"],
+      "explanation": "Replaced '.level-radio:focus-visible { outline: none }' with a visible 3px solid outline so keyboard focus on the radio buttons is visible."
+    },
+    {
+      "finding_id": "F011",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/styles.css"],
+      "explanation": "Increased .help-icon width and height from 16px to 24px (meeting the 24px minimum target size) and updated line-height to match."
+    },
+    {
+      "finding_id": "F012",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/styles.css"],
+      "explanation": "The same .help-icon CSS change that fixes F011 also raises the 'Help about timing' button to 24px, meeting the minimum target size."
+    },
+    {
+      "finding_id": "F013",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.js"],
+      "explanation": "The removal of the Tab-trapping keydown handlers (F008 fix) also restores the natural focus order through the terms section, resolving this finding."
+    },
+    {
+      "finding_id": "F014",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.html"],
+      "explanation": "Replaced the link text 'Click here' with 'View course rules' so the link purpose is clear from its text alone."
+    },
+    {
+      "finding_id": "F015",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.html"],
+      "explanation": "Added placeholder='DD/MM/YYYY', a visible hint paragraph 'Format: DD/MM/YYYY, for example 25/09/2026', and aria-describedby linking the date input to both the hint and the error element."
+    },
+    {
+      "finding_id": "F016",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.html"],
+      "explanation": "Added lang='en' to the opening html element so screen readers select the correct language voice and pronunciation rules."
+    },
+    {
+      "finding_id": "F017",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.js"],
+      "explanation": "Removed the course select change listener that immediately navigated to index.html when 'maths' or 'writing' was chosen, eliminating the unexpected context change."
+    },
+    {
+      "finding_id": "F018",
+      "status": "fixed",
+      "files_changed": [
+        "codes/fixture/src/quiz-signup.html",
+        "codes/fixture/src/quiz-signup.js",
+        "codes/fixture/src/styles.css"
+      ],
+      "explanation": "The F005 fix also covers F018: aria-invalid is set on invalid fields and a visible text error message is shown, so errors are no longer indicated by color alone."
+    },
+    {
+      "finding_id": "F019",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.html"],
+      "explanation": "The F015 fix also covers F019: a visible hint paragraph with the required format is shown next to the date field and linked via aria-describedby."
+    },
+    {
+      "finding_id": "F020",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.js"],
+      "explanation": "The F005/F018 fix also covers F020: specific error messages with correction examples are now shown for both the email and date fields on validation failure."
+    },
+    {
+      "finding_id": "F021",
+      "status": "fixed",
+      "files_changed": [
+        "codes/fixture/src/quiz-signup.html",
+        "codes/fixture/src/quiz-signup.js"
+      ],
+      "explanation": "Added aria-checked='false' to the #agree span initially and updated the click handler to toggle the attribute between 'true' and 'false' so assistive technology can announce the checked state."
+    },
+    {
+      "finding_id": "F022",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.html"],
+      "explanation": "Added aria-label='Close terms' to the #close-terms button so its purpose is announced to screen reader users."
+    },
+    {
+      "finding_id": "F023",
+      "status": "fixed",
+      "files_changed": ["codes/fixture/src/quiz-signup.html"],
+      "explanation": "Replaced the span.field-name for the Email field with a proper label[for=email] element so the input has a programmatic label."
+    }
+  ],
+  "not_fixed": []
+}
