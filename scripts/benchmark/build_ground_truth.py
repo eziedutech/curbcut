@@ -35,7 +35,7 @@ PR1 = [
     issue("P1-09", "2.4.7", Q, ".level-radio", "The custom level radios remove the outline on focus and show no other indicator.", "engine:focus_not_visible"),
     issue("P1-10", "2.1.1", Q, "#submit-signup", "The Sign up control is a div with a click handler; it cannot be reached or activated with a keyboard.", "engine:clickable_not_focusable", also=["4.1.2"]),
     issue("P1-11", "1.3.1", Q, ".quiz-options", "The level radios have no fieldset and legend, so the question Choose your level is not tied to them.", None),
-    issue("P1-12", "3.3.1", Q, "#email", "Invalid fields only turn red; there is no text describing the error.", None, also=["1.4.1"]),
+    issue("P1-12", "3.3.1", Q, "#email", "Invalid fields get no text error. The intended red border never shows, because a more specific input rule overrides it.", None, also=["1.4.1"]),
     issue("P1-13", "1.1.1", Q, ".quiz-badge img", 'The badge image has alt="image", which says nothing about the badge.', None),
     issue("P1-14", "2.4.4", Q, '#signup-form a[href="course.html#rules"]', 'A link reads only "Click here", in its own paragraph, with no programmatic context.', None),
     issue("P1-15", "1.3.3", Q, "#signup-form > p:nth-of-type(3)", "The instruction refers to the green button on the right, relying on colour and position.", None, also=["1.4.1"]),
@@ -99,6 +99,7 @@ def main():
             "26 Sep 2026, after the first scoring run: P1-08 selector widened from the #terms-box container to include "
             "the two links that form the trap, as its description already said. P1-15 selector moved from the Sign up "
             "control to the instruction paragraph that contains the sensory wording. No issue was added, removed or re-scoped.",
+            "26 Sep 2026: P1-12 description corrected; the fixture shows no error at all, not a red-only one. Selector and scoring unchanged.",
         ],
         "prs": [
             {"id": "pr-1", "base": "main", "head": "demo/pr-1-quiz-signup", "counts": counts(PR1, PR1_DECOYS), "issues": PR1, "decoys": PR1_DECOYS},

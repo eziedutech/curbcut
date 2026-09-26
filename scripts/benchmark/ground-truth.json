@@ -3,7 +3,8 @@
   "note": "Planted issues and decoys in the OpenClass fixture, written by the same team that built CurbCut. engine_signal is the deterministic check that fires on the element with axe-core 4.13.0 and the CurbCut engine, or null when only judgment can find it.",
   "fixture_root": "codes/fixture/src",
   "changes": [
-    "26 Sep 2026, after the first scoring run: P1-08 selector widened from the #terms-box container to include the two links that form the trap, as its description already said. P1-15 selector moved from the Sign up control to the instruction paragraph that contains the sensory wording. No issue was added, removed or re-scoped."
+    "26 Sep 2026, after the first scoring run: P1-08 selector widened from the #terms-box container to include the two links that form the trap, as its description already said. P1-15 selector moved from the Sign up control to the instruction paragraph that contains the sensory wording. No issue was added, removed or re-scoped.",
+    "26 Sep 2026: P1-12 description corrected; the fixture shows no error at all, not a red-only one. Selector and scoring unchanged."
   ],
   "prs": [
     {
@@ -169,7 +170,7 @@
           "principle": "understandable",
           "page": "quiz-signup.html",
           "selector": "#email",
-          "description": "Invalid fields only turn red; there is no text describing the error.",
+          "description": "Invalid fields get no text error. The intended red border never shows, because a more specific input rule overrides it.",
           "engine_signal": null,
           "expected_tier": "flagged",
           "fixable": true
