@@ -20,6 +20,11 @@ export default function About() {
         <Heading as="h1" size="7" mb="2">
           About CurbCut
         </Heading>
+        <Text as="p" color="gray" mb="2">
+          AI coding assistants have become remarkably capable, and more and more interface code is now written with their
+          help. Their output still tends to overlook the accessibility standards that people with disabilities depend on.
+          Speed has improved; inclusion has not kept pace.
+        </Text>
         <Text as="p" color="gray">
           Accessibility issues pass code review because most reviewers are not WCAG experts. CurbCut puts that review
           into the pull request, built on IBM Bob.

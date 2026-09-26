@@ -30,6 +30,8 @@ Live demo: [curbcut.eziedutech.dev](https://curbcut.eziedutech.dev). IBM Bob tas
 
 ## What it is
 
+AI coding assistants have become remarkably capable, and more and more interface code is now written with their help. Their output, however, still tends to overlook the accessibility standards that people with disabilities depend on: buttons without names, text with too little contrast, forms that cannot be completed with a keyboard. Speed has improved; inclusion has not kept pace.
+
 Accessibility issues pass code review because most reviewers are not WCAG experts, and linters only catch what a rule can match. CurbCut puts an accessibility reviewer into the pull request.
 
 Every finding carries one of three evidence tiers:
