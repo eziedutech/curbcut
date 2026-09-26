@@ -3,11 +3,6 @@ credentials/
 agents/
 docs/
 resources/
-project-global-rule.md
-CLAUDE.md
-.claude/
-.vscode/
-read_folder.md
 
 # Python
 __pycache__/

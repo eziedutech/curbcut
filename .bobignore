@@ -15,6 +15,3 @@ resources/wcag-source/
 agents/
 docs/
 credentials/
-.claude/
-project-global-rule.md
-read_folder.md
